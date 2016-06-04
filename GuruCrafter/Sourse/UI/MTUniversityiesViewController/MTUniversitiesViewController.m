@@ -1,13 +1,14 @@
 //
-//  MTUniversitiesViewController.m
+//  MTUniversityViewController.m
 //  GuruCrafter
 //
-//  Created by Mark Tezza on 04/06/16.
+//  Created by Mark Tezza on 03/06/16.
 //  Copyright © 2016 MTDev. All rights reserved.
 //
 
 #import "MTUniversitiesViewController.h"
 
+#import "MTAddUniversityViewController.h"
 #import "MTUniversity.h"
 #import "MTDataManager.h"
 
@@ -36,16 +37,16 @@
 #pragma mark -
 #pragma mark Actions
 
-- (void)actionAddNewObject:(UIBarButtonItem *)sender {
+- (void)insertNewObject:(id)sender {
     NSLog(@"actionAddNewObject");
     
-    //    MTAddUniversityViewController *vc =
-    //    [self.storyboard instantiateViewControllerWithIdentifier:@"MTAddUniversityViewController"];
-    //
-    //    MTUniversity *univer = [NSEntityDescription insertNewObjectForEntityForName:@"MTUniversity"
-    //                                                         inManagedObjectContext:self.managedObjectContext];
-    //    vc.university = univer;
-    //    [self.navigationController pushViewController:vc animated:YES];
+    MTAddUniversityViewController *vc =
+    [self.storyboard instantiateViewControllerWithIdentifier:@"MTAddUniversityViewController"];
+    
+    MTUniversity *univer = [NSEntityDescription insertNewObjectForEntityForName:@"MTUniversity"
+                                                         inManagedObjectContext:self.managedObjectContext];
+    vc.university = univer;
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 #pragma mark -

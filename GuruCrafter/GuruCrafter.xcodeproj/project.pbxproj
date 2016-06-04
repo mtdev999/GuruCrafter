@@ -26,6 +26,9 @@
 		1B0FB9051D02CBD4000F3DEF /* MTTeacher.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B0FB8F91D02CBD4000F3DEF /* MTTeacher.m */; };
 		1B0FB9061D02CBD4000F3DEF /* MTUniversity+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B0FB8FB1D02CBD4000F3DEF /* MTUniversity+CoreDataProperties.m */; };
 		1B0FB9071D02CBD4000F3DEF /* MTUniversity.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B0FB8FD1D02CBD4000F3DEF /* MTUniversity.m */; };
+		1B1084B61D02D41F00EC6E2A /* TextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B1084B51D02D41F00EC6E2A /* TextField.m */; };
+		1B1084BA1D02D4A300EC6E2A /* ManagerObjectsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B1084B91D02D4A300EC6E2A /* ManagerObjectsViewController.m */; };
+		1B1084BD1D02D63400EC6E2A /* MTAddUniversityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B1084BC1D02D63400EC6E2A /* MTAddUniversityViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +67,12 @@
 		1B0FB8FB1D02CBD4000F3DEF /* MTUniversity+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MTUniversity+CoreDataProperties.m"; sourceTree = "<group>"; };
 		1B0FB8FC1D02CBD4000F3DEF /* MTUniversity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTUniversity.h; sourceTree = "<group>"; };
 		1B0FB8FD1D02CBD4000F3DEF /* MTUniversity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTUniversity.m; sourceTree = "<group>"; };
+		1B1084B41D02D41F00EC6E2A /* TextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextField.h; sourceTree = "<group>"; };
+		1B1084B51D02D41F00EC6E2A /* TextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextField.m; sourceTree = "<group>"; };
+		1B1084B81D02D4A300EC6E2A /* ManagerObjectsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ManagerObjectsViewController.h; sourceTree = "<group>"; };
+		1B1084B91D02D4A300EC6E2A /* ManagerObjectsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ManagerObjectsViewController.m; sourceTree = "<group>"; };
+		1B1084BB1D02D63400EC6E2A /* MTAddUniversityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTAddUniversityViewController.h; sourceTree = "<group>"; };
+		1B1084BC1D02D63400EC6E2A /* MTAddUniversityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTAddUniversityViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +137,7 @@
 		1B0FB8B71D02B272000F3DEF /* Sourse */ = {
 			isa = PBXGroup;
 			children = (
+				1B1084B31D02D41F00EC6E2A /* UIElements */,
 				1B0FB8B81D02B272000F3DEF /* DataManager */,
 				1B0FB8B91D02B272000F3DEF /* Models */,
 				1B0FB8BA1D02B272000F3DEF /* UI */,
@@ -174,6 +184,7 @@
 		1B0FB8BA1D02B272000F3DEF /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				1B1084B71D02D47C00EC6E2A /* ManagerObjects */,
 				1B0FB8C11D02B53C000F3DEF /* CoreData */,
 				1B0FB8C21D02B53C000F3DEF /* MTCoursesViewController */,
 				1B0FB8C31D02B53C000F3DEF /* MTStudentsViewController */,
@@ -221,6 +232,27 @@
 			);
 			path = MTUniversityiesViewController;
 			sourceTree = "<group>";
+		};
+		1B1084B31D02D41F00EC6E2A /* UIElements */ = {
+			isa = PBXGroup;
+			children = (
+				1B1084B41D02D41F00EC6E2A /* TextField.h */,
+				1B1084B51D02D41F00EC6E2A /* TextField.m */,
+			);
+			path = UIElements;
+			sourceTree = "<group>";
+		};
+		1B1084B71D02D47C00EC6E2A /* ManagerObjects */ = {
+			isa = PBXGroup;
+			children = (
+				1B1084B81D02D4A300EC6E2A /* ManagerObjectsViewController.h */,
+				1B1084B91D02D4A300EC6E2A /* ManagerObjectsViewController.m */,
+				1B1084BB1D02D63400EC6E2A /* MTAddUniversityViewController.h */,
+				1B1084BC1D02D63400EC6E2A /* MTAddUniversityViewController.m */,
+			);
+			name = ManagerObjects;
+			path = Sourse/UI/ManagerObjects;
+			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
@@ -296,16 +328,19 @@
 				1B0FB8C01D02B2AE000F3DEF /* MTDataManager.m in Sources */,
 				1B0FB8C81D02B56D000F3DEF /* MTCoreDataViewController.m in Sources */,
 				1B0FB9031D02CBD4000F3DEF /* MTStudent.m in Sources */,
+				1B1084BD1D02D63400EC6E2A /* MTAddUniversityViewController.m in Sources */,
 				1B0FB9051D02CBD4000F3DEF /* MTTeacher.m in Sources */,
 				1B0FB8FE1D02CBD4000F3DEF /* MTParentObject+CoreDataProperties.m in Sources */,
 				1B0FB89C1D02B1ED000F3DEF /* AppDelegate.m in Sources */,
 				1B0FB8A51D02B1ED000F3DEF /* GuruCrafter.xcdatamodeld in Sources */,
 				1B0FB9021D02CBD4000F3DEF /* MTStudent+CoreDataProperties.m in Sources */,
 				1B0FB9011D02CBD4000F3DEF /* MTCourse.m in Sources */,
+				1B1084BA1D02D4A300EC6E2A /* ManagerObjectsViewController.m in Sources */,
 				1B0FB9041D02CBD4000F3DEF /* MTTeacher+CoreDataProperties.m in Sources */,
 				1B0FB8FF1D02CBD4000F3DEF /* MTParentObject.m in Sources */,
 				1B0FB8991D02B1ED000F3DEF /* main.m in Sources */,
 				1B0FB9071D02CBD4000F3DEF /* MTUniversity.m in Sources */,
+				1B1084B61D02D41F00EC6E2A /* TextField.m in Sources */,
 				1B0FB9001D02CBD4000F3DEF /* MTCourse+CoreDataProperties.m in Sources */,
 				1B0FB9061D02CBD4000F3DEF /* MTUniversity+CoreDataProperties.m in Sources */,
 				1B0FB8CB1D02B79C000F3DEF /* MTUniversitiesViewController.m in Sources */,
@@ -459,6 +494,7 @@
 				1B0FB8B01D02B1ED000F3DEF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="10171" systemVersion="15F34" minimumToolsVersion="Automatic">
+    <entity name="MTCourse" representedClassName="MTCourse" parentEntity="MTParentObject" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="sector" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="subject" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="students" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="MTStudent" inverseName="corses" inverseEntity="MTStudent" syncable="YES"/>
+        <relationship name="techers" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="MTTeacher" inverseName="courses" inverseEntity="MTTeacher" syncable="YES"/>
+        <relationship name="university" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="MTUniversity" inverseName="courses" inverseEntity="MTUniversity" syncable="YES"/>
+    </entity>
+    <entity name="MTParentObject" representedClassName="MTParentObject" syncable="YES"/>
+    <entity name="MTStudent" representedClassName="MTStudent" parentEntity="MTParentObject" syncable="YES">
+        <attribute name="email" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="surname" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="corses" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="MTCourse" inverseName="students" inverseEntity="MTCourse" syncable="YES"/>
+        <relationship name="university" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="MTUniversity" inverseName="students" inverseEntity="MTUniversity" syncable="YES"/>
+    </entity>
+    <entity name="MTTeacher" representedClassName="MTTeacher" parentEntity="MTParentObject" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="subject" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="surname" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="courses" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="MTCourse" inverseName="techers" inverseEntity="MTCourse" syncable="YES"/>
+        <relationship name="university" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="MTUniversity" inverseName="teachers" inverseEntity="MTUniversity" syncable="YES"/>
+    </entity>
+    <entity name="MTUniversity" representedClassName="MTUniversity" parentEntity="MTParentObject" syncable="YES">
+        <attribute name="foundingDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="location" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="courses" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="MTCourse" inverseName="university" inverseEntity="MTCourse" syncable="YES"/>
+        <relationship name="students" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="MTStudent" inverseName="university" inverseEntity="MTStudent" syncable="YES"/>
+        <relationship name="teachers" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="MTTeacher" inverseName="university" inverseEntity="MTTeacher" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="MTCourse" positionX="-6660" positionY="-36" width="128" height="135"/>
+        <element name="MTParentObject" positionX="-6653" positionY="-549" width="128" height="45"/>
+        <element name="MTStudent" positionX="-5904" positionY="-192" width="128" height="120"/>
+        <element name="MTTeacher" positionX="-6473" positionY="-325" width="128" height="118"/>
+        <element name="MTUniversity" positionX="-7101" positionY="-234" width="128" height="133"/>
+    </elements>
+</model>

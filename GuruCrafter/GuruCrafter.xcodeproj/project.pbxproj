@@ -1,0 +1,327 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1B0FB8991D02B1ED000F3DEF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B0FB8981D02B1ED000F3DEF /* main.m */; };
+		1B0FB89C1D02B1ED000F3DEF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B0FB89B1D02B1ED000F3DEF /* AppDelegate.m */; };
+		1B0FB89F1D02B1ED000F3DEF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B0FB89E1D02B1ED000F3DEF /* ViewController.m */; };
+		1B0FB8A21D02B1ED000F3DEF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B0FB8A01D02B1ED000F3DEF /* Main.storyboard */; };
+		1B0FB8A51D02B1ED000F3DEF /* GuruCrafter.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1B0FB8A31D02B1ED000F3DEF /* GuruCrafter.xcdatamodeld */; };
+		1B0FB8A71D02B1ED000F3DEF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B0FB8A61D02B1ED000F3DEF /* Assets.xcassets */; };
+		1B0FB8AA1D02B1ED000F3DEF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B0FB8A81D02B1ED000F3DEF /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1B0FB8941D02B1ED000F3DEF /* GuruCrafter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GuruCrafter.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1B0FB8981D02B1ED000F3DEF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		1B0FB89A1D02B1ED000F3DEF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		1B0FB89B1D02B1ED000F3DEF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		1B0FB89D1D02B1ED000F3DEF /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		1B0FB89E1D02B1ED000F3DEF /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		1B0FB8A11D02B1ED000F3DEF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1B0FB8A41D02B1ED000F3DEF /* GuruCrafter.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GuruCrafter.xcdatamodel; sourceTree = "<group>"; };
+		1B0FB8A61D02B1ED000F3DEF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1B0FB8A91D02B1ED000F3DEF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		1B0FB8AB1D02B1ED000F3DEF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1B0FB8911D02B1ED000F3DEF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1B0FB88B1D02B1ED000F3DEF = {
+			isa = PBXGroup;
+			children = (
+				1B0FB8961D02B1ED000F3DEF /* GuruCrafter */,
+				1B0FB8951D02B1ED000F3DEF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1B0FB8951D02B1ED000F3DEF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1B0FB8941D02B1ED000F3DEF /* GuruCrafter.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1B0FB8961D02B1ED000F3DEF /* GuruCrafter */ = {
+			isa = PBXGroup;
+			children = (
+				1B0FB89A1D02B1ED000F3DEF /* AppDelegate.h */,
+				1B0FB89B1D02B1ED000F3DEF /* AppDelegate.m */,
+				1B0FB89D1D02B1ED000F3DEF /* ViewController.h */,
+				1B0FB89E1D02B1ED000F3DEF /* ViewController.m */,
+				1B0FB8A01D02B1ED000F3DEF /* Main.storyboard */,
+				1B0FB8A61D02B1ED000F3DEF /* Assets.xcassets */,
+				1B0FB8A81D02B1ED000F3DEF /* LaunchScreen.storyboard */,
+				1B0FB8AB1D02B1ED000F3DEF /* Info.plist */,
+				1B0FB8A31D02B1ED000F3DEF /* GuruCrafter.xcdatamodeld */,
+				1B0FB8971D02B1ED000F3DEF /* Supporting Files */,
+			);
+			path = GuruCrafter;
+			sourceTree = "<group>";
+		};
+		1B0FB8971D02B1ED000F3DEF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1B0FB8981D02B1ED000F3DEF /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1B0FB8931D02B1ED000F3DEF /* GuruCrafter */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1B0FB8AE1D02B1ED000F3DEF /* Build configuration list for PBXNativeTarget "GuruCrafter" */;
+			buildPhases = (
+				1B0FB8901D02B1ED000F3DEF /* Sources */,
+				1B0FB8911D02B1ED000F3DEF /* Frameworks */,
+				1B0FB8921D02B1ED000F3DEF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GuruCrafter;
+			productName = GuruCrafter;
+			productReference = 1B0FB8941D02B1ED000F3DEF /* GuruCrafter.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1B0FB88C1D02B1ED000F3DEF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = MTDev;
+				TargetAttributes = {
+					1B0FB8931D02B1ED000F3DEF = {
+						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = Z662YN573K;
+					};
+				};
+			};
+			buildConfigurationList = 1B0FB88F1D02B1ED000F3DEF /* Build configuration list for PBXProject "GuruCrafter" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1B0FB88B1D02B1ED000F3DEF;
+			productRefGroup = 1B0FB8951D02B1ED000F3DEF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1B0FB8931D02B1ED000F3DEF /* GuruCrafter */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1B0FB8921D02B1ED000F3DEF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1B0FB8AA1D02B1ED000F3DEF /* LaunchScreen.storyboard in Resources */,
+				1B0FB8A71D02B1ED000F3DEF /* Assets.xcassets in Resources */,
+				1B0FB8A21D02B1ED000F3DEF /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1B0FB8901D02B1ED000F3DEF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1B0FB89F1D02B1ED000F3DEF /* ViewController.m in Sources */,
+				1B0FB89C1D02B1ED000F3DEF /* AppDelegate.m in Sources */,
+				1B0FB8A51D02B1ED000F3DEF /* GuruCrafter.xcdatamodeld in Sources */,
+				1B0FB8991D02B1ED000F3DEF /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		1B0FB8A01D02B1ED000F3DEF /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1B0FB8A11D02B1ED000F3DEF /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		1B0FB8A81D02B1ED000F3DEF /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1B0FB8A91D02B1ED000F3DEF /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1B0FB8AC1D02B1ED000F3DEF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1B0FB8AD1D02B1ED000F3DEF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1B0FB8AF1D02B1ED000F3DEF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = GuruCrafter/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = MT.GuruCrafter;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		1B0FB8B01D02B1ED000F3DEF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = GuruCrafter/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = MT.GuruCrafter;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1B0FB88F1D02B1ED000F3DEF /* Build configuration list for PBXProject "GuruCrafter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1B0FB8AC1D02B1ED000F3DEF /* Debug */,
+				1B0FB8AD1D02B1ED000F3DEF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1B0FB8AE1D02B1ED000F3DEF /* Build configuration list for PBXNativeTarget "GuruCrafter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1B0FB8AF1D02B1ED000F3DEF /* Debug */,
+				1B0FB8B01D02B1ED000F3DEF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		1B0FB8A31D02B1ED000F3DEF /* GuruCrafter.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				1B0FB8A41D02B1ED000F3DEF /* GuruCrafter.xcdatamodel */,
+			);
+			currentVersion = 1B0FB8A41D02B1ED000F3DEF /* GuruCrafter.xcdatamodel */;
+			path = GuruCrafter.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 1B0FB88C1D02B1ED000F3DEF /* Project object */;
+}

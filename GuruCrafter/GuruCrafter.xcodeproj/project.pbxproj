@@ -9,11 +9,23 @@
 /* Begin PBXBuildFile section */
 		1B0FB8991D02B1ED000F3DEF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B0FB8981D02B1ED000F3DEF /* main.m */; };
 		1B0FB89C1D02B1ED000F3DEF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B0FB89B1D02B1ED000F3DEF /* AppDelegate.m */; };
-		1B0FB89F1D02B1ED000F3DEF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B0FB89E1D02B1ED000F3DEF /* ViewController.m */; };
-		1B0FB8A21D02B1ED000F3DEF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B0FB8A01D02B1ED000F3DEF /* Main.storyboard */; };
 		1B0FB8A51D02B1ED000F3DEF /* GuruCrafter.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1B0FB8A31D02B1ED000F3DEF /* GuruCrafter.xcdatamodeld */; };
-		1B0FB8A71D02B1ED000F3DEF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B0FB8A61D02B1ED000F3DEF /* Assets.xcassets */; };
-		1B0FB8AA1D02B1ED000F3DEF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B0FB8A81D02B1ED000F3DEF /* LaunchScreen.storyboard */; };
+		1B0FB8BB1D02B272000F3DEF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B0FB8B21D02B272000F3DEF /* Assets.xcassets */; };
+		1B0FB8BC1D02B272000F3DEF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B0FB8B31D02B272000F3DEF /* LaunchScreen.storyboard */; };
+		1B0FB8BD1D02B272000F3DEF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B0FB8B51D02B272000F3DEF /* Main.storyboard */; };
+		1B0FB8C01D02B2AE000F3DEF /* MTDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B0FB8BF1D02B2AE000F3DEF /* MTDataManager.m */; };
+		1B0FB8C81D02B56D000F3DEF /* MTCoreDataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B0FB8C71D02B56D000F3DEF /* MTCoreDataViewController.m */; };
+		1B0FB8CB1D02B79C000F3DEF /* MTUniversitiesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B0FB8CA1D02B79C000F3DEF /* MTUniversitiesViewController.m */; };
+		1B0FB8FE1D02CBD4000F3DEF /* MTParentObject+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B0FB8EB1D02CBD4000F3DEF /* MTParentObject+CoreDataProperties.m */; };
+		1B0FB8FF1D02CBD4000F3DEF /* MTParentObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B0FB8ED1D02CBD4000F3DEF /* MTParentObject.m */; };
+		1B0FB9001D02CBD4000F3DEF /* MTCourse+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B0FB8EF1D02CBD4000F3DEF /* MTCourse+CoreDataProperties.m */; };
+		1B0FB9011D02CBD4000F3DEF /* MTCourse.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B0FB8F11D02CBD4000F3DEF /* MTCourse.m */; };
+		1B0FB9021D02CBD4000F3DEF /* MTStudent+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B0FB8F31D02CBD4000F3DEF /* MTStudent+CoreDataProperties.m */; };
+		1B0FB9031D02CBD4000F3DEF /* MTStudent.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B0FB8F51D02CBD4000F3DEF /* MTStudent.m */; };
+		1B0FB9041D02CBD4000F3DEF /* MTTeacher+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B0FB8F71D02CBD4000F3DEF /* MTTeacher+CoreDataProperties.m */; };
+		1B0FB9051D02CBD4000F3DEF /* MTTeacher.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B0FB8F91D02CBD4000F3DEF /* MTTeacher.m */; };
+		1B0FB9061D02CBD4000F3DEF /* MTUniversity+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B0FB8FB1D02CBD4000F3DEF /* MTUniversity+CoreDataProperties.m */; };
+		1B0FB9071D02CBD4000F3DEF /* MTUniversity.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B0FB8FD1D02CBD4000F3DEF /* MTUniversity.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,13 +33,37 @@
 		1B0FB8981D02B1ED000F3DEF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		1B0FB89A1D02B1ED000F3DEF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		1B0FB89B1D02B1ED000F3DEF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		1B0FB89D1D02B1ED000F3DEF /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		1B0FB89E1D02B1ED000F3DEF /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		1B0FB8A11D02B1ED000F3DEF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1B0FB8A41D02B1ED000F3DEF /* GuruCrafter.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GuruCrafter.xcdatamodel; sourceTree = "<group>"; };
-		1B0FB8A61D02B1ED000F3DEF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		1B0FB8A91D02B1ED000F3DEF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1B0FB8AB1D02B1ED000F3DEF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1B0FB8B21D02B272000F3DEF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1B0FB8B41D02B272000F3DEF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		1B0FB8B61D02B272000F3DEF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1B0FB8BE1D02B2AE000F3DEF /* MTDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTDataManager.h; sourceTree = "<group>"; };
+		1B0FB8BF1D02B2AE000F3DEF /* MTDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTDataManager.m; sourceTree = "<group>"; };
+		1B0FB8C61D02B56D000F3DEF /* MTCoreDataViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTCoreDataViewController.h; sourceTree = "<group>"; };
+		1B0FB8C71D02B56D000F3DEF /* MTCoreDataViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTCoreDataViewController.m; sourceTree = "<group>"; };
+		1B0FB8C91D02B79C000F3DEF /* MTUniversitiesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTUniversitiesViewController.h; sourceTree = "<group>"; };
+		1B0FB8CA1D02B79C000F3DEF /* MTUniversitiesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTUniversitiesViewController.m; sourceTree = "<group>"; };
+		1B0FB8EA1D02CBD4000F3DEF /* MTParentObject+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MTParentObject+CoreDataProperties.h"; sourceTree = "<group>"; };
+		1B0FB8EB1D02CBD4000F3DEF /* MTParentObject+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MTParentObject+CoreDataProperties.m"; sourceTree = "<group>"; };
+		1B0FB8EC1D02CBD4000F3DEF /* MTParentObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTParentObject.h; sourceTree = "<group>"; };
+		1B0FB8ED1D02CBD4000F3DEF /* MTParentObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTParentObject.m; sourceTree = "<group>"; };
+		1B0FB8EE1D02CBD4000F3DEF /* MTCourse+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MTCourse+CoreDataProperties.h"; sourceTree = "<group>"; };
+		1B0FB8EF1D02CBD4000F3DEF /* MTCourse+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MTCourse+CoreDataProperties.m"; sourceTree = "<group>"; };
+		1B0FB8F01D02CBD4000F3DEF /* MTCourse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTCourse.h; sourceTree = "<group>"; };
+		1B0FB8F11D02CBD4000F3DEF /* MTCourse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTCourse.m; sourceTree = "<group>"; };
+		1B0FB8F21D02CBD4000F3DEF /* MTStudent+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MTStudent+CoreDataProperties.h"; sourceTree = "<group>"; };
+		1B0FB8F31D02CBD4000F3DEF /* MTStudent+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MTStudent+CoreDataProperties.m"; sourceTree = "<group>"; };
+		1B0FB8F41D02CBD4000F3DEF /* MTStudent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTStudent.h; sourceTree = "<group>"; };
+		1B0FB8F51D02CBD4000F3DEF /* MTStudent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTStudent.m; sourceTree = "<group>"; };
+		1B0FB8F61D02CBD4000F3DEF /* MTTeacher+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MTTeacher+CoreDataProperties.h"; sourceTree = "<group>"; };
+		1B0FB8F71D02CBD4000F3DEF /* MTTeacher+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MTTeacher+CoreDataProperties.m"; sourceTree = "<group>"; };
+		1B0FB8F81D02CBD4000F3DEF /* MTTeacher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTTeacher.h; sourceTree = "<group>"; };
+		1B0FB8F91D02CBD4000F3DEF /* MTTeacher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTTeacher.m; sourceTree = "<group>"; };
+		1B0FB8FA1D02CBD4000F3DEF /* MTUniversity+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MTUniversity+CoreDataProperties.h"; sourceTree = "<group>"; };
+		1B0FB8FB1D02CBD4000F3DEF /* MTUniversity+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MTUniversity+CoreDataProperties.m"; sourceTree = "<group>"; };
+		1B0FB8FC1D02CBD4000F3DEF /* MTUniversity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTUniversity.h; sourceTree = "<group>"; };
+		1B0FB8FD1D02CBD4000F3DEF /* MTUniversity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTUniversity.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +80,8 @@
 		1B0FB88B1D02B1ED000F3DEF = {
 			isa = PBXGroup;
 			children = (
+				1B0FB8B11D02B272000F3DEF /* Resourse */,
+				1B0FB8B71D02B272000F3DEF /* Sourse */,
 				1B0FB8961D02B1ED000F3DEF /* GuruCrafter */,
 				1B0FB8951D02B1ED000F3DEF /* Products */,
 			);
@@ -62,11 +100,6 @@
 			children = (
 				1B0FB89A1D02B1ED000F3DEF /* AppDelegate.h */,
 				1B0FB89B1D02B1ED000F3DEF /* AppDelegate.m */,
-				1B0FB89D1D02B1ED000F3DEF /* ViewController.h */,
-				1B0FB89E1D02B1ED000F3DEF /* ViewController.m */,
-				1B0FB8A01D02B1ED000F3DEF /* Main.storyboard */,
-				1B0FB8A61D02B1ED000F3DEF /* Assets.xcassets */,
-				1B0FB8A81D02B1ED000F3DEF /* LaunchScreen.storyboard */,
 				1B0FB8AB1D02B1ED000F3DEF /* Info.plist */,
 				1B0FB8A31D02B1ED000F3DEF /* GuruCrafter.xcdatamodeld */,
 				1B0FB8971D02B1ED000F3DEF /* Supporting Files */,
@@ -80,6 +113,113 @@
 				1B0FB8981D02B1ED000F3DEF /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1B0FB8B11D02B272000F3DEF /* Resourse */ = {
+			isa = PBXGroup;
+			children = (
+				1B0FB8B21D02B272000F3DEF /* Assets.xcassets */,
+				1B0FB8B31D02B272000F3DEF /* LaunchScreen.storyboard */,
+				1B0FB8B51D02B272000F3DEF /* Main.storyboard */,
+			);
+			path = Resourse;
+			sourceTree = "<group>";
+		};
+		1B0FB8B71D02B272000F3DEF /* Sourse */ = {
+			isa = PBXGroup;
+			children = (
+				1B0FB8B81D02B272000F3DEF /* DataManager */,
+				1B0FB8B91D02B272000F3DEF /* Models */,
+				1B0FB8BA1D02B272000F3DEF /* UI */,
+			);
+			path = Sourse;
+			sourceTree = "<group>";
+		};
+		1B0FB8B81D02B272000F3DEF /* DataManager */ = {
+			isa = PBXGroup;
+			children = (
+				1B0FB8BE1D02B2AE000F3DEF /* MTDataManager.h */,
+				1B0FB8BF1D02B2AE000F3DEF /* MTDataManager.m */,
+			);
+			path = DataManager;
+			sourceTree = "<group>";
+		};
+		1B0FB8B91D02B272000F3DEF /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1B0FB8EA1D02CBD4000F3DEF /* MTParentObject+CoreDataProperties.h */,
+				1B0FB8EB1D02CBD4000F3DEF /* MTParentObject+CoreDataProperties.m */,
+				1B0FB8EC1D02CBD4000F3DEF /* MTParentObject.h */,
+				1B0FB8ED1D02CBD4000F3DEF /* MTParentObject.m */,
+				1B0FB8EE1D02CBD4000F3DEF /* MTCourse+CoreDataProperties.h */,
+				1B0FB8EF1D02CBD4000F3DEF /* MTCourse+CoreDataProperties.m */,
+				1B0FB8F01D02CBD4000F3DEF /* MTCourse.h */,
+				1B0FB8F11D02CBD4000F3DEF /* MTCourse.m */,
+				1B0FB8F21D02CBD4000F3DEF /* MTStudent+CoreDataProperties.h */,
+				1B0FB8F31D02CBD4000F3DEF /* MTStudent+CoreDataProperties.m */,
+				1B0FB8F41D02CBD4000F3DEF /* MTStudent.h */,
+				1B0FB8F51D02CBD4000F3DEF /* MTStudent.m */,
+				1B0FB8F61D02CBD4000F3DEF /* MTTeacher+CoreDataProperties.h */,
+				1B0FB8F71D02CBD4000F3DEF /* MTTeacher+CoreDataProperties.m */,
+				1B0FB8F81D02CBD4000F3DEF /* MTTeacher.h */,
+				1B0FB8F91D02CBD4000F3DEF /* MTTeacher.m */,
+				1B0FB8FA1D02CBD4000F3DEF /* MTUniversity+CoreDataProperties.h */,
+				1B0FB8FB1D02CBD4000F3DEF /* MTUniversity+CoreDataProperties.m */,
+				1B0FB8FC1D02CBD4000F3DEF /* MTUniversity.h */,
+				1B0FB8FD1D02CBD4000F3DEF /* MTUniversity.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		1B0FB8BA1D02B272000F3DEF /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				1B0FB8C11D02B53C000F3DEF /* CoreData */,
+				1B0FB8C21D02B53C000F3DEF /* MTCoursesViewController */,
+				1B0FB8C31D02B53C000F3DEF /* MTStudentsViewController */,
+				1B0FB8C41D02B53C000F3DEF /* MTTeacherViewController */,
+				1B0FB8C51D02B53C000F3DEF /* MTUniversityiesViewController */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		1B0FB8C11D02B53C000F3DEF /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				1B0FB8C61D02B56D000F3DEF /* MTCoreDataViewController.h */,
+				1B0FB8C71D02B56D000F3DEF /* MTCoreDataViewController.m */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		1B0FB8C21D02B53C000F3DEF /* MTCoursesViewController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = MTCoursesViewController;
+			sourceTree = "<group>";
+		};
+		1B0FB8C31D02B53C000F3DEF /* MTStudentsViewController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = MTStudentsViewController;
+			sourceTree = "<group>";
+		};
+		1B0FB8C41D02B53C000F3DEF /* MTTeacherViewController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = MTTeacherViewController;
+			sourceTree = "<group>";
+		};
+		1B0FB8C51D02B53C000F3DEF /* MTUniversityiesViewController */ = {
+			isa = PBXGroup;
+			children = (
+				1B0FB8C91D02B79C000F3DEF /* MTUniversitiesViewController.h */,
+				1B0FB8CA1D02B79C000F3DEF /* MTUniversitiesViewController.m */,
+			);
+			path = MTUniversityiesViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,9 +280,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1B0FB8AA1D02B1ED000F3DEF /* LaunchScreen.storyboard in Resources */,
-				1B0FB8A71D02B1ED000F3DEF /* Assets.xcassets in Resources */,
-				1B0FB8A21D02B1ED000F3DEF /* Main.storyboard in Resources */,
+				1B0FB8BB1D02B272000F3DEF /* Assets.xcassets in Resources */,
+				1B0FB8BD1D02B272000F3DEF /* Main.storyboard in Resources */,
+				1B0FB8BC1D02B272000F3DEF /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -153,30 +293,42 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1B0FB89F1D02B1ED000F3DEF /* ViewController.m in Sources */,
+				1B0FB8C01D02B2AE000F3DEF /* MTDataManager.m in Sources */,
+				1B0FB8C81D02B56D000F3DEF /* MTCoreDataViewController.m in Sources */,
+				1B0FB9031D02CBD4000F3DEF /* MTStudent.m in Sources */,
+				1B0FB9051D02CBD4000F3DEF /* MTTeacher.m in Sources */,
+				1B0FB8FE1D02CBD4000F3DEF /* MTParentObject+CoreDataProperties.m in Sources */,
 				1B0FB89C1D02B1ED000F3DEF /* AppDelegate.m in Sources */,
 				1B0FB8A51D02B1ED000F3DEF /* GuruCrafter.xcdatamodeld in Sources */,
+				1B0FB9021D02CBD4000F3DEF /* MTStudent+CoreDataProperties.m in Sources */,
+				1B0FB9011D02CBD4000F3DEF /* MTCourse.m in Sources */,
+				1B0FB9041D02CBD4000F3DEF /* MTTeacher+CoreDataProperties.m in Sources */,
+				1B0FB8FF1D02CBD4000F3DEF /* MTParentObject.m in Sources */,
 				1B0FB8991D02B1ED000F3DEF /* main.m in Sources */,
+				1B0FB9071D02CBD4000F3DEF /* MTUniversity.m in Sources */,
+				1B0FB9001D02CBD4000F3DEF /* MTCourse+CoreDataProperties.m in Sources */,
+				1B0FB9061D02CBD4000F3DEF /* MTUniversity+CoreDataProperties.m in Sources */,
+				1B0FB8CB1D02B79C000F3DEF /* MTUniversitiesViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		1B0FB8A01D02B1ED000F3DEF /* Main.storyboard */ = {
+		1B0FB8B31D02B272000F3DEF /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				1B0FB8A11D02B1ED000F3DEF /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		1B0FB8A81D02B1ED000F3DEF /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				1B0FB8A91D02B1ED000F3DEF /* Base */,
+				1B0FB8B41D02B272000F3DEF /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		1B0FB8B51D02B272000F3DEF /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1B0FB8B61D02B272000F3DEF /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

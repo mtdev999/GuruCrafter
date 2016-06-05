@@ -1,35 +1,33 @@
 //
-//  MTUniversityInfoViewController.m
+//  MTCourseInfoViewController.m
 //  GuruCrafter
 //
 //  Created by Mark Tezza on 05/06/16.
 //  Copyright © 2016 MTDev. All rights reserved.
 //
 
-#import "MTUniversityInfoViewController.h"
-
-#import "MTChoseCoursesViewController.h"
+#import "MTCourseInfoViewController.h"
 
 #import "MTUniversity.h"
 #import "MTCourse.h"
-#import "MTTeacher.h"
 #import "MTStudent.h"
+#import "MTDataManager.h"
 
 #import "TextField.h"
 
-@interface MTUniversityInfoViewController () <UITextFieldDelegate>
+@interface MTCourseInfoViewController () <UITextFieldDelegate>
 
 @end
 
-@implementation MTUniversityInfoViewController
+@implementation MTCourseInfoViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.navigationItem.title = @"University Info";
+    self.navigationItem.title = @"Course Info";
     
     UIBarButtonItem *edit = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemEdit
-                                                                                target:self
-                                                                                action:@selector(actionEdit:)];
+                                                                          target:self
+                                                                          action:@selector(actionEdit:)];
     self.navigationItem.rightBarButtonItem = edit;
 }
 
@@ -54,7 +52,7 @@
 #pragma mark UITableViewDataSource
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return section == 0 ? 3 : self.university.courses.count + 1;
+    return section == 0 ? 3 : self.course.students.count + 1;
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -73,16 +71,17 @@
         if (indexPath.row == 0) {
             cell.textLabel.text = @"Name:";
             self.firstField = field;
-            self.firstField.text = self.university.name;
+            self.firstField.text = self.course.name;
             
         } else if (indexPath.row == 1) {
-            cell.textLabel.text = @"Location:";
+            cell.textLabel.text = @"Subject:";
             self.secondField = field;
-            self.secondField.text = self.university.location;
+            self.secondField.text = self.course.subject;
             
         } else if (indexPath.row == 2) {
-            cell.textLabel.text = @"Category:";
+            cell.textLabel.text = @"Sector:";
             self.thridField = field;
+            self.thridField.text = self.course.sector;
         }
         
         [cell addSubview:field];
@@ -93,22 +92,22 @@
             cell.textLabel.font = [UIFont systemFontOfSize:12];
             cell.textLabel.text = @"ADD COURSE";
         } else {
-            MTUniversity *univer = self.university;
-            NSArray *array = [univer.courses allObjects];
-            MTCourse *course = [array objectAtIndex:indexPath.row - 1];
-            cell.textLabel.text = [NSString stringWithFormat:@"%@ ", course.name];
+            MTCourse *course = self.course;
+            NSArray *array = [course.students allObjects];
+            MTStudent *student = [array objectAtIndex:indexPath.row - 1];
+            cell.textLabel.text = [NSString stringWithFormat:@"%@ %@", student.name, student.surname];
         }
     }
 }
 
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
-        NSArray *tempArray = [self.university.courses allObjects];
+        NSArray *tempArray = [self.course.students allObjects];
         NSMutableArray *tempMutableArray = [NSMutableArray arrayWithArray:tempArray];
         
         
         [tempMutableArray removeObject:[tempArray objectAtIndex:indexPath.row - 1]];
-        [self.university setCourses:[NSSet setWithArray:tempMutableArray]];
+        [self.course setStudents:[NSSet setWithArray:tempMutableArray]];
         
         [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
     }
@@ -120,15 +119,15 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
-    if (indexPath.row == 0) {
-        MTChoseCoursesViewController *vc = [MTChoseCoursesViewController new];
-        vc.university = self.university;
-        UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:vc];
-        navController.modalPresentationStyle = UIModalPresentationPageSheet;
-        [self presentViewController:navController animated:YES completion:nil];
-    } else {
-        
-    }
+//    if (indexPath.row == 0) {
+//        MTChoseCoursesViewController *vc = [MTChoseCoursesViewController new];
+//        vc.university = self.university;
+//        UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:vc];
+//        navController.modalPresentationStyle = UIModalPresentationPageSheet;
+//        [self presentViewController:navController animated:YES completion:nil];
+//    } else {
+//        
+//    }
 }
 
 #pragma mark -

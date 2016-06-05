@@ -62,6 +62,8 @@
     }
     
     NSManagedObject *object = [[self fetchedResultsController] objectAtIndexPath:indexPath];
+    NSLog(@"object description: %@", object.description);
+    
     [self configureCell:cell withObject:object indexPath:indexPath];
     
     return cell;

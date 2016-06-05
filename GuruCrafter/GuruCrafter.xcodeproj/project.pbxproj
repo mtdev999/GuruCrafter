@@ -27,8 +27,11 @@
 		1B0FB8411D01D5FD000F3DEF /* MTAddStudentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B0FB8401D01D5FD000F3DEF /* MTAddStudentViewController.m */; };
 		1B0FB8441D01E3CA000F3DEF /* MTAddCourseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B0FB8431D01E3CA000F3DEF /* MTAddCourseViewController.m */; };
 		1B0FB8471D01E3D7000F3DEF /* MTAddTeacherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B0FB8461D01E3D7000F3DEF /* MTAddTeacherViewController.m */; };
-		1B10850C1D04190400EC6E2A /* MTUniversityInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B10850B1D04190400EC6E2A /* MTUniversityInfoViewController.m */; };
 		1B1085101D04277200EC6E2A /* MTChoseCoursesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B10850F1D04277200EC6E2A /* MTChoseCoursesViewController.m */; };
+		1B10851D1D0454FD00EC6E2A /* MTUniversityInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B10851C1D0454FD00EC6E2A /* MTUniversityInfoViewController.m */; };
+		1B1085241D04553000EC6E2A /* MTCourseInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B10851F1D04553000EC6E2A /* MTCourseInfoViewController.m */; };
+		1B1085251D04553000EC6E2A /* MTStudentInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B1085211D04553000EC6E2A /* MTStudentInfoViewController.m */; };
+		1B1085261D04553000EC6E2A /* MTTeacherInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B1085231D04553000EC6E2A /* MTTeacherInfoViewController.m */; };
 		1BC59F601CFADFC300FC5D63 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BC59F5F1CFADFC300FC5D63 /* main.m */; };
 		1BC59F631CFADFC300FC5D63 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BC59F621CFADFC300FC5D63 /* AppDelegate.m */; };
 		1BC59F6C1CFADFC300FC5D63 /* GuruCrafter.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1BC59F6A1CFADFC300FC5D63 /* GuruCrafter.xcdatamodeld */; };
@@ -80,10 +83,16 @@
 		1B0FB8431D01E3CA000F3DEF /* MTAddCourseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTAddCourseViewController.m; sourceTree = "<group>"; };
 		1B0FB8451D01E3D7000F3DEF /* MTAddTeacherViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTAddTeacherViewController.h; sourceTree = "<group>"; };
 		1B0FB8461D01E3D7000F3DEF /* MTAddTeacherViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTAddTeacherViewController.m; sourceTree = "<group>"; };
-		1B10850A1D04190400EC6E2A /* MTUniversityInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTUniversityInfoViewController.h; sourceTree = "<group>"; };
-		1B10850B1D04190400EC6E2A /* MTUniversityInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTUniversityInfoViewController.m; sourceTree = "<group>"; };
 		1B10850E1D04277200EC6E2A /* MTChoseCoursesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTChoseCoursesViewController.h; sourceTree = "<group>"; };
 		1B10850F1D04277200EC6E2A /* MTChoseCoursesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTChoseCoursesViewController.m; sourceTree = "<group>"; };
+		1B10851B1D0454FD00EC6E2A /* MTUniversityInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTUniversityInfoViewController.h; sourceTree = "<group>"; };
+		1B10851C1D0454FD00EC6E2A /* MTUniversityInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTUniversityInfoViewController.m; sourceTree = "<group>"; };
+		1B10851E1D04553000EC6E2A /* MTCourseInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTCourseInfoViewController.h; sourceTree = "<group>"; };
+		1B10851F1D04553000EC6E2A /* MTCourseInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTCourseInfoViewController.m; sourceTree = "<group>"; };
+		1B1085201D04553000EC6E2A /* MTStudentInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTStudentInfoViewController.h; sourceTree = "<group>"; };
+		1B1085211D04553000EC6E2A /* MTStudentInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTStudentInfoViewController.m; sourceTree = "<group>"; };
+		1B1085221D04553000EC6E2A /* MTTeacherInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTTeacherInfoViewController.h; sourceTree = "<group>"; };
+		1B1085231D04553000EC6E2A /* MTTeacherInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTTeacherInfoViewController.m; sourceTree = "<group>"; };
 		1BC59F5B1CFADFC300FC5D63 /* GuruCrafter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GuruCrafter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BC59F5F1CFADFC300FC5D63 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		1BC59F611CFADFC300FC5D63 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -131,7 +140,6 @@
 		1B0FB8381D0198BE000F3DEF /* ManagerObjects */ = {
 			isa = PBXGroup;
 			children = (
-				1B10850D1D04274000EC6E2A /* ChoseObjects */,
 				1B0FB8391D0198FE000F3DEF /* MTManagerObjectsViewController.h */,
 				1B0FB83A1D0198FE000F3DEF /* MTManagerObjectsViewController.m */,
 				1B0FB83C1D01ABF5000F3DEF /* MTAddUniversityViewController.h */,
@@ -142,8 +150,8 @@
 				1B0FB8431D01E3CA000F3DEF /* MTAddCourseViewController.m */,
 				1B0FB8451D01E3D7000F3DEF /* MTAddTeacherViewController.h */,
 				1B0FB8461D01E3D7000F3DEF /* MTAddTeacherViewController.m */,
-				1B10850A1D04190400EC6E2A /* MTUniversityInfoViewController.h */,
-				1B10850B1D04190400EC6E2A /* MTUniversityInfoViewController.m */,
+				1B10851A1D0454FD00EC6E2A /* InfoObjects */,
+				1B10850D1D04274000EC6E2A /* ChoseObjects */,
 			);
 			path = ManagerObjects;
 			sourceTree = "<group>";
@@ -155,6 +163,21 @@
 				1B10850F1D04277200EC6E2A /* MTChoseCoursesViewController.m */,
 			);
 			path = ChoseObjects;
+			sourceTree = "<group>";
+		};
+		1B10851A1D0454FD00EC6E2A /* InfoObjects */ = {
+			isa = PBXGroup;
+			children = (
+				1B10851B1D0454FD00EC6E2A /* MTUniversityInfoViewController.h */,
+				1B10851C1D0454FD00EC6E2A /* MTUniversityInfoViewController.m */,
+				1B10851E1D04553000EC6E2A /* MTCourseInfoViewController.h */,
+				1B10851F1D04553000EC6E2A /* MTCourseInfoViewController.m */,
+				1B1085221D04553000EC6E2A /* MTTeacherInfoViewController.h */,
+				1B1085231D04553000EC6E2A /* MTTeacherInfoViewController.m */,
+				1B1085201D04553000EC6E2A /* MTStudentInfoViewController.h */,
+				1B1085211D04553000EC6E2A /* MTStudentInfoViewController.m */,
+			);
+			path = InfoObjects;
 			sourceTree = "<group>";
 		};
 		1BC59F521CFADFC300FC5D63 = {
@@ -257,9 +280,9 @@
 				1B0FB8381D0198BE000F3DEF /* ManagerObjects */,
 				1BC59FD31CFC6A8F00FC5D63 /* CoreData */,
 				1BC59FD91CFC6A8F00FC5D63 /* Universities */,
-				1BC59FDA1CFC6A8F00FC5D63 /* Students */,
 				1BC59FD61CFC6A8F00FC5D63 /* Courses */,
 				1B0FB8131D018E00000F3DEF /* Teachers */,
+				1BC59FDA1CFC6A8F00FC5D63 /* Students */,
 				1B0FB8061D002458000F3DEF /* UIElements */,
 			);
 			path = UI;
@@ -374,9 +397,10 @@
 			files = (
 				1B0FB8471D01E3D7000F3DEF /* MTAddTeacherViewController.m in Sources */,
 				1B0FB8441D01E3CA000F3DEF /* MTAddCourseViewController.m in Sources */,
-				1B10850C1D04190400EC6E2A /* MTUniversityInfoViewController.m in Sources */,
 				1B0FB8321D0190C1000F3DEF /* MTUniversity.m in Sources */,
 				1BC59F871CFAE08800FC5D63 /* MTDataManager.m in Sources */,
+				1B1085261D04553000EC6E2A /* MTTeacherInfoViewController.m in Sources */,
+				1B10851D1D0454FD00EC6E2A /* MTUniversityInfoViewController.m in Sources */,
 				1B0FB8091D002463000F3DEF /* TextField.m in Sources */,
 				1B0FB82F1D0190C1000F3DEF /* MTTeacher+CoreDataProperties.m in Sources */,
 				1B0FB8301D0190C1000F3DEF /* MTTeacher.m in Sources */,
@@ -384,6 +408,7 @@
 				1B0FB8331D0190C1000F3DEF /* MTStudent+CoreDataProperties.m in Sources */,
 				1BC59F6C1CFADFC300FC5D63 /* GuruCrafter.xcdatamodeld in Sources */,
 				1B0FB8161D018E33000F3DEF /* MTTeachersViewController.m in Sources */,
+				1B1085251D04553000EC6E2A /* MTStudentInfoViewController.m in Sources */,
 				1B0FB83E1D01ABF5000F3DEF /* MTAddUniversityViewController.m in Sources */,
 				1B0FB82E1D0190C1000F3DEF /* MTCourse.m in Sources */,
 				1B0FB83B1D0198FE000F3DEF /* MTManagerObjectsViewController.m in Sources */,
@@ -392,6 +417,7 @@
 				1B0FB80C1D018D6F000F3DEF /* MTUniversitiesViewController.m in Sources */,
 				1BC59FE11CFC6A8F00FC5D63 /* MTCoreDataViewController.m in Sources */,
 				1B0FB80F1D018DD2000F3DEF /* MTStudentsViewController.m in Sources */,
+				1B1085241D04553000EC6E2A /* MTCourseInfoViewController.m in Sources */,
 				1B0FB82C1D0190C1000F3DEF /* MTParentObject.m in Sources */,
 				1B0FB82B1D0190C1000F3DEF /* MTParentObject+CoreDataProperties.m in Sources */,
 				1B0FB8121D018DF4000F3DEF /* MTCoursesViewController.m in Sources */,

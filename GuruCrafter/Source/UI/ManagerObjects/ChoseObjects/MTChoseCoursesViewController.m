@@ -46,6 +46,9 @@
         MTCourse *course = (MTCourse *)object;
         course = [self.fetchedResultsController objectAtIndexPath:indexPath];
         cell.textLabel.text = [NSString stringWithFormat:@"%@", course.name];
+        if ([self.university.courses containsObject:course]) {
+            cell.accessoryType = UITableViewCellAccessoryCheckmark;
+        }
     }
 }
 
@@ -55,15 +58,8 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
-    
     MTUniversity *university = self.university;
-    NSLog(@"%@", university.name);
-    
     NSMutableSet *array = [NSMutableSet setWithSet:university.courses];
-    
-    if (self.choisedIndexPath) {
-        //[[tableView cellForRowAtIndexPath:self.choisedIndexPath] setAccessoryType:UITableViewCellAccessoryNone];
-    }
     
     UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
     cell.accessoryType = UITableViewCellAccessoryCheckmark;
@@ -76,10 +72,6 @@
     if (![[[MTDataManager sharedManager] managedObjectContext] save:&error]) {
         NSLog(@"%@", error.localizedDescription);
     };
-    
-    
-    NSLog(@"Univer %@ has %lu courses", university.name, university.courses.count);
-
     
     self.choisedIndexPath = indexPath;
 }

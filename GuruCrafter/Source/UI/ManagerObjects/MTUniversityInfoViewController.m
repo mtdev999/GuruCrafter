@@ -48,14 +48,6 @@
 
 - (void)actionEdit:(UIBarButtonItem *)sender {
     
-    
-    
-    //    self.university.foundingDate = self.firstField.text;
-    
-    
-    
-    
-//    [self.navigationController popViewControllerAnimated:YES];
 }
 
 #pragma mark -
@@ -109,19 +101,34 @@
     }
 }
 
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        NSArray *tempArray = [self.university.courses allObjects];
+        NSMutableArray *tempMutableArray = [NSMutableArray arrayWithArray:tempArray];
+        
+        
+        [tempMutableArray removeObject:[tempArray objectAtIndex:indexPath.row - 1]];
+        [self.university setCourses:[NSSet setWithArray:tempMutableArray]];
+        
+        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+    }
+}
+
 #pragma mark -
 #pragma mark UITableViewDelegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
-    
-    
-    MTChoseCoursesViewController *vc = [MTChoseCoursesViewController new]; //[self.storyboard instantiateViewControllerWithIdentifier:@"MTChoseCoursesViewController"];
-    vc.university = self.university;
-    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:vc];
-    navController.modalPresentationStyle = UIModalPresentationPageSheet;
-    [self presentViewController:navController animated:YES completion:nil];
+    if (indexPath.row == 0) {
+        MTChoseCoursesViewController *vc = [MTChoseCoursesViewController new];
+        vc.university = self.university;
+        UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:vc];
+        navController.modalPresentationStyle = UIModalPresentationPageSheet;
+        [self presentViewController:navController animated:YES completion:nil];
+    } else {
+        
+    }
 }
 
 #pragma mark -

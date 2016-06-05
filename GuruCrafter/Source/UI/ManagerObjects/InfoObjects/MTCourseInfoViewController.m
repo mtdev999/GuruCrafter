@@ -8,6 +8,8 @@
 
 #import "MTCourseInfoViewController.h"
 
+#import "MTChoseStudentViewController.h"
+
 #import "MTUniversity.h"
 #import "MTCourse.h"
 #import "MTStudent.h"
@@ -119,31 +121,20 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
-//    if (indexPath.row == 0) {
-//        MTChoseCoursesViewController *vc = [MTChoseCoursesViewController new];
-//        vc.university = self.university;
-//        UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:vc];
-//        navController.modalPresentationStyle = UIModalPresentationPageSheet;
-//        [self presentViewController:navController animated:YES completion:nil];
-//    } else {
-//        
-//    }
+    if (indexPath.row == 0) {
+        MTChoseStudentViewController *vc = [MTChoseStudentViewController new];
+        vc.course = self.course;
+        UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:vc];
+        navController.modalPresentationStyle = UIModalPresentationPageSheet;
+        [self presentViewController:navController animated:YES completion:nil];
+    } else {
+        
+    }
 }
 
 #pragma mark -
 #pragma mark UITextFieldDelegate
 
-- (BOOL)textFieldShouldReturn:(UITextField *)textField {
-    if ([textField isEqual:self.firstField]) {
-        [self.secondField becomeFirstResponder];
-    } else if ([textField isEqual:self.secondField]) {
-        [self.thridField becomeFirstResponder];
-    } else {
-        [textField resignFirstResponder];
-    }
-    
-    return YES;
-}
 
 - (BOOL)textFieldShouldBeginEditing:(UITextField *)textField {
     return NO;

@@ -96,4 +96,19 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
+#pragma mark -
+#pragma mark UITextFieldDelegate
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    if ([textField isEqual:self.firstField]) {
+        [self.secondField becomeFirstResponder];
+    } else if ([textField isEqual:self.secondField]) {
+        [self.thridField becomeFirstResponder];
+    } else {
+        [textField resignFirstResponder];
+    }
+    
+    return YES;
+}
+
 @end

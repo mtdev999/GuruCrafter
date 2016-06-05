@@ -9,6 +9,7 @@
 #import "MTCoursesViewController.h"
 
 #import "MTAddCourseViewController.h"
+#import "MTCourseInfoViewController.h"
 #import "MTCourse.h"
 #import "MTDataManager.h"
 
@@ -68,6 +69,11 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    MTCourseInfoViewController *vc  = [[MTCourseInfoViewController alloc] init];
+    MTCourse *course = [self.fetchedResultsController objectAtIndexPath:indexPath];
+    vc.course = course;
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 #pragma mark -

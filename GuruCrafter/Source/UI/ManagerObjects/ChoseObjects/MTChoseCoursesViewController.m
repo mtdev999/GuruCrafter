@@ -41,6 +41,17 @@
 #pragma mark -
 #pragma mark UITableViewDataSource
 
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    if (section == 0) {
+        NSArray *array = [self.fetchedResultsController fetchedObjects];
+        NSUInteger count = array.count;
+        
+        return count;
+    }
+    
+    return 0;
+}
+
 - (void)configureCell:(UITableViewCell *)cell withObject:(NSManagedObject *)object indexPath:(NSIndexPath *)indexPath {
     if ([object isKindOfClass:[MTCourse class]]) {
         MTCourse *course = (MTCourse *)object;

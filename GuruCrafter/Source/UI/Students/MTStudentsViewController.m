@@ -44,9 +44,6 @@
     MTAddStudentViewController *vc =
     [self.storyboard instantiateViewControllerWithIdentifier:@"MTAddStudentViewController"];
     
-    MTStudent *student = [NSEntityDescription insertNewObjectForEntityForName:@"MTStudent"
-                                                         inManagedObjectContext:self.managedObjectContext];
-    vc.student = student;
     [self.navigationController pushViewController:vc animated:YES];
 }
 
@@ -57,11 +54,10 @@
     return @"List:";
 }
 
-- (void)configureCell:(UITableViewCell *)cell withObject:(NSManagedObject *)object indexPath:(NSIndexPath *)indexPath {
+- (void)configureCell:(UITableViewCell *)cell withObject:(NSManagedObject *)object {
     if ([object isKindOfClass:[MTStudent class]]) {
         MTStudent *student = (MTStudent *)object;
         if (student.name.length > 0) {
-            student = [self.fetchedResultsController objectAtIndexPath:indexPath];
             cell.textLabel.text = [NSString stringWithFormat:@"%@ %@", student.name, student.surname];
         } else {
             [[[MTDataManager sharedManager] managedObjectContext] rollback];

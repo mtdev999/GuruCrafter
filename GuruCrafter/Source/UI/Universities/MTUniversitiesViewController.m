@@ -57,8 +57,6 @@
     if ([object isKindOfClass:[MTUniversity class]]) {
         MTUniversity *university = (MTUniversity *)object;
         if (university.name.length > 0) {
-            //university = [self.fetchedResultsController objectAtIndexPath:indexPath];
-            
             cell.textLabel.text = [NSString stringWithFormat:@"%@", university.name];
         } else {
             [[[MTDataManager sharedManager] managedObjectContext] rollback];

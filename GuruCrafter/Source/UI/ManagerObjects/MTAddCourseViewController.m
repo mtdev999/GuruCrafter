@@ -11,6 +11,8 @@
 #import "MTCourse.h"
 #import "TextField.h"
 
+#import "MTDataManager.h"
+
 @interface MTAddCourseViewController () <UITextFieldDelegate, UITableViewDataSource>
 
 @end
@@ -31,9 +33,13 @@
 #pragma mark Actions
 
 - (void)actionDone:(UIBarButtonItem *)sender {
-    self.course.name = self.firstField.text;
-    self.course.subject = self.secondField.text;
-    self.course.sector = self.thridField.text;
+    
+    MTCourse *course = [NSEntityDescription insertNewObjectForEntityForName:@"MTCourse"
+                                                     inManagedObjectContext:[[MTDataManager sharedManager] managedObjectContext]];
+    
+    course.name = self.firstField.text;
+    course.subject = self.secondField.text;
+    course.sector = self.thridField.text;
     
     [self save];
     [self.navigationController popViewControllerAnimated:YES];

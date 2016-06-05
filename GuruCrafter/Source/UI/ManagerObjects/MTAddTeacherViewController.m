@@ -11,6 +11,8 @@
 #import "MTTeacher.h"
 #import "TextField.h"
 
+#import "MTDataManager.h"
+
 @interface MTAddTeacherViewController () <UITextFieldDelegate, UITableViewDataSource>
 
 @end
@@ -30,9 +32,12 @@
 #pragma mark Actions
 
 - (void)actionDone:(UIBarButtonItem *)sender {
-    self.teacher.name = self.firstField.text;
-    self.teacher.surname = self.secondField.text;
-    self.teacher.subject = self.thridField.text;
+    MTTeacher *teacher = [NSEntityDescription insertNewObjectForEntityForName:@"MTTeacher"
+                                                       inManagedObjectContext:[[MTDataManager sharedManager] managedObjectContext]];
+    
+    teacher.name = self.firstField.text;
+    teacher.surname = self.secondField.text;
+    teacher.subject = self.thridField.text;
     
     [self save];
     [self.navigationController popViewControllerAnimated:YES];

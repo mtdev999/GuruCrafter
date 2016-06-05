@@ -42,9 +42,6 @@
     MTAddTeacherViewController *vc =
     [self.storyboard instantiateViewControllerWithIdentifier:@"MTAddTeacherViewController"];
     
-    MTTeacher *teacher = [NSEntityDescription insertNewObjectForEntityForName:@"MTTeacher"
-                                                     inManagedObjectContext:self.managedObjectContext];
-    vc.teacher = teacher;
     [self.navigationController pushViewController:vc animated:YES];
 }
 
@@ -55,11 +52,10 @@
     return @"List:";
 }
 
-- (void)configureCell:(UITableViewCell *)cell withObject:(NSManagedObject *)object indexPath:(NSIndexPath *)indexPath {
+- (void)configureCell:(UITableViewCell *)cell withObject:(NSManagedObject *)object {
     if ([object isKindOfClass:[MTTeacher class]]) {
         MTTeacher *teacher = (MTTeacher *)object;
         if (teacher.name.length > 0) {
-            teacher = [self.fetchedResultsController objectAtIndexPath:indexPath];
             cell.textLabel.text = [NSString stringWithFormat:@"%@ %@", teacher.name , teacher.surname];
         } else {
             [[[MTDataManager sharedManager] managedObjectContext] rollback];

@@ -33,9 +33,13 @@
 #pragma mark Actions
 
 - (void)actionDone:(UIBarButtonItem *)sender {
-    self.student.name = self.firstField.text;
-    self.student.surname = self.secondField.text;
-    self.student.email = self.thridField.text;
+    
+    MTStudent *student = [NSEntityDescription insertNewObjectForEntityForName:@"MTStudent"
+                                                       inManagedObjectContext:[[MTDataManager sharedManager] managedObjectContext]];
+    
+    student.name = self.firstField.text;
+    student.surname = self.secondField.text;
+    student.email = self.thridField.text;
     
     [self save];
     [self.navigationController popViewControllerAnimated:YES];

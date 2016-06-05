@@ -42,9 +42,6 @@
     MTAddCourseViewController *vc =
     [self.storyboard instantiateViewControllerWithIdentifier:@"MTAddCourseViewController"];
     
-    MTCourse *course = [NSEntityDescription insertNewObjectForEntityForName:@"MTCourse"
-                                                         inManagedObjectContext:self.managedObjectContext];
-    vc.course = course;
     [self.navigationController pushViewController:vc animated:YES];
 }
 
@@ -55,11 +52,10 @@
     return @"List:";
 }
 
-- (void)configureCell:(UITableViewCell *)cell withObject:(NSManagedObject *)object indexPath:(NSIndexPath *)indexPath {
+- (void)configureCell:(UITableViewCell *)cell withObject:(NSManagedObject *)object {
     if ([object isKindOfClass:[MTCourse class]]) {
         MTCourse *course = (MTCourse *)object;
         if (course.name.length > 0) {
-            course = [self.fetchedResultsController objectAtIndexPath:indexPath];
             cell.textLabel.text = [NSString stringWithFormat:@"%@", course.name];
         } else {
             [[[MTDataManager sharedManager] managedObjectContext] rollback];

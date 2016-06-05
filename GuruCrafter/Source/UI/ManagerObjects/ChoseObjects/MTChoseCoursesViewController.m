@@ -1,82 +1,87 @@
 //
-//  MTUniversityViewController.m
+//  MTChoseCoursesViewController.m
 //  GuruCrafter
 //
-//  Created by Mark Tezza on 03/06/16.
+//  Created by Mark Tezza on 05/06/16.
 //  Copyright © 2016 MTDev. All rights reserved.
 //
 
-#import "MTUniversitiesViewController.h"
-
-#import "MTAddUniversityViewController.h"
-#import "MTUniversityInfoViewController.h"
+#import "MTChoseCoursesViewController.h"
 
 #import "MTUniversity.h"
+#import "MTCourse.h"
 #import "MTDataManager.h"
 
-@interface MTUniversitiesViewController ()
+@interface MTChoseCoursesViewController ()
 
 @end
 
-@implementation MTUniversitiesViewController
+@implementation MTChoseCoursesViewController
 @synthesize fetchedResultsController = _fetchedResultsController;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.navigationItem.title = @"Universities";
-}
-
-- (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
-    
-    [self.tableView reloadData];
+    self.managedObjectContext = [[MTDataManager sharedManager] managedObjectContext];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
 }
 
 #pragma mark -
 #pragma mark Actions
 
-- (void)actionAddNewObject:(UIBarButtonItem *)sender {
-    NSLog(@"actionAddNewObject");
-    
-    MTAddUniversityViewController *vc =
-    [self.storyboard instantiateViewControllerWithIdentifier:@"MTAddUniversityViewController"];
-    
-    [self.navigationController pushViewController:vc animated:YES];
+- (void)actionDone:(UIBarButtonItem *)sender {
+    [self dismissViewControllerAnimated:YES completion:^{
+        
+    }];
 }
 
 #pragma mark -
 #pragma mark UITableViewDataSource
 
-- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
-    return @"List:";
-}
-
-- (void)configureCell:(UITableViewCell *)cell withObject:(NSManagedObject *)object {
-    if ([object isKindOfClass:[MTUniversity class]]) {
-        MTUniversity *university = (MTUniversity *)object;
-        if (university.name.length > 0) {
-            cell.textLabel.text = [NSString stringWithFormat:@"%@", university.name];
-        } else {
-            [[[MTDataManager sharedManager] managedObjectContext] rollback];
-        }
+- (void)configureCell:(UITableViewCell *)cell withObject:(NSManagedObject *)object indexPath:(NSIndexPath *)indexPath {
+    if ([object isKindOfClass:[MTCourse class]]) {
+        MTCourse *course = (MTCourse *)object;
+        course = [self.fetchedResultsController objectAtIndexPath:indexPath];
+        cell.textLabel.text = [NSString stringWithFormat:@"%@", course.name];
     }
 }
 
 #pragma mark -
-#pragma mark UITableVIewDelegate
+#pragma mark UItableViewDelegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
-    MTUniversityInfoViewController *vc  = [[MTUniversityInfoViewController alloc] init];
-    MTUniversity *university = [self.fetchedResultsController objectAtIndexPath:indexPath];
-    vc.university = university;
-    [self.navigationController pushViewController:vc animated:YES];
     
+    MTUniversity *university = self.university;
+    NSLog(@"%@", university.name);
+    
+    NSMutableSet *array = [NSMutableSet setWithSet:university.courses];
+    
+    if (self.choisedIndexPath) {
+        //[[tableView cellForRowAtIndexPath:self.choisedIndexPath] setAccessoryType:UITableViewCellAccessoryNone];
+    }
+    
+    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+    cell.accessoryType = UITableViewCellAccessoryCheckmark;
+    
+    MTCourse *course = [self.fetchedResultsController objectAtIndexPath:indexPath];
+    [array addObject:course];
+    university.courses = array;
+    
+    NSError *error = nil;
+    if (![[[MTDataManager sharedManager] managedObjectContext] save:&error]) {
+        NSLog(@"%@", error.localizedDescription);
+    };
+    
+    
+    NSLog(@"Univer %@ has %lu courses", university.name, university.courses.count);
+
+    
+    self.choisedIndexPath = indexPath;
 }
 
 #pragma mark -
@@ -89,7 +94,7 @@
     }
     
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
-    NSEntityDescription *description = [NSEntityDescription entityForName:@"MTUniversity"
+    NSEntityDescription *description = [NSEntityDescription entityForName:@"MTCourse"
                                                    inManagedObjectContext:self.managedObjectContext];
     [fetchRequest setEntity:description];
     NSSortDescriptor *nameDescriptor = [NSSortDescriptor sortDescriptorWithKey:@"name" ascending:YES];
@@ -112,5 +117,6 @@
     
     return _fetchedResultsController;
 }
+
 
 @end

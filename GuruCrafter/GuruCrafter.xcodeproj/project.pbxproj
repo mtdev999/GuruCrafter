@@ -27,6 +27,8 @@
 		1B0FB8411D01D5FD000F3DEF /* MTAddStudentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B0FB8401D01D5FD000F3DEF /* MTAddStudentViewController.m */; };
 		1B0FB8441D01E3CA000F3DEF /* MTAddCourseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B0FB8431D01E3CA000F3DEF /* MTAddCourseViewController.m */; };
 		1B0FB8471D01E3D7000F3DEF /* MTAddTeacherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B0FB8461D01E3D7000F3DEF /* MTAddTeacherViewController.m */; };
+		1B10850C1D04190400EC6E2A /* MTUniversityInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B10850B1D04190400EC6E2A /* MTUniversityInfoViewController.m */; };
+		1B1085101D04277200EC6E2A /* MTChoseCoursesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B10850F1D04277200EC6E2A /* MTChoseCoursesViewController.m */; };
 		1BC59F601CFADFC300FC5D63 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BC59F5F1CFADFC300FC5D63 /* main.m */; };
 		1BC59F631CFADFC300FC5D63 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BC59F621CFADFC300FC5D63 /* AppDelegate.m */; };
 		1BC59F6C1CFADFC300FC5D63 /* GuruCrafter.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1BC59F6A1CFADFC300FC5D63 /* GuruCrafter.xcdatamodeld */; };
@@ -78,6 +80,10 @@
 		1B0FB8431D01E3CA000F3DEF /* MTAddCourseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTAddCourseViewController.m; sourceTree = "<group>"; };
 		1B0FB8451D01E3D7000F3DEF /* MTAddTeacherViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTAddTeacherViewController.h; sourceTree = "<group>"; };
 		1B0FB8461D01E3D7000F3DEF /* MTAddTeacherViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTAddTeacherViewController.m; sourceTree = "<group>"; };
+		1B10850A1D04190400EC6E2A /* MTUniversityInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTUniversityInfoViewController.h; sourceTree = "<group>"; };
+		1B10850B1D04190400EC6E2A /* MTUniversityInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTUniversityInfoViewController.m; sourceTree = "<group>"; };
+		1B10850E1D04277200EC6E2A /* MTChoseCoursesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTChoseCoursesViewController.h; sourceTree = "<group>"; };
+		1B10850F1D04277200EC6E2A /* MTChoseCoursesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTChoseCoursesViewController.m; sourceTree = "<group>"; };
 		1BC59F5B1CFADFC300FC5D63 /* GuruCrafter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GuruCrafter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BC59F5F1CFADFC300FC5D63 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		1BC59F611CFADFC300FC5D63 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -125,6 +131,7 @@
 		1B0FB8381D0198BE000F3DEF /* ManagerObjects */ = {
 			isa = PBXGroup;
 			children = (
+				1B10850D1D04274000EC6E2A /* ChoseObjects */,
 				1B0FB8391D0198FE000F3DEF /* MTManagerObjectsViewController.h */,
 				1B0FB83A1D0198FE000F3DEF /* MTManagerObjectsViewController.m */,
 				1B0FB83C1D01ABF5000F3DEF /* MTAddUniversityViewController.h */,
@@ -135,8 +142,19 @@
 				1B0FB8431D01E3CA000F3DEF /* MTAddCourseViewController.m */,
 				1B0FB8451D01E3D7000F3DEF /* MTAddTeacherViewController.h */,
 				1B0FB8461D01E3D7000F3DEF /* MTAddTeacherViewController.m */,
+				1B10850A1D04190400EC6E2A /* MTUniversityInfoViewController.h */,
+				1B10850B1D04190400EC6E2A /* MTUniversityInfoViewController.m */,
 			);
 			path = ManagerObjects;
+			sourceTree = "<group>";
+		};
+		1B10850D1D04274000EC6E2A /* ChoseObjects */ = {
+			isa = PBXGroup;
+			children = (
+				1B10850E1D04277200EC6E2A /* MTChoseCoursesViewController.h */,
+				1B10850F1D04277200EC6E2A /* MTChoseCoursesViewController.m */,
+			);
+			path = ChoseObjects;
 			sourceTree = "<group>";
 		};
 		1BC59F521CFADFC300FC5D63 = {
@@ -221,14 +239,14 @@
 				1B0FB8201D0190C1000F3DEF /* MTTeacher+CoreDataProperties.m */,
 				1B0FB8211D0190C1000F3DEF /* MTTeacher.h */,
 				1B0FB8221D0190C1000F3DEF /* MTTeacher.m */,
+				1B0FB8351D019462000F3DEF /* MTUniversity+CoreDataProperties.h */,
+				1B0FB8361D019462000F3DEF /* MTUniversity+CoreDataProperties.m */,
 				1B0FB8251D0190C1000F3DEF /* MTUniversity.h */,
 				1B0FB8261D0190C1000F3DEF /* MTUniversity.m */,
 				1B0FB8271D0190C1000F3DEF /* MTStudent+CoreDataProperties.h */,
 				1B0FB8281D0190C1000F3DEF /* MTStudent+CoreDataProperties.m */,
 				1B0FB8291D0190C1000F3DEF /* MTStudent.h */,
 				1B0FB82A1D0190C1000F3DEF /* MTStudent.m */,
-				1B0FB8351D019462000F3DEF /* MTUniversity+CoreDataProperties.h */,
-				1B0FB8361D019462000F3DEF /* MTUniversity+CoreDataProperties.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -356,6 +374,7 @@
 			files = (
 				1B0FB8471D01E3D7000F3DEF /* MTAddTeacherViewController.m in Sources */,
 				1B0FB8441D01E3CA000F3DEF /* MTAddCourseViewController.m in Sources */,
+				1B10850C1D04190400EC6E2A /* MTUniversityInfoViewController.m in Sources */,
 				1B0FB8321D0190C1000F3DEF /* MTUniversity.m in Sources */,
 				1BC59F871CFAE08800FC5D63 /* MTDataManager.m in Sources */,
 				1B0FB8091D002463000F3DEF /* TextField.m in Sources */,
@@ -378,6 +397,7 @@
 				1B0FB8121D018DF4000F3DEF /* MTCoursesViewController.m in Sources */,
 				1B0FB8371D019462000F3DEF /* MTUniversity+CoreDataProperties.m in Sources */,
 				1B0FB8341D0190C1000F3DEF /* MTStudent.m in Sources */,
+				1B1085101D04277200EC6E2A /* MTChoseCoursesViewController.m in Sources */,
 				1B0FB8411D01D5FD000F3DEF /* MTAddStudentViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

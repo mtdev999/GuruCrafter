@@ -5,55 +5,6 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
-        <!--Navigation Controller-->
-        <scene sceneID="6g5-4j-Fls">
-            <objects>
-                <navigationController id="eLV-mG-9Au" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="d8H-ZF-uXh">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="0.81512389519999995" green="0.51696983966992371" blue="0.48788006695386926" alpha="1" colorSpace="calibratedRGB"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="hh6-Ri-xgA" kind="relationship" relationship="rootViewController" id="tlk-CJ-z53"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="LOK-oC-Swx" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="244" y="723"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="xht-1v-cMx">
-            <objects>
-                <viewController storyboardIdentifier="StartViewController" id="hh6-Ri-xgA" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="XhQ-gP-fNK"/>
-                        <viewControllerLayoutGuide type="bottom" id="rCc-H5-aIH"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="EYn-1N-gdY">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TTk-D4-YVr">
-                                <rect key="frame" x="218" y="285" width="164" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="164" id="YUm-X6-iRf"/>
-                                </constraints>
-                                <state key="normal" title="START"/>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="TTk-D4-YVr" firstAttribute="centerX" secondItem="EYn-1N-gdY" secondAttribute="centerX" id="5si-Kd-CTa"/>
-                            <constraint firstItem="TTk-D4-YVr" firstAttribute="centerY" secondItem="EYn-1N-gdY" secondAttribute="centerY" id="6eV-xz-2bF"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" id="49x-XL-zMZ"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Xaq-ti-W6y" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="917" y="723"/>
-        </scene>
         <!--Courses View Controller-->
         <scene sceneID="mkB-lJ-KWA">
             <objects>
@@ -382,34 +333,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SfP-Ov-wPl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3805" y="1763"/>
-        </scene>
-        <!--Table View Controller-->
-        <scene sceneID="A6Y-PX-a3B">
-            <objects>
-                <tableViewController id="5i7-gI-FZs" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="VRG-MF-Tn6">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="Oyv-wt-zfc">
-                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Oyv-wt-zfc" id="bak-el-5VY">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="5i7-gI-FZs" id="ZhL-OT-g7n"/>
-                            <outlet property="delegate" destination="5i7-gI-FZs" id="ke6-nB-9dp"/>
-                        </connections>
-                    </tableView>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="bHM-ob-rvf" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4435" y="-214"/>
         </scene>
     </scenes>
 </document>

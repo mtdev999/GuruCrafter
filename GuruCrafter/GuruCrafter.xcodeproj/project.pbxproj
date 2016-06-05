@@ -7,76 +7,94 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1B0FB8991D02B1ED000F3DEF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B0FB8981D02B1ED000F3DEF /* main.m */; };
-		1B0FB89C1D02B1ED000F3DEF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B0FB89B1D02B1ED000F3DEF /* AppDelegate.m */; };
-		1B0FB8A51D02B1ED000F3DEF /* GuruCrafter.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1B0FB8A31D02B1ED000F3DEF /* GuruCrafter.xcdatamodeld */; };
-		1B0FB8BB1D02B272000F3DEF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B0FB8B21D02B272000F3DEF /* Assets.xcassets */; };
-		1B0FB8BC1D02B272000F3DEF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B0FB8B31D02B272000F3DEF /* LaunchScreen.storyboard */; };
-		1B0FB8BD1D02B272000F3DEF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B0FB8B51D02B272000F3DEF /* Main.storyboard */; };
-		1B0FB8C01D02B2AE000F3DEF /* MTDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B0FB8BF1D02B2AE000F3DEF /* MTDataManager.m */; };
-		1B0FB8C81D02B56D000F3DEF /* MTCoreDataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B0FB8C71D02B56D000F3DEF /* MTCoreDataViewController.m */; };
-		1B0FB8CB1D02B79C000F3DEF /* MTUniversitiesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B0FB8CA1D02B79C000F3DEF /* MTUniversitiesViewController.m */; };
-		1B0FB8FE1D02CBD4000F3DEF /* MTParentObject+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B0FB8EB1D02CBD4000F3DEF /* MTParentObject+CoreDataProperties.m */; };
-		1B0FB8FF1D02CBD4000F3DEF /* MTParentObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B0FB8ED1D02CBD4000F3DEF /* MTParentObject.m */; };
-		1B0FB9001D02CBD4000F3DEF /* MTCourse+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B0FB8EF1D02CBD4000F3DEF /* MTCourse+CoreDataProperties.m */; };
-		1B0FB9011D02CBD4000F3DEF /* MTCourse.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B0FB8F11D02CBD4000F3DEF /* MTCourse.m */; };
-		1B0FB9021D02CBD4000F3DEF /* MTStudent+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B0FB8F31D02CBD4000F3DEF /* MTStudent+CoreDataProperties.m */; };
-		1B0FB9031D02CBD4000F3DEF /* MTStudent.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B0FB8F51D02CBD4000F3DEF /* MTStudent.m */; };
-		1B0FB9041D02CBD4000F3DEF /* MTTeacher+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B0FB8F71D02CBD4000F3DEF /* MTTeacher+CoreDataProperties.m */; };
-		1B0FB9051D02CBD4000F3DEF /* MTTeacher.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B0FB8F91D02CBD4000F3DEF /* MTTeacher.m */; };
-		1B0FB9061D02CBD4000F3DEF /* MTUniversity+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B0FB8FB1D02CBD4000F3DEF /* MTUniversity+CoreDataProperties.m */; };
-		1B0FB9071D02CBD4000F3DEF /* MTUniversity.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B0FB8FD1D02CBD4000F3DEF /* MTUniversity.m */; };
-		1B1084B61D02D41F00EC6E2A /* TextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B1084B51D02D41F00EC6E2A /* TextField.m */; };
-		1B1084BA1D02D4A300EC6E2A /* ManagerObjectsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B1084B91D02D4A300EC6E2A /* ManagerObjectsViewController.m */; };
-		1B1084BD1D02D63400EC6E2A /* MTAddUniversityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B1084BC1D02D63400EC6E2A /* MTAddUniversityViewController.m */; };
+		1B0FB8091D002463000F3DEF /* TextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B0FB8081D002463000F3DEF /* TextField.m */; };
+		1B0FB80C1D018D6F000F3DEF /* MTUniversitiesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B0FB80B1D018D6F000F3DEF /* MTUniversitiesViewController.m */; };
+		1B0FB80F1D018DD2000F3DEF /* MTStudentsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B0FB80E1D018DD2000F3DEF /* MTStudentsViewController.m */; };
+		1B0FB8121D018DF4000F3DEF /* MTCoursesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B0FB8111D018DF4000F3DEF /* MTCoursesViewController.m */; };
+		1B0FB8161D018E33000F3DEF /* MTTeachersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B0FB8151D018E33000F3DEF /* MTTeachersViewController.m */; };
+		1B0FB82B1D0190C1000F3DEF /* MTParentObject+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B0FB8181D0190C1000F3DEF /* MTParentObject+CoreDataProperties.m */; };
+		1B0FB82C1D0190C1000F3DEF /* MTParentObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B0FB81A1D0190C1000F3DEF /* MTParentObject.m */; };
+		1B0FB82D1D0190C1000F3DEF /* MTCourse+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B0FB81C1D0190C1000F3DEF /* MTCourse+CoreDataProperties.m */; };
+		1B0FB82E1D0190C1000F3DEF /* MTCourse.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B0FB81E1D0190C1000F3DEF /* MTCourse.m */; };
+		1B0FB82F1D0190C1000F3DEF /* MTTeacher+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B0FB8201D0190C1000F3DEF /* MTTeacher+CoreDataProperties.m */; };
+		1B0FB8301D0190C1000F3DEF /* MTTeacher.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B0FB8221D0190C1000F3DEF /* MTTeacher.m */; };
+		1B0FB8321D0190C1000F3DEF /* MTUniversity.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B0FB8261D0190C1000F3DEF /* MTUniversity.m */; };
+		1B0FB8331D0190C1000F3DEF /* MTStudent+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B0FB8281D0190C1000F3DEF /* MTStudent+CoreDataProperties.m */; };
+		1B0FB8341D0190C1000F3DEF /* MTStudent.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B0FB82A1D0190C1000F3DEF /* MTStudent.m */; };
+		1B0FB8371D019462000F3DEF /* MTUniversity+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B0FB8361D019462000F3DEF /* MTUniversity+CoreDataProperties.m */; };
+		1B0FB83B1D0198FE000F3DEF /* MTManagerObjectsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B0FB83A1D0198FE000F3DEF /* MTManagerObjectsViewController.m */; };
+		1B0FB83E1D01ABF5000F3DEF /* MTAddUniversityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B0FB83D1D01ABF5000F3DEF /* MTAddUniversityViewController.m */; };
+		1B0FB8411D01D5FD000F3DEF /* MTAddStudentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B0FB8401D01D5FD000F3DEF /* MTAddStudentViewController.m */; };
+		1B0FB8441D01E3CA000F3DEF /* MTAddCourseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B0FB8431D01E3CA000F3DEF /* MTAddCourseViewController.m */; };
+		1B0FB8471D01E3D7000F3DEF /* MTAddTeacherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B0FB8461D01E3D7000F3DEF /* MTAddTeacherViewController.m */; };
+		1BC59F601CFADFC300FC5D63 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BC59F5F1CFADFC300FC5D63 /* main.m */; };
+		1BC59F631CFADFC300FC5D63 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BC59F621CFADFC300FC5D63 /* AppDelegate.m */; };
+		1BC59F6C1CFADFC300FC5D63 /* GuruCrafter.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1BC59F6A1CFADFC300FC5D63 /* GuruCrafter.xcdatamodeld */; };
+		1BC59F821CFAE04000FC5D63 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1BC59F791CFAE04000FC5D63 /* Assets.xcassets */; };
+		1BC59F831CFAE04000FC5D63 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1BC59F7A1CFAE04000FC5D63 /* LaunchScreen.storyboard */; };
+		1BC59F841CFAE04000FC5D63 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1BC59F7C1CFAE04000FC5D63 /* Main.storyboard */; };
+		1BC59F871CFAE08800FC5D63 /* MTDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BC59F861CFAE08800FC5D63 /* MTDataManager.m */; };
+		1BC59FE11CFC6A8F00FC5D63 /* MTCoreDataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BC59FD51CFC6A8F00FC5D63 /* MTCoreDataViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1B0FB8941D02B1ED000F3DEF /* GuruCrafter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GuruCrafter.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		1B0FB8981D02B1ED000F3DEF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		1B0FB89A1D02B1ED000F3DEF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		1B0FB89B1D02B1ED000F3DEF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		1B0FB8A41D02B1ED000F3DEF /* GuruCrafter.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GuruCrafter.xcdatamodel; sourceTree = "<group>"; };
-		1B0FB8AB1D02B1ED000F3DEF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1B0FB8B21D02B272000F3DEF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		1B0FB8B41D02B272000F3DEF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		1B0FB8B61D02B272000F3DEF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		1B0FB8BE1D02B2AE000F3DEF /* MTDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTDataManager.h; sourceTree = "<group>"; };
-		1B0FB8BF1D02B2AE000F3DEF /* MTDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTDataManager.m; sourceTree = "<group>"; };
-		1B0FB8C61D02B56D000F3DEF /* MTCoreDataViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTCoreDataViewController.h; sourceTree = "<group>"; };
-		1B0FB8C71D02B56D000F3DEF /* MTCoreDataViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTCoreDataViewController.m; sourceTree = "<group>"; };
-		1B0FB8C91D02B79C000F3DEF /* MTUniversitiesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTUniversitiesViewController.h; sourceTree = "<group>"; };
-		1B0FB8CA1D02B79C000F3DEF /* MTUniversitiesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTUniversitiesViewController.m; sourceTree = "<group>"; };
-		1B0FB8EA1D02CBD4000F3DEF /* MTParentObject+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MTParentObject+CoreDataProperties.h"; sourceTree = "<group>"; };
-		1B0FB8EB1D02CBD4000F3DEF /* MTParentObject+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MTParentObject+CoreDataProperties.m"; sourceTree = "<group>"; };
-		1B0FB8EC1D02CBD4000F3DEF /* MTParentObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTParentObject.h; sourceTree = "<group>"; };
-		1B0FB8ED1D02CBD4000F3DEF /* MTParentObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTParentObject.m; sourceTree = "<group>"; };
-		1B0FB8EE1D02CBD4000F3DEF /* MTCourse+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MTCourse+CoreDataProperties.h"; sourceTree = "<group>"; };
-		1B0FB8EF1D02CBD4000F3DEF /* MTCourse+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MTCourse+CoreDataProperties.m"; sourceTree = "<group>"; };
-		1B0FB8F01D02CBD4000F3DEF /* MTCourse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTCourse.h; sourceTree = "<group>"; };
-		1B0FB8F11D02CBD4000F3DEF /* MTCourse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTCourse.m; sourceTree = "<group>"; };
-		1B0FB8F21D02CBD4000F3DEF /* MTStudent+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MTStudent+CoreDataProperties.h"; sourceTree = "<group>"; };
-		1B0FB8F31D02CBD4000F3DEF /* MTStudent+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MTStudent+CoreDataProperties.m"; sourceTree = "<group>"; };
-		1B0FB8F41D02CBD4000F3DEF /* MTStudent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTStudent.h; sourceTree = "<group>"; };
-		1B0FB8F51D02CBD4000F3DEF /* MTStudent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTStudent.m; sourceTree = "<group>"; };
-		1B0FB8F61D02CBD4000F3DEF /* MTTeacher+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MTTeacher+CoreDataProperties.h"; sourceTree = "<group>"; };
-		1B0FB8F71D02CBD4000F3DEF /* MTTeacher+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MTTeacher+CoreDataProperties.m"; sourceTree = "<group>"; };
-		1B0FB8F81D02CBD4000F3DEF /* MTTeacher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTTeacher.h; sourceTree = "<group>"; };
-		1B0FB8F91D02CBD4000F3DEF /* MTTeacher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTTeacher.m; sourceTree = "<group>"; };
-		1B0FB8FA1D02CBD4000F3DEF /* MTUniversity+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MTUniversity+CoreDataProperties.h"; sourceTree = "<group>"; };
-		1B0FB8FB1D02CBD4000F3DEF /* MTUniversity+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MTUniversity+CoreDataProperties.m"; sourceTree = "<group>"; };
-		1B0FB8FC1D02CBD4000F3DEF /* MTUniversity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTUniversity.h; sourceTree = "<group>"; };
-		1B0FB8FD1D02CBD4000F3DEF /* MTUniversity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTUniversity.m; sourceTree = "<group>"; };
-		1B1084B41D02D41F00EC6E2A /* TextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextField.h; sourceTree = "<group>"; };
-		1B1084B51D02D41F00EC6E2A /* TextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextField.m; sourceTree = "<group>"; };
-		1B1084B81D02D4A300EC6E2A /* ManagerObjectsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ManagerObjectsViewController.h; sourceTree = "<group>"; };
-		1B1084B91D02D4A300EC6E2A /* ManagerObjectsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ManagerObjectsViewController.m; sourceTree = "<group>"; };
-		1B1084BB1D02D63400EC6E2A /* MTAddUniversityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTAddUniversityViewController.h; sourceTree = "<group>"; };
-		1B1084BC1D02D63400EC6E2A /* MTAddUniversityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTAddUniversityViewController.m; sourceTree = "<group>"; };
+		1B0FB8071D002463000F3DEF /* TextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextField.h; sourceTree = "<group>"; };
+		1B0FB8081D002463000F3DEF /* TextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextField.m; sourceTree = "<group>"; };
+		1B0FB80A1D018D6F000F3DEF /* MTUniversitiesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTUniversitiesViewController.h; sourceTree = "<group>"; };
+		1B0FB80B1D018D6F000F3DEF /* MTUniversitiesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTUniversitiesViewController.m; sourceTree = "<group>"; };
+		1B0FB80D1D018DD2000F3DEF /* MTStudentsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTStudentsViewController.h; sourceTree = "<group>"; };
+		1B0FB80E1D018DD2000F3DEF /* MTStudentsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTStudentsViewController.m; sourceTree = "<group>"; };
+		1B0FB8101D018DF4000F3DEF /* MTCoursesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTCoursesViewController.h; sourceTree = "<group>"; };
+		1B0FB8111D018DF4000F3DEF /* MTCoursesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTCoursesViewController.m; sourceTree = "<group>"; };
+		1B0FB8141D018E33000F3DEF /* MTTeachersViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTTeachersViewController.h; sourceTree = "<group>"; };
+		1B0FB8151D018E33000F3DEF /* MTTeachersViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTTeachersViewController.m; sourceTree = "<group>"; };
+		1B0FB8171D0190C1000F3DEF /* MTParentObject+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MTParentObject+CoreDataProperties.h"; sourceTree = "<group>"; };
+		1B0FB8181D0190C1000F3DEF /* MTParentObject+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MTParentObject+CoreDataProperties.m"; sourceTree = "<group>"; };
+		1B0FB8191D0190C1000F3DEF /* MTParentObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTParentObject.h; sourceTree = "<group>"; };
+		1B0FB81A1D0190C1000F3DEF /* MTParentObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTParentObject.m; sourceTree = "<group>"; };
+		1B0FB81B1D0190C1000F3DEF /* MTCourse+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MTCourse+CoreDataProperties.h"; sourceTree = "<group>"; };
+		1B0FB81C1D0190C1000F3DEF /* MTCourse+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MTCourse+CoreDataProperties.m"; sourceTree = "<group>"; };
+		1B0FB81D1D0190C1000F3DEF /* MTCourse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTCourse.h; sourceTree = "<group>"; };
+		1B0FB81E1D0190C1000F3DEF /* MTCourse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTCourse.m; sourceTree = "<group>"; };
+		1B0FB81F1D0190C1000F3DEF /* MTTeacher+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MTTeacher+CoreDataProperties.h"; sourceTree = "<group>"; };
+		1B0FB8201D0190C1000F3DEF /* MTTeacher+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MTTeacher+CoreDataProperties.m"; sourceTree = "<group>"; };
+		1B0FB8211D0190C1000F3DEF /* MTTeacher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTTeacher.h; sourceTree = "<group>"; };
+		1B0FB8221D0190C1000F3DEF /* MTTeacher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTTeacher.m; sourceTree = "<group>"; };
+		1B0FB8251D0190C1000F3DEF /* MTUniversity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTUniversity.h; sourceTree = "<group>"; };
+		1B0FB8261D0190C1000F3DEF /* MTUniversity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTUniversity.m; sourceTree = "<group>"; };
+		1B0FB8271D0190C1000F3DEF /* MTStudent+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MTStudent+CoreDataProperties.h"; sourceTree = "<group>"; };
+		1B0FB8281D0190C1000F3DEF /* MTStudent+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MTStudent+CoreDataProperties.m"; sourceTree = "<group>"; };
+		1B0FB8291D0190C1000F3DEF /* MTStudent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTStudent.h; sourceTree = "<group>"; };
+		1B0FB82A1D0190C1000F3DEF /* MTStudent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTStudent.m; sourceTree = "<group>"; };
+		1B0FB8351D019462000F3DEF /* MTUniversity+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MTUniversity+CoreDataProperties.h"; sourceTree = "<group>"; };
+		1B0FB8361D019462000F3DEF /* MTUniversity+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MTUniversity+CoreDataProperties.m"; sourceTree = "<group>"; };
+		1B0FB8391D0198FE000F3DEF /* MTManagerObjectsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTManagerObjectsViewController.h; sourceTree = "<group>"; };
+		1B0FB83A1D0198FE000F3DEF /* MTManagerObjectsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTManagerObjectsViewController.m; sourceTree = "<group>"; };
+		1B0FB83C1D01ABF5000F3DEF /* MTAddUniversityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTAddUniversityViewController.h; sourceTree = "<group>"; };
+		1B0FB83D1D01ABF5000F3DEF /* MTAddUniversityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTAddUniversityViewController.m; sourceTree = "<group>"; };
+		1B0FB83F1D01D5FD000F3DEF /* MTAddStudentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTAddStudentViewController.h; sourceTree = "<group>"; };
+		1B0FB8401D01D5FD000F3DEF /* MTAddStudentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTAddStudentViewController.m; sourceTree = "<group>"; };
+		1B0FB8421D01E3CA000F3DEF /* MTAddCourseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTAddCourseViewController.h; sourceTree = "<group>"; };
+		1B0FB8431D01E3CA000F3DEF /* MTAddCourseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTAddCourseViewController.m; sourceTree = "<group>"; };
+		1B0FB8451D01E3D7000F3DEF /* MTAddTeacherViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTAddTeacherViewController.h; sourceTree = "<group>"; };
+		1B0FB8461D01E3D7000F3DEF /* MTAddTeacherViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTAddTeacherViewController.m; sourceTree = "<group>"; };
+		1BC59F5B1CFADFC300FC5D63 /* GuruCrafter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GuruCrafter.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1BC59F5F1CFADFC300FC5D63 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		1BC59F611CFADFC300FC5D63 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		1BC59F621CFADFC300FC5D63 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		1BC59F6B1CFADFC300FC5D63 /* GuruCrafter.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GuruCrafter.xcdatamodel; sourceTree = "<group>"; };
+		1BC59F721CFADFC300FC5D63 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1BC59F791CFAE04000FC5D63 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1BC59F7B1CFAE04000FC5D63 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		1BC59F7D1CFAE04000FC5D63 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1BC59F851CFAE08800FC5D63 /* MTDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTDataManager.h; sourceTree = "<group>"; };
+		1BC59F861CFAE08800FC5D63 /* MTDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTDataManager.m; sourceTree = "<group>"; };
+		1BC59FD41CFC6A8F00FC5D63 /* MTCoreDataViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTCoreDataViewController.h; sourceTree = "<group>"; };
+		1BC59FD51CFC6A8F00FC5D63 /* MTCoreDataViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTCoreDataViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		1B0FB8911D02B1ED000F3DEF /* Frameworks */ = {
+		1BC59F581CFADFC300FC5D63 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -86,184 +104,195 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1B0FB88B1D02B1ED000F3DEF = {
+		1B0FB8061D002458000F3DEF /* UIElements */ = {
 			isa = PBXGroup;
 			children = (
-				1B0FB8B11D02B272000F3DEF /* Resourse */,
-				1B0FB8B71D02B272000F3DEF /* Sourse */,
-				1B0FB8961D02B1ED000F3DEF /* GuruCrafter */,
-				1B0FB8951D02B1ED000F3DEF /* Products */,
-			);
-			sourceTree = "<group>";
-		};
-		1B0FB8951D02B1ED000F3DEF /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				1B0FB8941D02B1ED000F3DEF /* GuruCrafter.app */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		1B0FB8961D02B1ED000F3DEF /* GuruCrafter */ = {
-			isa = PBXGroup;
-			children = (
-				1B0FB89A1D02B1ED000F3DEF /* AppDelegate.h */,
-				1B0FB89B1D02B1ED000F3DEF /* AppDelegate.m */,
-				1B0FB8AB1D02B1ED000F3DEF /* Info.plist */,
-				1B0FB8A31D02B1ED000F3DEF /* GuruCrafter.xcdatamodeld */,
-				1B0FB8971D02B1ED000F3DEF /* Supporting Files */,
-			);
-			path = GuruCrafter;
-			sourceTree = "<group>";
-		};
-		1B0FB8971D02B1ED000F3DEF /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				1B0FB8981D02B1ED000F3DEF /* main.m */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		1B0FB8B11D02B272000F3DEF /* Resourse */ = {
-			isa = PBXGroup;
-			children = (
-				1B0FB8B21D02B272000F3DEF /* Assets.xcassets */,
-				1B0FB8B31D02B272000F3DEF /* LaunchScreen.storyboard */,
-				1B0FB8B51D02B272000F3DEF /* Main.storyboard */,
-			);
-			path = Resourse;
-			sourceTree = "<group>";
-		};
-		1B0FB8B71D02B272000F3DEF /* Sourse */ = {
-			isa = PBXGroup;
-			children = (
-				1B1084B31D02D41F00EC6E2A /* UIElements */,
-				1B0FB8B81D02B272000F3DEF /* DataManager */,
-				1B0FB8B91D02B272000F3DEF /* Models */,
-				1B0FB8BA1D02B272000F3DEF /* UI */,
-			);
-			path = Sourse;
-			sourceTree = "<group>";
-		};
-		1B0FB8B81D02B272000F3DEF /* DataManager */ = {
-			isa = PBXGroup;
-			children = (
-				1B0FB8BE1D02B2AE000F3DEF /* MTDataManager.h */,
-				1B0FB8BF1D02B2AE000F3DEF /* MTDataManager.m */,
-			);
-			path = DataManager;
-			sourceTree = "<group>";
-		};
-		1B0FB8B91D02B272000F3DEF /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				1B0FB8EA1D02CBD4000F3DEF /* MTParentObject+CoreDataProperties.h */,
-				1B0FB8EB1D02CBD4000F3DEF /* MTParentObject+CoreDataProperties.m */,
-				1B0FB8EC1D02CBD4000F3DEF /* MTParentObject.h */,
-				1B0FB8ED1D02CBD4000F3DEF /* MTParentObject.m */,
-				1B0FB8EE1D02CBD4000F3DEF /* MTCourse+CoreDataProperties.h */,
-				1B0FB8EF1D02CBD4000F3DEF /* MTCourse+CoreDataProperties.m */,
-				1B0FB8F01D02CBD4000F3DEF /* MTCourse.h */,
-				1B0FB8F11D02CBD4000F3DEF /* MTCourse.m */,
-				1B0FB8F21D02CBD4000F3DEF /* MTStudent+CoreDataProperties.h */,
-				1B0FB8F31D02CBD4000F3DEF /* MTStudent+CoreDataProperties.m */,
-				1B0FB8F41D02CBD4000F3DEF /* MTStudent.h */,
-				1B0FB8F51D02CBD4000F3DEF /* MTStudent.m */,
-				1B0FB8F61D02CBD4000F3DEF /* MTTeacher+CoreDataProperties.h */,
-				1B0FB8F71D02CBD4000F3DEF /* MTTeacher+CoreDataProperties.m */,
-				1B0FB8F81D02CBD4000F3DEF /* MTTeacher.h */,
-				1B0FB8F91D02CBD4000F3DEF /* MTTeacher.m */,
-				1B0FB8FA1D02CBD4000F3DEF /* MTUniversity+CoreDataProperties.h */,
-				1B0FB8FB1D02CBD4000F3DEF /* MTUniversity+CoreDataProperties.m */,
-				1B0FB8FC1D02CBD4000F3DEF /* MTUniversity.h */,
-				1B0FB8FD1D02CBD4000F3DEF /* MTUniversity.m */,
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
-		1B0FB8BA1D02B272000F3DEF /* UI */ = {
-			isa = PBXGroup;
-			children = (
-				1B1084B71D02D47C00EC6E2A /* ManagerObjects */,
-				1B0FB8C11D02B53C000F3DEF /* CoreData */,
-				1B0FB8C21D02B53C000F3DEF /* MTCoursesViewController */,
-				1B0FB8C31D02B53C000F3DEF /* MTStudentsViewController */,
-				1B0FB8C41D02B53C000F3DEF /* MTTeacherViewController */,
-				1B0FB8C51D02B53C000F3DEF /* MTUniversityiesViewController */,
-			);
-			path = UI;
-			sourceTree = "<group>";
-		};
-		1B0FB8C11D02B53C000F3DEF /* CoreData */ = {
-			isa = PBXGroup;
-			children = (
-				1B0FB8C61D02B56D000F3DEF /* MTCoreDataViewController.h */,
-				1B0FB8C71D02B56D000F3DEF /* MTCoreDataViewController.m */,
-			);
-			path = CoreData;
-			sourceTree = "<group>";
-		};
-		1B0FB8C21D02B53C000F3DEF /* MTCoursesViewController */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = MTCoursesViewController;
-			sourceTree = "<group>";
-		};
-		1B0FB8C31D02B53C000F3DEF /* MTStudentsViewController */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = MTStudentsViewController;
-			sourceTree = "<group>";
-		};
-		1B0FB8C41D02B53C000F3DEF /* MTTeacherViewController */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = MTTeacherViewController;
-			sourceTree = "<group>";
-		};
-		1B0FB8C51D02B53C000F3DEF /* MTUniversityiesViewController */ = {
-			isa = PBXGroup;
-			children = (
-				1B0FB8C91D02B79C000F3DEF /* MTUniversitiesViewController.h */,
-				1B0FB8CA1D02B79C000F3DEF /* MTUniversitiesViewController.m */,
-			);
-			path = MTUniversityiesViewController;
-			sourceTree = "<group>";
-		};
-		1B1084B31D02D41F00EC6E2A /* UIElements */ = {
-			isa = PBXGroup;
-			children = (
-				1B1084B41D02D41F00EC6E2A /* TextField.h */,
-				1B1084B51D02D41F00EC6E2A /* TextField.m */,
+				1B0FB8071D002463000F3DEF /* TextField.h */,
+				1B0FB8081D002463000F3DEF /* TextField.m */,
 			);
 			path = UIElements;
 			sourceTree = "<group>";
 		};
-		1B1084B71D02D47C00EC6E2A /* ManagerObjects */ = {
+		1B0FB8131D018E00000F3DEF /* Teachers */ = {
 			isa = PBXGroup;
 			children = (
-				1B1084B81D02D4A300EC6E2A /* ManagerObjectsViewController.h */,
-				1B1084B91D02D4A300EC6E2A /* ManagerObjectsViewController.m */,
-				1B1084BB1D02D63400EC6E2A /* MTAddUniversityViewController.h */,
-				1B1084BC1D02D63400EC6E2A /* MTAddUniversityViewController.m */,
+				1B0FB8141D018E33000F3DEF /* MTTeachersViewController.h */,
+				1B0FB8151D018E33000F3DEF /* MTTeachersViewController.m */,
 			);
-			name = ManagerObjects;
-			path = Sourse/UI/ManagerObjects;
-			sourceTree = SOURCE_ROOT;
+			path = Teachers;
+			sourceTree = "<group>";
+		};
+		1B0FB8381D0198BE000F3DEF /* ManagerObjects */ = {
+			isa = PBXGroup;
+			children = (
+				1B0FB8391D0198FE000F3DEF /* MTManagerObjectsViewController.h */,
+				1B0FB83A1D0198FE000F3DEF /* MTManagerObjectsViewController.m */,
+				1B0FB83C1D01ABF5000F3DEF /* MTAddUniversityViewController.h */,
+				1B0FB83D1D01ABF5000F3DEF /* MTAddUniversityViewController.m */,
+				1B0FB83F1D01D5FD000F3DEF /* MTAddStudentViewController.h */,
+				1B0FB8401D01D5FD000F3DEF /* MTAddStudentViewController.m */,
+				1B0FB8421D01E3CA000F3DEF /* MTAddCourseViewController.h */,
+				1B0FB8431D01E3CA000F3DEF /* MTAddCourseViewController.m */,
+				1B0FB8451D01E3D7000F3DEF /* MTAddTeacherViewController.h */,
+				1B0FB8461D01E3D7000F3DEF /* MTAddTeacherViewController.m */,
+			);
+			path = ManagerObjects;
+			sourceTree = "<group>";
+		};
+		1BC59F521CFADFC300FC5D63 = {
+			isa = PBXGroup;
+			children = (
+				1BC59F781CFAE04000FC5D63 /* Resource */,
+				1BC59F7E1CFAE04000FC5D63 /* Source */,
+				1BC59F5D1CFADFC300FC5D63 /* GuruCrafter */,
+				1BC59F5C1CFADFC300FC5D63 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1BC59F5C1CFADFC300FC5D63 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1BC59F5B1CFADFC300FC5D63 /* GuruCrafter.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1BC59F5D1CFADFC300FC5D63 /* GuruCrafter */ = {
+			isa = PBXGroup;
+			children = (
+				1BC59F611CFADFC300FC5D63 /* AppDelegate.h */,
+				1BC59F621CFADFC300FC5D63 /* AppDelegate.m */,
+				1BC59F721CFADFC300FC5D63 /* Info.plist */,
+				1BC59F6A1CFADFC300FC5D63 /* GuruCrafter.xcdatamodeld */,
+				1BC59F5E1CFADFC300FC5D63 /* Supporting Files */,
+			);
+			path = GuruCrafter;
+			sourceTree = "<group>";
+		};
+		1BC59F5E1CFADFC300FC5D63 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1BC59F5F1CFADFC300FC5D63 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1BC59F781CFAE04000FC5D63 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				1BC59F791CFAE04000FC5D63 /* Assets.xcassets */,
+				1BC59F7A1CFAE04000FC5D63 /* LaunchScreen.storyboard */,
+				1BC59F7C1CFAE04000FC5D63 /* Main.storyboard */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		1BC59F7E1CFAE04000FC5D63 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				1BC59F7F1CFAE04000FC5D63 /* Data */,
+				1BC59F801CFAE04000FC5D63 /* Models */,
+				1BC59F811CFAE04000FC5D63 /* UI */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		1BC59F7F1CFAE04000FC5D63 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				1BC59F851CFAE08800FC5D63 /* MTDataManager.h */,
+				1BC59F861CFAE08800FC5D63 /* MTDataManager.m */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		1BC59F801CFAE04000FC5D63 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1B0FB8171D0190C1000F3DEF /* MTParentObject+CoreDataProperties.h */,
+				1B0FB8181D0190C1000F3DEF /* MTParentObject+CoreDataProperties.m */,
+				1B0FB8191D0190C1000F3DEF /* MTParentObject.h */,
+				1B0FB81A1D0190C1000F3DEF /* MTParentObject.m */,
+				1B0FB81B1D0190C1000F3DEF /* MTCourse+CoreDataProperties.h */,
+				1B0FB81C1D0190C1000F3DEF /* MTCourse+CoreDataProperties.m */,
+				1B0FB81D1D0190C1000F3DEF /* MTCourse.h */,
+				1B0FB81E1D0190C1000F3DEF /* MTCourse.m */,
+				1B0FB81F1D0190C1000F3DEF /* MTTeacher+CoreDataProperties.h */,
+				1B0FB8201D0190C1000F3DEF /* MTTeacher+CoreDataProperties.m */,
+				1B0FB8211D0190C1000F3DEF /* MTTeacher.h */,
+				1B0FB8221D0190C1000F3DEF /* MTTeacher.m */,
+				1B0FB8251D0190C1000F3DEF /* MTUniversity.h */,
+				1B0FB8261D0190C1000F3DEF /* MTUniversity.m */,
+				1B0FB8271D0190C1000F3DEF /* MTStudent+CoreDataProperties.h */,
+				1B0FB8281D0190C1000F3DEF /* MTStudent+CoreDataProperties.m */,
+				1B0FB8291D0190C1000F3DEF /* MTStudent.h */,
+				1B0FB82A1D0190C1000F3DEF /* MTStudent.m */,
+				1B0FB8351D019462000F3DEF /* MTUniversity+CoreDataProperties.h */,
+				1B0FB8361D019462000F3DEF /* MTUniversity+CoreDataProperties.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		1BC59F811CFAE04000FC5D63 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				1B0FB8381D0198BE000F3DEF /* ManagerObjects */,
+				1BC59FD31CFC6A8F00FC5D63 /* CoreData */,
+				1BC59FD91CFC6A8F00FC5D63 /* Universities */,
+				1BC59FDA1CFC6A8F00FC5D63 /* Students */,
+				1BC59FD61CFC6A8F00FC5D63 /* Courses */,
+				1B0FB8131D018E00000F3DEF /* Teachers */,
+				1B0FB8061D002458000F3DEF /* UIElements */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		1BC59FD31CFC6A8F00FC5D63 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				1BC59FD41CFC6A8F00FC5D63 /* MTCoreDataViewController.h */,
+				1BC59FD51CFC6A8F00FC5D63 /* MTCoreDataViewController.m */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		1BC59FD61CFC6A8F00FC5D63 /* Courses */ = {
+			isa = PBXGroup;
+			children = (
+				1B0FB8101D018DF4000F3DEF /* MTCoursesViewController.h */,
+				1B0FB8111D018DF4000F3DEF /* MTCoursesViewController.m */,
+			);
+			path = Courses;
+			sourceTree = "<group>";
+		};
+		1BC59FD91CFC6A8F00FC5D63 /* Universities */ = {
+			isa = PBXGroup;
+			children = (
+				1B0FB80A1D018D6F000F3DEF /* MTUniversitiesViewController.h */,
+				1B0FB80B1D018D6F000F3DEF /* MTUniversitiesViewController.m */,
+			);
+			path = Universities;
+			sourceTree = "<group>";
+		};
+		1BC59FDA1CFC6A8F00FC5D63 /* Students */ = {
+			isa = PBXGroup;
+			children = (
+				1B0FB80D1D018DD2000F3DEF /* MTStudentsViewController.h */,
+				1B0FB80E1D018DD2000F3DEF /* MTStudentsViewController.m */,
+			);
+			path = Students;
+			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		1B0FB8931D02B1ED000F3DEF /* GuruCrafter */ = {
+		1BC59F5A1CFADFC300FC5D63 /* GuruCrafter */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1B0FB8AE1D02B1ED000F3DEF /* Build configuration list for PBXNativeTarget "GuruCrafter" */;
+			buildConfigurationList = 1BC59F751CFADFC300FC5D63 /* Build configuration list for PBXNativeTarget "GuruCrafter" */;
 			buildPhases = (
-				1B0FB8901D02B1ED000F3DEF /* Sources */,
-				1B0FB8911D02B1ED000F3DEF /* Frameworks */,
-				1B0FB8921D02B1ED000F3DEF /* Resources */,
+				1BC59F571CFADFC300FC5D63 /* Sources */,
+				1BC59F581CFADFC300FC5D63 /* Frameworks */,
+				1BC59F591CFADFC300FC5D63 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -271,25 +300,25 @@
 			);
 			name = GuruCrafter;
 			productName = GuruCrafter;
-			productReference = 1B0FB8941D02B1ED000F3DEF /* GuruCrafter.app */;
+			productReference = 1BC59F5B1CFADFC300FC5D63 /* GuruCrafter.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		1B0FB88C1D02B1ED000F3DEF /* Project object */ = {
+		1BC59F531CFADFC300FC5D63 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = MTDev;
 				TargetAttributes = {
-					1B0FB8931D02B1ED000F3DEF = {
+					1BC59F5A1CFADFC300FC5D63 = {
 						CreatedOnToolsVersion = 7.3;
 						DevelopmentTeam = Z662YN573K;
 					};
 				};
 			};
-			buildConfigurationList = 1B0FB88F1D02B1ED000F3DEF /* Build configuration list for PBXProject "GuruCrafter" */;
+			buildConfigurationList = 1BC59F561CFADFC300FC5D63 /* Build configuration list for PBXProject "GuruCrafter" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -297,71 +326,77 @@
 				en,
 				Base,
 			);
-			mainGroup = 1B0FB88B1D02B1ED000F3DEF;
-			productRefGroup = 1B0FB8951D02B1ED000F3DEF /* Products */;
+			mainGroup = 1BC59F521CFADFC300FC5D63;
+			productRefGroup = 1BC59F5C1CFADFC300FC5D63 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				1B0FB8931D02B1ED000F3DEF /* GuruCrafter */,
+				1BC59F5A1CFADFC300FC5D63 /* GuruCrafter */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		1B0FB8921D02B1ED000F3DEF /* Resources */ = {
+		1BC59F591CFADFC300FC5D63 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1B0FB8BB1D02B272000F3DEF /* Assets.xcassets in Resources */,
-				1B0FB8BD1D02B272000F3DEF /* Main.storyboard in Resources */,
-				1B0FB8BC1D02B272000F3DEF /* LaunchScreen.storyboard in Resources */,
+				1BC59F821CFAE04000FC5D63 /* Assets.xcassets in Resources */,
+				1BC59F841CFAE04000FC5D63 /* Main.storyboard in Resources */,
+				1BC59F831CFAE04000FC5D63 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		1B0FB8901D02B1ED000F3DEF /* Sources */ = {
+		1BC59F571CFADFC300FC5D63 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1B0FB8C01D02B2AE000F3DEF /* MTDataManager.m in Sources */,
-				1B0FB8C81D02B56D000F3DEF /* MTCoreDataViewController.m in Sources */,
-				1B0FB9031D02CBD4000F3DEF /* MTStudent.m in Sources */,
-				1B1084BD1D02D63400EC6E2A /* MTAddUniversityViewController.m in Sources */,
-				1B0FB9051D02CBD4000F3DEF /* MTTeacher.m in Sources */,
-				1B0FB8FE1D02CBD4000F3DEF /* MTParentObject+CoreDataProperties.m in Sources */,
-				1B0FB89C1D02B1ED000F3DEF /* AppDelegate.m in Sources */,
-				1B0FB8A51D02B1ED000F3DEF /* GuruCrafter.xcdatamodeld in Sources */,
-				1B0FB9021D02CBD4000F3DEF /* MTStudent+CoreDataProperties.m in Sources */,
-				1B0FB9011D02CBD4000F3DEF /* MTCourse.m in Sources */,
-				1B1084BA1D02D4A300EC6E2A /* ManagerObjectsViewController.m in Sources */,
-				1B0FB9041D02CBD4000F3DEF /* MTTeacher+CoreDataProperties.m in Sources */,
-				1B0FB8FF1D02CBD4000F3DEF /* MTParentObject.m in Sources */,
-				1B0FB8991D02B1ED000F3DEF /* main.m in Sources */,
-				1B0FB9071D02CBD4000F3DEF /* MTUniversity.m in Sources */,
-				1B1084B61D02D41F00EC6E2A /* TextField.m in Sources */,
-				1B0FB9001D02CBD4000F3DEF /* MTCourse+CoreDataProperties.m in Sources */,
-				1B0FB9061D02CBD4000F3DEF /* MTUniversity+CoreDataProperties.m in Sources */,
-				1B0FB8CB1D02B79C000F3DEF /* MTUniversitiesViewController.m in Sources */,
+				1B0FB8471D01E3D7000F3DEF /* MTAddTeacherViewController.m in Sources */,
+				1B0FB8441D01E3CA000F3DEF /* MTAddCourseViewController.m in Sources */,
+				1B0FB8321D0190C1000F3DEF /* MTUniversity.m in Sources */,
+				1BC59F871CFAE08800FC5D63 /* MTDataManager.m in Sources */,
+				1B0FB8091D002463000F3DEF /* TextField.m in Sources */,
+				1B0FB82F1D0190C1000F3DEF /* MTTeacher+CoreDataProperties.m in Sources */,
+				1B0FB8301D0190C1000F3DEF /* MTTeacher.m in Sources */,
+				1BC59F631CFADFC300FC5D63 /* AppDelegate.m in Sources */,
+				1B0FB8331D0190C1000F3DEF /* MTStudent+CoreDataProperties.m in Sources */,
+				1BC59F6C1CFADFC300FC5D63 /* GuruCrafter.xcdatamodeld in Sources */,
+				1B0FB8161D018E33000F3DEF /* MTTeachersViewController.m in Sources */,
+				1B0FB83E1D01ABF5000F3DEF /* MTAddUniversityViewController.m in Sources */,
+				1B0FB82E1D0190C1000F3DEF /* MTCourse.m in Sources */,
+				1B0FB83B1D0198FE000F3DEF /* MTManagerObjectsViewController.m in Sources */,
+				1BC59F601CFADFC300FC5D63 /* main.m in Sources */,
+				1B0FB82D1D0190C1000F3DEF /* MTCourse+CoreDataProperties.m in Sources */,
+				1B0FB80C1D018D6F000F3DEF /* MTUniversitiesViewController.m in Sources */,
+				1BC59FE11CFC6A8F00FC5D63 /* MTCoreDataViewController.m in Sources */,
+				1B0FB80F1D018DD2000F3DEF /* MTStudentsViewController.m in Sources */,
+				1B0FB82C1D0190C1000F3DEF /* MTParentObject.m in Sources */,
+				1B0FB82B1D0190C1000F3DEF /* MTParentObject+CoreDataProperties.m in Sources */,
+				1B0FB8121D018DF4000F3DEF /* MTCoursesViewController.m in Sources */,
+				1B0FB8371D019462000F3DEF /* MTUniversity+CoreDataProperties.m in Sources */,
+				1B0FB8341D0190C1000F3DEF /* MTStudent.m in Sources */,
+				1B0FB8411D01D5FD000F3DEF /* MTAddStudentViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		1B0FB8B31D02B272000F3DEF /* LaunchScreen.storyboard */ = {
+		1BC59F7A1CFAE04000FC5D63 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				1B0FB8B41D02B272000F3DEF /* Base */,
+				1BC59F7B1CFAE04000FC5D63 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
-		1B0FB8B51D02B272000F3DEF /* Main.storyboard */ = {
+		1BC59F7C1CFAE04000FC5D63 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				1B0FB8B61D02B272000F3DEF /* Base */,
+				1BC59F7D1CFAE04000FC5D63 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -369,7 +404,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		1B0FB8AC1D02B1ED000F3DEF /* Debug */ = {
+		1BC59F731CFADFC300FC5D63 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -414,7 +449,7 @@
 			};
 			name = Debug;
 		};
-		1B0FB8AD1D02B1ED000F3DEF /* Release */ = {
+		1BC59F741CFADFC300FC5D63 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -453,7 +488,7 @@
 			};
 			name = Release;
 		};
-		1B0FB8AF1D02B1ED000F3DEF /* Debug */ = {
+		1BC59F761CFADFC300FC5D63 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -464,7 +499,7 @@
 			};
 			name = Debug;
 		};
-		1B0FB8B01D02B1ED000F3DEF /* Release */ = {
+		1BC59F771CFADFC300FC5D63 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -478,20 +513,20 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1B0FB88F1D02B1ED000F3DEF /* Build configuration list for PBXProject "GuruCrafter" */ = {
+		1BC59F561CFADFC300FC5D63 /* Build configuration list for PBXProject "GuruCrafter" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				1B0FB8AC1D02B1ED000F3DEF /* Debug */,
-				1B0FB8AD1D02B1ED000F3DEF /* Release */,
+				1BC59F731CFADFC300FC5D63 /* Debug */,
+				1BC59F741CFADFC300FC5D63 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1B0FB8AE1D02B1ED000F3DEF /* Build configuration list for PBXNativeTarget "GuruCrafter" */ = {
+		1BC59F751CFADFC300FC5D63 /* Build configuration list for PBXNativeTarget "GuruCrafter" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				1B0FB8AF1D02B1ED000F3DEF /* Debug */,
-				1B0FB8B01D02B1ED000F3DEF /* Release */,
+				1BC59F761CFADFC300FC5D63 /* Debug */,
+				1BC59F771CFADFC300FC5D63 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -499,17 +534,17 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		1B0FB8A31D02B1ED000F3DEF /* GuruCrafter.xcdatamodeld */ = {
+		1BC59F6A1CFADFC300FC5D63 /* GuruCrafter.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				1B0FB8A41D02B1ED000F3DEF /* GuruCrafter.xcdatamodel */,
+				1BC59F6B1CFADFC300FC5D63 /* GuruCrafter.xcdatamodel */,
 			);
-			currentVersion = 1B0FB8A41D02B1ED000F3DEF /* GuruCrafter.xcdatamodel */;
+			currentVersion = 1BC59F6B1CFADFC300FC5D63 /* GuruCrafter.xcdatamodel */;
 			path = GuruCrafter.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
 /* End XCVersionGroup section */
 	};
-	rootObject = 1B0FB88C1D02B1ED000F3DEF /* Project object */;
+	rootObject = 1BC59F531CFADFC300FC5D63 /* Project object */;
 }

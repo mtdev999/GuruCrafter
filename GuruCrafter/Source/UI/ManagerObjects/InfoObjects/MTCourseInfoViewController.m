@@ -62,7 +62,7 @@
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
-    return section == 0 ? @"Info:": @"Courses:";
+    return section == 0 ? @"Info:": @"Students:";
 }
 
 - (void)configureCell:(UITableViewCell *)cell withObject:(NSManagedObject *)object indexPath:(NSIndexPath *)indexPath {
@@ -92,7 +92,7 @@
             cell.textLabel.textAlignment = NSTextAlignmentRight;
             cell.textLabel.textColor = [UIColor orangeColor];
             cell.textLabel.font = [UIFont systemFontOfSize:12];
-            cell.textLabel.text = @"ADD COURSE";
+            cell.textLabel.text = @"ADD STUDENT";
         } else {
             MTCourse *course = self.course;
             NSArray *array = [course.students allObjects];
@@ -121,7 +121,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
-    if (indexPath.row == 0) {
+    if (indexPath.section == 1 && indexPath.row == 0) {
         MTChoseStudentViewController *vc = [MTChoseStudentViewController new];
         vc.course = self.course;
         UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:vc];

@@ -11,6 +11,7 @@
 @class MTCourse;
 
 @interface MTChoseStudentViewController : MTManagerObjectsViewController
+@property (strong, nonatomic) NSIndexPath   *choisedIndexPath;
 @property (nonatomic, strong)   MTCourse *course;
 
 @end

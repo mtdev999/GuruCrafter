@@ -27,6 +27,10 @@
     [super didReceiveMemoryWarning];
 }
 
+- (void)dealloc {
+    NSLog(@"MTDatePickerViewController is deallocated");
+}
+
 #pragma mark -
 #pragma mark Actions
 

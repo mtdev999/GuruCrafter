@@ -18,7 +18,7 @@
 @interface MTDatePickerViewController : UIViewController
 
 @property (strong, nonatomic) id <MTDatePickerDelegate> delegate;
-@property (strong, nonatomic)           NSDate          *foundingDate;
+@property (strong, nonatomic)                   NSDate          *foundingDate;
 @property (strong, nonatomic)     IBOutlet      UIDatePicker    *dateOfDatePicker;
 
 - (IBAction)actionDateDidChange:(UIDatePicker *)sender;

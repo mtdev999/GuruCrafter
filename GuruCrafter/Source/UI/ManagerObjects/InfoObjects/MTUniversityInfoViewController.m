@@ -9,6 +9,7 @@
 #import "MTUniversityInfoViewController.h"
 
 #import "MTChoseCoursesViewController.h"
+#import "MTDatePickerViewController.h"
 
 #import "MTUniversity.h"
 #import "MTCourse.h"
@@ -19,8 +20,9 @@
 
 #define BGColorCellEditing [UIColor colorWithRed:1.0 green:0.972 blue:0.7441 alpha:1.0];
 
-@interface MTUniversityInfoViewController () <UITextFieldDelegate>
+@interface MTUniversityInfoViewController () <UITextFieldDelegate, MTDatePickerDelegate>
 @property (nonatomic, assign)   BOOL editing;
+@property (nonatomic, strong)   NSDate *currentDate;
 
 @end
 
@@ -78,6 +80,7 @@
         
         self.university.name = self.firstField.text;
         self.university.location = self.secondField.text;
+        self.university.foundingDate = self.currentDate;
         
         [self save];
         [self.navigationController popViewControllerAnimated:YES];
@@ -193,10 +196,41 @@
     if (self.editing) {
         
         return YES;
-    } else {
+    }
+#warning srabativaet redaktirovanie srazu
+    
+    if ([textField isEqual:self.thridField] && self.editing) {
+        [self showDatePicker];
+        
         
         return NO;
     }
+        
+    return NO;
+    
+}
+
+- (void)showDatePicker {
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
+    MTDatePickerViewController *dateViewController =
+    [storyboard instantiateViewControllerWithIdentifier:@"MTDatePickerViewController"];
+    dateViewController.delegate = self;
+    
+    
+    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:dateViewController];
+    
+    navController.modalPresentationStyle = UIModalPresentationPopover;
+    [self presentViewController:navController animated:YES completion:nil];
+}
+
+#pragma mark -
+#pragma mark Data Picker Delegate
+
+- (void)didFinishEditingDate:(NSDate *)date {
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"MMMM dd, yyyy"];
+    self.thridField.text = [dateFormatter stringFromDate:date];
+    self.currentDate = date;
 }
 
 @end

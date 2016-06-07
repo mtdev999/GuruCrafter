@@ -11,7 +11,7 @@
 @implementation TextField
 
 + (UITextField *)getTextFieldWith:(CGRect)frame {
-    UITextField *nameTextField = [[UITextField alloc] initWithFrame:CGRectMake(CGRectGetMaxX(frame) - 208, 8, 180, 28)];
+    UITextField *nameTextField = [[UITextField alloc] initWithFrame:CGRectMake(CGRectGetMaxX(frame) - 228, 8, 220, 28)];
     nameTextField.borderStyle = UITextBorderStyleRoundedRect;
     nameTextField.autocorrectionType = UITextAutocorrectionTypeNo ;
     nameTextField.autocapitalizationType = UITextAutocapitalizationTypeWords;

@@ -131,9 +131,13 @@
             self.secondField.text = self.university.location;
             
         } else if (indexPath.row == 2) {
-            cell.textLabel.text = @"Category:";
+            cell.textLabel.text = @"Founding Date:";
             self.thridField = field;
             self.thridField.returnKeyType = UIReturnKeyDone;
+            NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+            [dateFormatter setDateFormat:@"MMMM dd, yyyy"];
+            self.thridField.text = [dateFormatter stringFromDate:self.university.foundingDate];
+            
         }
         
         [cell addSubview:field];

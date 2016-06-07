@@ -33,9 +33,7 @@
 #pragma mark Actions
 
 - (void)actionDone:(UIBarButtonItem *)sender {
-    [self dismissViewControllerAnimated:YES completion:^{
-        
-    }];
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 #pragma mark -
@@ -61,17 +59,6 @@
         NSEntityDescription *description = [NSEntityDescription entityForName:@"MTUniversity"
                                                        inManagedObjectContext:self.managedObjectContext];
         [request setEntity:description];
-        
-//        NSError *error = nil;
-//        NSArray *resultArray = [self.managedObjectContext executeFetchRequest:request error:&error];
-//        if (error) {
-//            NSLog(@"%@", error.localizedDescription);
-//        }
-
-        
-//        if ([resultArray containsObject:univer]) {
-//            cell.accessoryType = UITableViewCellAccessoryCheckmark;
-//        }
     }
 }
 

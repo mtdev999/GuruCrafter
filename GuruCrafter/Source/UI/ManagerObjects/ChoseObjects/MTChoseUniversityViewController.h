@@ -20,7 +20,7 @@
 @end
 
 @interface MTChoseUniversityViewController : MTManagerObjectsViewController
-@property (nonatomic, strong)   id<MTChoseUniversityDelegate> delegate;
+@property (nonatomic, strong)   id <MTChoseUniversityDelegate> delegate;
 @property (strong, nonatomic) NSIndexPath   *choisedIndexPath;
 @property (strong, nonatomic) NSString      *nameUniversity;
 

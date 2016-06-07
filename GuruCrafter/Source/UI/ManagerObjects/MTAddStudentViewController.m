@@ -44,7 +44,7 @@
     student.email = self.thridField.text;
     student.university.name = self.fourField.text;
     student.university = self.university;
-    NSLog(@"name of univer: %@", student);
+
     
     [self save];
     [self.navigationController popViewControllerAnimated:YES];
@@ -88,7 +88,7 @@
         
         if (self.university) {
             self.fourField.text = self.university.name;
-            NSLog(@"univer name: %@", self.university.name);
+            
         } else {
             self.fourField.text = @"ADD UNIVERSITY";
             self.fourField.font = [UIFont systemFontOfSize:12];
@@ -146,7 +146,6 @@
 - (void)didFinishChoseUniversity:(MTUniversity *)university withIndexPath:(NSIndexPath *)indexPath {
     self.fourField.text = university.name;
     self.university = university;
-    [self save];
 }
 
 @end

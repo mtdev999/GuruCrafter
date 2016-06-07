@@ -35,6 +35,7 @@
 		1B1085291D045E6A00EC6E2A /* MTChoseStudentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B1085281D045E6A00EC6E2A /* MTChoseStudentViewController.m */; };
 		1B10852C1D045E9A00EC6E2A /* MTChoseTeacherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B10852B1D045E9A00EC6E2A /* MTChoseTeacherViewController.m */; };
 		1B10852F1D05FC9000EC6E2A /* MTChoseUniversityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B10852E1D05FC9000EC6E2A /* MTChoseUniversityViewController.m */; };
+		1B3CF9F31D06F75400DAF925 /* MTDatePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B3CF9F21D06F75400DAF925 /* MTDatePickerViewController.m */; };
 		1BC59F601CFADFC300FC5D63 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BC59F5F1CFADFC300FC5D63 /* main.m */; };
 		1BC59F631CFADFC300FC5D63 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BC59F621CFADFC300FC5D63 /* AppDelegate.m */; };
 		1BC59F6C1CFADFC300FC5D63 /* GuruCrafter.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1BC59F6A1CFADFC300FC5D63 /* GuruCrafter.xcdatamodeld */; };
@@ -102,6 +103,8 @@
 		1B10852B1D045E9A00EC6E2A /* MTChoseTeacherViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTChoseTeacherViewController.m; sourceTree = "<group>"; };
 		1B10852D1D05FC9000EC6E2A /* MTChoseUniversityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTChoseUniversityViewController.h; sourceTree = "<group>"; };
 		1B10852E1D05FC9000EC6E2A /* MTChoseUniversityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTChoseUniversityViewController.m; sourceTree = "<group>"; };
+		1B3CF9F11D06F75400DAF925 /* MTDatePickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTDatePickerViewController.h; sourceTree = "<group>"; };
+		1B3CF9F21D06F75400DAF925 /* MTDatePickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTDatePickerViewController.m; sourceTree = "<group>"; };
 		1BC59F5B1CFADFC300FC5D63 /* GuruCrafter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GuruCrafter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BC59F5F1CFADFC300FC5D63 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		1BC59F611CFADFC300FC5D63 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -193,6 +196,15 @@
 				1B1085211D04553000EC6E2A /* MTStudentInfoViewController.m */,
 			);
 			path = InfoObjects;
+			sourceTree = "<group>";
+		};
+		1B3CF9F01D06F75400DAF925 /* MTDatePickerViewController */ = {
+			isa = PBXGroup;
+			children = (
+				1B3CF9F11D06F75400DAF925 /* MTDatePickerViewController.h */,
+				1B3CF9F21D06F75400DAF925 /* MTDatePickerViewController.m */,
+			);
+			path = MTDatePickerViewController;
 			sourceTree = "<group>";
 		};
 		1BC59F521CFADFC300FC5D63 = {
@@ -292,6 +304,7 @@
 		1BC59F811CFAE04000FC5D63 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				1B3CF9F01D06F75400DAF925 /* MTDatePickerViewController */,
 				1B0FB8381D0198BE000F3DEF /* ManagerObjects */,
 				1BC59FD31CFC6A8F00FC5D63 /* CoreData */,
 				1BC59FD91CFC6A8F00FC5D63 /* Universities */,
@@ -423,6 +436,7 @@
 				1BC59F631CFADFC300FC5D63 /* AppDelegate.m in Sources */,
 				1B0FB8331D0190C1000F3DEF /* MTStudent+CoreDataProperties.m in Sources */,
 				1BC59F6C1CFADFC300FC5D63 /* GuruCrafter.xcdatamodeld in Sources */,
+				1B3CF9F31D06F75400DAF925 /* MTDatePickerViewController.m in Sources */,
 				1B1085291D045E6A00EC6E2A /* MTChoseStudentViewController.m in Sources */,
 				1B0FB8161D018E33000F3DEF /* MTTeachersViewController.m in Sources */,
 				1B1085251D04553000EC6E2A /* MTStudentInfoViewController.m in Sources */,

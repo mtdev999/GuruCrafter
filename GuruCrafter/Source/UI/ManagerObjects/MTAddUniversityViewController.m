@@ -8,12 +8,14 @@
 
 #import "MTAddUniversityViewController.h"
 
+#import "MTDatePickerViewController.h"
 #import "MTUniversity.h"
 #import "TextField.h"
 
 #import "MTDataManager.h"
 
-@interface MTAddUniversityViewController () <UITextFieldDelegate, UITableViewDataSource>
+@interface MTAddUniversityViewController () <UITextFieldDelegate, UITableViewDataSource, MTDatePickerDelegate>
+@property (nonatomic, strong)   NSDate *currentDate;
 
 @end
 
@@ -37,9 +39,7 @@
     
     university.name = self.firstField.text;
     university.location = self.secondField.text;
-//    self.university.foundingDate = self.firstField.text;
-    
-    NSLog(@"%@", self.firstField.text);
+    university.foundingDate = self.currentDate;
     
     [self save];
     [self.navigationController popViewControllerAnimated:YES];
@@ -60,23 +60,59 @@
         cell.textLabel.text = @"Name:";
         self.firstField = field;
         [self.firstField becomeFirstResponder];
+        
+        [cell addSubview:field];
 
     } else if (indexPath.row == 1) {
         cell.textLabel.text = @"Location:";
         self.secondField = field;
+        [cell addSubview:field];
+        
     } else if (indexPath.row == 2) {
-        cell.textLabel.text = @"Category:";
+        cell.textLabel.text = @"Founding Date:";
         self.thridField = field;
+        if (self.currentDate) {
+            NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+            [dateFormatter setDateFormat:@"MMMM dd, yyyy"];
+            self.thridField.text = [dateFormatter stringFromDate:self.currentDate];
+        }
+        
+        [cell addSubview:field];
     }
     
-    [cell addSubview:field];
+    
 }
 
 #pragma mark -
 #pragma mark UITextFieldDelegate
 
 - (BOOL)textFieldShouldBeginEditing:(UITextField *)textField {
+    if ([textField isEqual:self.thridField]) {
+        [self showDatePicker];
+        
+        return NO;
+    }
+    
     return YES;
+}
+
+- (void)showDatePicker {
+    MTDatePickerViewController *dateViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"MTDatePickerViewController"];
+    dateViewController.delegate = self;
+    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:dateViewController];
+    
+    navController.modalPresentationStyle = UIModalPresentationPopover;
+    [self presentViewController:navController animated:YES completion:nil];
+}
+
+#pragma mark -
+#pragma mark Data Picker Delegate
+
+- (void)didFinishEditingDate:(NSDate *)date {
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"MMMM dd, yyyy"];
+    self.thridField.text = [dateFormatter stringFromDate:date];
+    self.currentDate = date;
 }
 
 @end

@@ -43,7 +43,6 @@
 #pragma mark Actions
 
 - (void)actionDone:(UIBarButtonItem *)sender {
-    NSLog(@"actionDone Manager");
 }
 
 #pragma mark -
@@ -58,12 +57,10 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
     
     if (!cell) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:identifier];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
     }
     
     NSManagedObject *object = [[self fetchedResultsController] objectAtIndexPath:indexPath];
-    NSLog(@"object description: %@", object.description);
-    
     [self configureCell:cell withObject:object indexPath:indexPath];
     
     return cell;

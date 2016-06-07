@@ -65,30 +65,33 @@
 - (void)configureCell:(UITableViewCell *)cell withObject:(NSManagedObject *)object indexPath:(NSIndexPath *)indexPath {
     UITextField *field = [TextField getTextFieldWith:self.view.bounds];
     field.delegate = self;
+    MTStudent *student = self.student;
     
     if (indexPath.section == 0) {
         if (indexPath.row == 0) {
             cell.textLabel.text = @"Name:";
             self.firstField = field;
-            self.firstField.text = self.student.name;
+            self.firstField.text = student.name;
             
         } else if (indexPath.row == 1) {
             cell.textLabel.text = @"Surname:";
             self.secondField = field;
-            self.secondField.text = self.student.surname;
+            self.secondField.text = student.surname;
             
         } else if (indexPath.row == 2) {
             cell.textLabel.text = @"E-mail:";
             self.thridField = field;
-            self.thridField.text = self.student.email;
+            self.thridField.text = student.email;
             self.thridField.returnKeyType = UIReturnKeyDone;
         } else if (indexPath.row == 3){
             cell.textLabel.text = @"University:";
-            
             self.fourField = field;
             
-            MTUniversity *univer = self.student.university;
-            self.fourField.text = univer.name;
+            NSString *str = student.university.name;
+            if (student && str) {
+                self.fourField.text = student.university.name;
+                NSLog(@"student.univer.name: %@", student.university.name);
+            } 
         }
         
         [cell addSubview:field];

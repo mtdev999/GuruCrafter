@@ -16,7 +16,7 @@
 
 #import "TextField.h"
 
-@interface MTAddStudentViewController () <UITextFieldDelegate, UITableViewDataSource>
+@interface MTAddStudentViewController () <UITextFieldDelegate, UITableViewDataSource, MTChoseUniversityDelegate>
 
 @end
 
@@ -27,15 +27,8 @@
     self.navigationItem.title = @"Add Student";
 }
 
-- (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
-    
-    [self.tableView reloadData];
-}
-
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 #pragma mark -
@@ -49,6 +42,9 @@
     student.name = self.firstField.text;
     student.surname = self.secondField.text;
     student.email = self.thridField.text;
+    student.university.name = self.fourField.text;
+    student.university = self.university;
+    NSLog(@"name of univer: %@", student);
     
     [self save];
     [self.navigationController popViewControllerAnimated:YES];
@@ -73,45 +69,35 @@
     if (indexPath.row == 0) {
         cell.textLabel.text = @"Name:";
         self.firstField = field;
+        self.firstField.placeholder = @"enter first name";
         [self.firstField becomeFirstResponder];
-        
-        [cell addSubview:field];
         
     } else if (indexPath.row == 1) {
         cell.textLabel.text = @"Surname:";
         self.secondField = field;
-        [cell addSubview:field];
+        self.secondField.placeholder = @"enter second name";
         
     } else if (indexPath.row == 2) {
         cell.textLabel.text = @"E-mail:";
         self.thridField = field;
-        [cell addSubview:field];
+        self.thridField.placeholder = @"enter e-mail";
         
     } else {
         cell.textLabel.text = @"University:";
+        self.fourField = field;
         
         if (self.university) {
-            [cell addSubview:field];
             self.fourField.text = self.university.name;
-            
             NSLog(@"univer name: %@", self.university.name);
-            
-//            NSIndexPath *newIndexPath = [NSIndexPath indexPathForRow:indexPath.row inSection:indexPath.section];
-            
-            //[self.tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationTop];
         } else {
-            UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(CGRectGetMaxX(self.view.bounds) - 208, 8, 180, 28)];
-            label.text = @"ADD UNIVER";
-            
-            
-            label.textAlignment = NSTextAlignmentCenter;
-            label.textColor = [UIColor orangeColor];
-            label.font = [UIFont systemFontOfSize:12];
-            label.text = @"ADD UNIVERSITY";
-            
-            [cell addSubview:label];
+            self.fourField.text = @"ADD UNIVERSITY";
+            self.fourField.font = [UIFont systemFontOfSize:12];
+            self.fourField.textColor = [UIColor orangeColor];
+            self.fourField.placeholder = @"chose university";
         }
     }
+    
+    [cell addSubview:field];
 }
 
 #pragma mark -
@@ -121,24 +107,46 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
     if (indexPath.row == 3) {
-        MTChoseUniversityViewController *vc = [MTChoseUniversityViewController new];
-        UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:vc];
-        vc.university = self.university;
-        vc.addStudentController = self;
-        navController.modalPresentationStyle = UIModalPresentationPopover;
-        [self presentViewController:navController animated:YES completion:nil];
+//        MTChoseUniversityViewController *vc = [MTChoseUniversityViewController new];
+//        UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:vc];
+//        vc.delegate = self;
+//        vc.university = self.university;
+//        vc.addStudentController = self;
+//        navController.modalPresentationStyle = UIModalPresentationPopover;
+//        [self presentViewController:navController animated:YES completion:nil];
         
 //        [self.navigationController pushViewController:vc animated:YES];
         
     }
 }
 
+- (void)showChoseUniversity {
+    MTChoseUniversityViewController *vc = [MTChoseUniversityViewController new];
+    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:vc];
+    vc.delegate = self;
+    navController.modalPresentationStyle = UIModalPresentationPopover;
+    [self presentViewController:navController animated:YES completion:nil];
+}
+
 #pragma mark -
 #pragma mark UITextFieldDelegate
 
 - (BOOL)textFieldShouldBeginEditing:(UITextField *)textField {
+    if ([textField isEqual:self.fourField]) {
+        [self showChoseUniversity];
+        
+        return NO;
+    }
     return YES;
 }
 
+#pragma mark -
+#pragma mark MTChoseUniversityDelegate
+
+- (void)didFinishChoseUniversity:(MTUniversity *)university withIndexPath:(NSIndexPath *)indexPath {
+    self.fourField.text = university.name;
+    self.university = university;
+    [self save];
+}
 
 @end

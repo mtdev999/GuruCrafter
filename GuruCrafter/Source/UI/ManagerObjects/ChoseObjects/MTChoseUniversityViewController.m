@@ -44,9 +44,8 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     if (section == 0) {
         NSArray *array = [self.fetchedResultsController fetchedObjects];
-        NSUInteger count = array.count;
-        
-        return count;
+
+        return array.count;
     }
     
     return 0;
@@ -85,7 +84,7 @@
     MTUniversity *university = [self.fetchedResultsController objectAtIndexPath:indexPath];
     
     self.addStudentController.university = university;
-    NSLog(@"%@", self.addStudentController.university.name);
+    NSLog(@"univer: %@", self.addStudentController.university.name);
     
     if (self.choisedIndexPath) {
         [[tableView cellForRowAtIndexPath:self.choisedIndexPath] setAccessoryType:UITableViewCellAccessoryNone];
@@ -101,6 +100,7 @@
     };
     
     self.choisedIndexPath = indexPath;
+    [self.delegate didFinishChoseUniversity:university withIndexPath:indexPath];
 }
 
 #pragma mark -

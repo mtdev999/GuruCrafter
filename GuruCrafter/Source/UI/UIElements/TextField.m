@@ -17,6 +17,7 @@
     nameTextField.autocapitalizationType = UITextAutocapitalizationTypeWords;
     nameTextField.returnKeyType = UIReturnKeyNext;
     nameTextField.placeholder = @"enter text here";
+    nameTextField.font = [UIFont systemFontOfSize:15];
     nameTextField.textAlignment = NSTextAlignmentCenter;
     
     return nameTextField;

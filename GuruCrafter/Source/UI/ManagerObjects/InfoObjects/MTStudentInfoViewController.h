@@ -8,6 +8,9 @@
 
 #import "MTManagerObjectsViewController.h"
 
+@class MTStudent;
+
 @interface MTStudentInfoViewController : MTManagerObjectsViewController
+@property (nonatomic, strong)   MTStudent *student;
 
 @end

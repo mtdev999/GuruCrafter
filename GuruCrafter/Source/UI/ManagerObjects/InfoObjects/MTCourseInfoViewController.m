@@ -84,6 +84,7 @@
             cell.textLabel.text = @"Sector:";
             self.thridField = field;
             self.thridField.text = self.course.sector;
+            self.thridField.returnKeyType = UIReturnKeyDone;
         }
         
         [cell addSubview:field];

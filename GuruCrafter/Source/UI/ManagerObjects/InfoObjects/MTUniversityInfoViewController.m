@@ -17,7 +17,10 @@
 
 #import "TextField.h"
 
+#define BGColorCellEditing [UIColor colorWithRed:1.0 green:0.972 blue:0.7441 alpha:1.0];
+
 @interface MTUniversityInfoViewController () <UITextFieldDelegate>
+@property (nonatomic, assign)   BOOL editing;
 
 @end
 
@@ -26,7 +29,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.navigationItem.title = @"University Info";
-    
+
     UIBarButtonItem *edit = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemEdit
                                                                                 target:self
                                                                                 action:@selector(actionEdit:)];
@@ -47,7 +50,53 @@
 #pragma mark Actions
 
 - (void)actionEdit:(UIBarButtonItem *)sender {
+    self.tableView.editing = NO;
+
+    self.editing = YES;
+
+    [self.firstField becomeFirstResponder];
+    self.firstField.backgroundColor = BGColorCellEditing
+    self.secondField.backgroundColor = BGColorCellEditing
+    self.thridField.backgroundColor = BGColorCellEditing
     
+    UIBarButtonItem *editButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone
+                                                                                target:self
+                                                                                action:@selector(actionDone:)];
+    [self.navigationItem setRightBarButtonItem:editButton animated:YES];
+    
+}
+
+- (void)actionDone:(UIBarButtonItem *)sender {
+    [self actionSaveChangedInfo];
+}
+
+
+
+- (void)actionSaveChangedInfo{
+    if (self.firstField.text.length > 0
+        && self.secondField.text.length > 0) {
+        
+        self.university.name = self.firstField.text;
+        self.university.location = self.secondField.text;
+        
+        [self save];
+        [self.navigationController popViewControllerAnimated:YES];
+    } else {
+        [self showAlertInfo];
+    }
+}
+
+- (void)showAlertInfo {
+    UIAlertController *controller = [UIAlertController alertControllerWithTitle:@"WARNING!"
+                                                                        message:@"You should not have empty cells."
+                                                                 preferredStyle:UIAlertControllerStyleAlert];
+    
+    UIAlertAction *ok = [UIAlertAction actionWithTitle:@"OK"
+                                                 style:UIAlertActionStyleCancel
+                                               handler:nil];
+    
+    [controller addAction:ok];
+    [self presentViewController:controller animated:YES completion:nil];
 }
 
 #pragma mark -
@@ -75,6 +124,7 @@
             self.firstField = field;
             self.firstField.text = self.university.name;
             
+            
         } else if (indexPath.row == 1) {
             cell.textLabel.text = @"Location:";
             self.secondField = field;
@@ -83,6 +133,7 @@
         } else if (indexPath.row == 2) {
             cell.textLabel.text = @"Category:";
             self.thridField = field;
+            self.thridField.returnKeyType = UIReturnKeyDone;
         }
         
         [cell addSubview:field];
@@ -135,7 +186,13 @@
 #pragma mark UITextFieldDelegate
 
 - (BOOL)textFieldShouldBeginEditing:(UITextField *)textField {
-    return NO;
+    if (self.editing) {
+        
+        return YES;
+    } else {
+        
+        return NO;
+    }
 }
 
 @end

@@ -34,6 +34,7 @@
 		1B1085261D04553000EC6E2A /* MTTeacherInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B1085231D04553000EC6E2A /* MTTeacherInfoViewController.m */; };
 		1B1085291D045E6A00EC6E2A /* MTChoseStudentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B1085281D045E6A00EC6E2A /* MTChoseStudentViewController.m */; };
 		1B10852C1D045E9A00EC6E2A /* MTChoseTeacherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B10852B1D045E9A00EC6E2A /* MTChoseTeacherViewController.m */; };
+		1B10852F1D05FC9000EC6E2A /* MTChoseUniversityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B10852E1D05FC9000EC6E2A /* MTChoseUniversityViewController.m */; };
 		1BC59F601CFADFC300FC5D63 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BC59F5F1CFADFC300FC5D63 /* main.m */; };
 		1BC59F631CFADFC300FC5D63 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BC59F621CFADFC300FC5D63 /* AppDelegate.m */; };
 		1BC59F6C1CFADFC300FC5D63 /* GuruCrafter.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1BC59F6A1CFADFC300FC5D63 /* GuruCrafter.xcdatamodeld */; };
@@ -99,6 +100,8 @@
 		1B1085281D045E6A00EC6E2A /* MTChoseStudentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTChoseStudentViewController.m; sourceTree = "<group>"; };
 		1B10852A1D045E9A00EC6E2A /* MTChoseTeacherViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTChoseTeacherViewController.h; sourceTree = "<group>"; };
 		1B10852B1D045E9A00EC6E2A /* MTChoseTeacherViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTChoseTeacherViewController.m; sourceTree = "<group>"; };
+		1B10852D1D05FC9000EC6E2A /* MTChoseUniversityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTChoseUniversityViewController.h; sourceTree = "<group>"; };
+		1B10852E1D05FC9000EC6E2A /* MTChoseUniversityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTChoseUniversityViewController.m; sourceTree = "<group>"; };
 		1BC59F5B1CFADFC300FC5D63 /* GuruCrafter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GuruCrafter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BC59F5F1CFADFC300FC5D63 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		1BC59F611CFADFC300FC5D63 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -171,6 +174,8 @@
 				1B1085281D045E6A00EC6E2A /* MTChoseStudentViewController.m */,
 				1B10852A1D045E9A00EC6E2A /* MTChoseTeacherViewController.h */,
 				1B10852B1D045E9A00EC6E2A /* MTChoseTeacherViewController.m */,
+				1B10852D1D05FC9000EC6E2A /* MTChoseUniversityViewController.h */,
+				1B10852E1D05FC9000EC6E2A /* MTChoseUniversityViewController.m */,
 			);
 			path = ChoseObjects;
 			sourceTree = "<group>";
@@ -424,6 +429,7 @@
 				1B0FB83E1D01ABF5000F3DEF /* MTAddUniversityViewController.m in Sources */,
 				1B0FB82E1D0190C1000F3DEF /* MTCourse.m in Sources */,
 				1B0FB83B1D0198FE000F3DEF /* MTManagerObjectsViewController.m in Sources */,
+				1B10852F1D05FC9000EC6E2A /* MTChoseUniversityViewController.m in Sources */,
 				1BC59F601CFADFC300FC5D63 /* main.m in Sources */,
 				1B0FB82D1D0190C1000F3DEF /* MTCourse+CoreDataProperties.m in Sources */,
 				1B0FB80C1D018D6F000F3DEF /* MTUniversitiesViewController.m in Sources */,

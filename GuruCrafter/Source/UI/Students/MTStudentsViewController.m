@@ -9,6 +9,7 @@
 #import "MTStudentsViewController.h"
 
 #import "MTAddStudentViewController.h"
+#import "MTStudentInfoViewController.h"
 #import "MTStudent.h"
 #import "MTDataManager.h"
 
@@ -39,8 +40,6 @@
 #pragma mark Actions
 
 - (void)actionAddNewObject:(UIBarButtonItem *)sender {
-    NSLog(@"actionAddNewObject");
-    
     MTAddStudentViewController *vc =
     [self.storyboard instantiateViewControllerWithIdentifier:@"MTAddStudentViewController"];
     
@@ -70,6 +69,12 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    MTStudentInfoViewController *vc = [[MTStudentInfoViewController alloc] init];
+    MTStudent *student = [self.fetchedResultsController objectAtIndexPath:indexPath];
+    vc.student = student;
+    [self.navigationController pushViewController:vc animated:YES];
+    
 }
 
 #pragma mark -

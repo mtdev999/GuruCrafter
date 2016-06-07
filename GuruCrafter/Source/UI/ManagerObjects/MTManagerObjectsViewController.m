@@ -13,7 +13,7 @@
 
 #import "MTDataManager.h"
 
-@interface MTManagerObjectsViewController () <UITextFieldDelegate>
+@interface MTManagerObjectsViewController () 
 
 @end
 
@@ -50,7 +50,7 @@
 #pragma mark UITableViewDataSource
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 3;
+    return 4;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -58,7 +58,7 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
     
     if (!cell) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:identifier];
     }
     
     NSManagedObject *object = [[self fetchedResultsController] objectAtIndexPath:indexPath];
@@ -73,8 +73,6 @@
     
 }
 
-
-
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.section == 1 && indexPath.row == 0) {
         return NO;
@@ -82,12 +80,6 @@
         return YES;
     }
 }
-
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    
-}
-
-
 
 #pragma mark -
 #pragma mark UITableViewDelegate
@@ -104,6 +96,8 @@
         [self.secondField becomeFirstResponder];
     } else if ([textField isEqual:self.secondField]) {
         [self.thridField becomeFirstResponder];
+    } else if ([textField isEqual:self.thridField]) {
+        [self.fourField becomeFirstResponder];
     } else {
         [textField resignFirstResponder];
     }

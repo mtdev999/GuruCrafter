@@ -8,13 +8,17 @@
 
 #import "MTCoreDataViewController.h"
 
-@interface MTManagerObjectsViewController : UITableViewController <NSFetchedResultsControllerDelegate> 
+@interface MTManagerObjectsViewController : UITableViewController <NSFetchedResultsControllerDelegate,
+                                                                     UITextFieldDelegate,
+                                                                     UITableViewDataSource>
+
 @property (nonatomic, strong)   NSManagedObjectContext *managedObjectContext;
 @property (nonatomic, strong)   NSFetchedResultsController *fetchedResultsController;
 
 @property (nonatomic, strong)       UITextField     *firstField;
 @property (nonatomic, strong)       UITextField     *secondField;
 @property (nonatomic, strong)       UITextField     *thridField;
+@property (nonatomic, strong)       UITextField     *fourField;
 
 - (void)save;
 

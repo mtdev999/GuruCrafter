@@ -69,18 +69,14 @@
 }
 
 - (void)actionDone:(UIBarButtonItem *)sender {
-    [self actionSaveChangedInfo];
-}
-
-
-
-- (void)actionSaveChangedInfo{
     if (self.firstField.text.length > 0
         && self.secondField.text.length > 0) {
         
         self.university.name = self.firstField.text;
         self.university.location = self.secondField.text;
         self.university.foundingDate = self.currentDate;
+        
+        NSLog(@"%@", [NSString stringWithFormat:@"%@", self.university.foundingDate]);
         
         [self save];
         [self.navigationController popViewControllerAnimated:YES];
@@ -137,9 +133,17 @@
             cell.textLabel.text = @"Founding Date:";
             self.thridField = field;
             self.thridField.returnKeyType = UIReturnKeyDone;
-            NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-            [dateFormatter setDateFormat:@"MMMM dd, yyyy"];
-            self.thridField.text = [dateFormatter stringFromDate:self.university.foundingDate];
+            if (self.currentDate) {
+                NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+                [dateFormatter setDateFormat:@"MMMM dd, yyyy"];
+                self.thridField.text = [dateFormatter stringFromDate:self.currentDate];
+            } else {
+                NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+                [dateFormatter setDateFormat:@"MMMM dd, yyyy"];
+                self.thridField.text = [dateFormatter stringFromDate:self.university.foundingDate];
+            }
+            
+            NSLog(@"%@", self.thridField.text);
             
         }
         
@@ -194,20 +198,14 @@
 
 - (BOOL)textFieldShouldBeginEditing:(UITextField *)textField {
     if (self.editing) {
+        if ([textField isEqual:self.thridField]) {
+            [self showDatePicker];
+        }
         
         return YES;
     }
-#warning srabativaet redaktirovanie srazu
-    
-    if ([textField isEqual:self.thridField] && self.editing) {
-        [self showDatePicker];
-        
-        
-        return NO;
-    }
         
     return NO;
-    
 }
 
 - (void)showDatePicker {

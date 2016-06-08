@@ -17,10 +17,19 @@
     [super viewDidLoad];
     self.navigationItem.title = @"Setting Date";
     
-    UIBarButtonItem *doneItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone
-                                                                              target:self
-                                                                              action:@selector(actionDone:)];
-    self.navigationItem.rightBarButtonItem = doneItem;
+    self.navigationItem.leftBarButtonItem =
+    [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel
+                                                  target:self
+                                                  action:@selector(actionSheetCancel:)];
+    
+    self.navigationItem.rightBarButtonItem =
+    [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone
+                                                  target:self
+                                                  action:@selector(actionDone:)];
+}
+
+- (void)actionSheetCancel:(id)sender {
+    [self actionDone:sender];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -28,7 +37,6 @@
 }
 
 - (void)dealloc {
-    NSLog(@"MTDatePickerViewController is deallocated");
 }
 
 #pragma mark -

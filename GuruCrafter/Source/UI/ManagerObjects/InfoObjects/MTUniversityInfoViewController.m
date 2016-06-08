@@ -75,7 +75,10 @@
         
         self.university.name = self.firstField.text;
         self.university.location = self.secondField.text;
-        self.university.foundingDate = self.currentDate;
+        if (self.currentDate) {
+            self.university.foundingDate = self.currentDate;
+        }
+
         
         NSLog(@"%@", [NSString stringWithFormat:@"%@", self.university.foundingDate]);
         

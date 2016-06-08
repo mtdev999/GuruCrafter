@@ -10,6 +10,7 @@
 
 #import "MTChoseCoursesViewController.h"
 #import "MTDatePickerViewController.h"
+#import "MTCourseInfoViewController.h"
 
 #import "MTUniversity.h"
 #import "MTCourse.h"
@@ -189,7 +190,11 @@
         navController.modalPresentationStyle = UIModalPresentationPageSheet;
         [self presentViewController:navController animated:YES completion:nil];
     } else {
+        MTCourseInfoViewController *vc = [MTCourseInfoViewController new];
+        NSArray *array = [self.university.courses allObjects];
         
+        vc.course = [array objectAtIndex:indexPath.row - 1];
+        [self.navigationController pushViewController:vc animated:YES];
     }
 }
 

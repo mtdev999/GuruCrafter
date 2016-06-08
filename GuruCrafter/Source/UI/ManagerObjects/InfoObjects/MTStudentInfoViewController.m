@@ -93,6 +93,12 @@
 #pragma mark -
 #pragma mark UITableViewDataSource
 
+-(void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (indexPath.section == 0 && [cell respondsToSelector:@selector(setBackgroundColor:)]) {
+        [cell setBackgroundColor:[UIColor colorWithRed:0.2941 green:0.6 blue:0.7804 alpha:0.504671663851351]];
+    }
+}
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
     return section == 0 ? 4 : 10;

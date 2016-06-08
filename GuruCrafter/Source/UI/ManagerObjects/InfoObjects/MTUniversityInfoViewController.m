@@ -32,6 +32,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.navigationItem.title = @"University Info";
+    
+   
+
 
     UIBarButtonItem *edit = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemEdit
                                                                                 target:self
@@ -105,7 +108,15 @@
 #pragma mark -
 #pragma mark UITableViewDataSource
 
+-(void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (indexPath.section == 0 && [cell respondsToSelector:@selector(setBackgroundColor:)]) {
+        [cell setBackgroundColor:[UIColor colorWithRed:0.2667 green:0.6353 blue:0.6941 alpha:0.5]];
+    }
+}
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    
+    
     return section == 0 ? 3 : self.university.courses.count + 1;
 }
 
@@ -120,7 +131,6 @@
 - (void)configureCell:(UITableViewCell *)cell withObject:(NSManagedObject *)object indexPath:(NSIndexPath *)indexPath {
     UITextField *field = [TextField getTextFieldWith:self.view.bounds];
     field.delegate = self;
-    
     if (indexPath.section == 0) {
         if (indexPath.row == 0) {
             cell.textLabel.text = [self.university.listCategories objectAtIndex:indexPath.row];//@"Name:";
@@ -134,6 +144,7 @@
             self.secondField.text = self.university.location;
             
         } else if (indexPath.row == 2) {
+            
             cell.textLabel.text = @"Founding Date:";
             self.thridField = field;
             self.thridField.returnKeyType = UIReturnKeyDone;

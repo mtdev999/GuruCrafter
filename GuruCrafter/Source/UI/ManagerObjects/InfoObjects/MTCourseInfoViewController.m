@@ -53,6 +53,12 @@
 #pragma mark -
 #pragma mark UITableViewDataSource
 
+-(void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (indexPath.section == 0 && [cell respondsToSelector:@selector(setBackgroundColor:)]) {
+        [cell setBackgroundColor:[UIColor colorWithRed:0.8039 green:0.5059 blue:0.4784 alpha:0.501266891891892]];
+    }
+}
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return section == 0 ? 3 : self.course.students.count + 1;
 }

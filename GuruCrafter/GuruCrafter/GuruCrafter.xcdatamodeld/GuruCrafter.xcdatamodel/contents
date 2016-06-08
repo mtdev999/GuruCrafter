@@ -5,7 +5,7 @@
         <attribute name="sector" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="subject" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="students" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="MTStudent" inverseName="corses" inverseEntity="MTStudent" syncable="YES"/>
-        <relationship name="techers" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="MTTeacher" inverseName="courses" inverseEntity="MTTeacher" syncable="YES"/>
+        <relationship name="teachers" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="MTTeacher" inverseName="courses" inverseEntity="MTTeacher" syncable="YES"/>
         <relationship name="university" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="MTUniversity" inverseName="courses" inverseEntity="MTUniversity" syncable="YES"/>
     </entity>
     <entity name="MTParentObject" representedClassName="MTParentObject" syncable="YES"/>
@@ -20,7 +20,7 @@
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="subject" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="surname" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="courses" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="MTCourse" inverseName="techers" inverseEntity="MTCourse" syncable="YES"/>
+        <relationship name="courses" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="MTCourse" inverseName="teachers" inverseEntity="MTCourse" syncable="YES"/>
         <relationship name="university" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="MTUniversity" inverseName="teachers" inverseEntity="MTUniversity" syncable="YES"/>
     </entity>
     <entity name="MTUniversity" representedClassName="MTUniversity" parentEntity="MTParentObject" syncable="YES">
@@ -32,8 +32,8 @@
         <relationship name="teachers" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="MTTeacher" inverseName="university" inverseEntity="MTTeacher" syncable="YES"/>
     </entity>
     <elements>
-        <element name="MTCourse" positionX="-6660" positionY="-36" width="128" height="135"/>
-        <element name="MTParentObject" positionX="-6653" positionY="-549" width="128" height="45"/>
+        <element name="MTCourse" positionX="-6660" positionY="-36" width="128" height="133"/>
+        <element name="MTParentObject" positionX="-6653" positionY="-549" width="128" height="43"/>
         <element name="MTStudent" positionX="-5904" positionY="-192" width="128" height="120"/>
         <element name="MTTeacher" positionX="-6473" positionY="-325" width="128" height="118"/>
         <element name="MTUniversity" positionX="-7101" positionY="-234" width="128" height="133"/>

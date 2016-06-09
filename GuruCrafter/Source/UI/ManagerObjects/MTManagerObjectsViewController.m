@@ -21,6 +21,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    CGRect frame = self.view.bounds;
+    
+    self.tableView = [[UITableView alloc] initWithFrame:frame style:UITableViewStyleGrouped];
 
     UIBarButtonItem *doneButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone
                                                                                target:self

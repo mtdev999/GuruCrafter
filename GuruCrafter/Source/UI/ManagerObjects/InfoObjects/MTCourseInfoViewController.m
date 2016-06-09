@@ -8,29 +8,37 @@
 
 #import "MTCourseInfoViewController.h"
 
+#import "MTUniversitiesViewController.h"
 #import "MTChoseStudentViewController.h"
+#import "MTChoseTeacherViewController.h"
 
 #import "MTUniversity.h"
 #import "MTCourse.h"
 #import "MTStudent.h"
+#import "MTTeacher.h"
 #import "MTDataManager.h"
 
 #import "TextField.h"
 
-@interface MTCourseInfoViewController () <UITextFieldDelegate>
-
+@interface MTCourseInfoViewController () <UITextFieldDelegate, MTChoseTeacherDelegate>
+@property (nonatomic, strong)   NSMutableArray *tempTeashers;
 @end
 
 @implementation MTCourseInfoViewController
+@synthesize fetchedResultsController = _fetchedResultsController;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.navigationItem.title = @"Course Info";
     
-    UIBarButtonItem *edit = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemEdit
-                                                                          target:self
-                                                                          action:@selector(actionEdit:)];
-    self.navigationItem.rightBarButtonItem = edit;
+    if ([[self.navigationController.viewControllers firstObject] isKindOfClass:[MTUniversitiesViewController class]]) {
+        self.navigationItem.rightBarButtonItem = nil;
+    } else {
+        UIBarButtonItem *edit = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemEdit
+                                                                              target:self
+                                                                              action:@selector(actionEdit:)];
+        self.navigationItem.rightBarButtonItem = edit;
+    }
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -60,7 +68,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return section == 0 ? 3 : self.course.students.count + 1;
+    return section == 0 ? 4 : self.course.students.count + 1;
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -91,6 +99,20 @@
             self.thridField = field;
             self.thridField.text = self.course.sector;
             self.thridField.returnKeyType = UIReturnKeyDone;
+        } else {
+            cell.textLabel.text = @"Teacher:";
+            self.fourField = field;
+
+            if (self.course.teachers) {
+                self.fourField.text = [NSString stringWithFormat:@"%@ %@", self.course.teachers.name, self.course.teachers.surname];
+                
+            } else {
+                self.fourField.text = @"ADD TEACHER";
+                self.fourField.font = [UIFont systemFontOfSize:12];
+                self.fourField.textColor = [UIColor orangeColor];
+                self.fourField.placeholder = @"chose university";
+            }
+
         }
         
         [cell addSubview:field];
@@ -142,9 +164,39 @@
 #pragma mark -
 #pragma mark UITextFieldDelegate
 
-
 - (BOOL)textFieldShouldBeginEditing:(UITextField *)textField {
-    return NO;
+    
+    if ([[self.navigationController.viewControllers firstObject] isKindOfClass:[MTUniversitiesViewController class]]) {
+        return NO;
+    }
+    if ([textField isEqual:self.fourField]) {
+        [self showChoseTeacher];
+        
+        return NO;
+    }
+    
+    return YES;
+}
+
+#pragma mark -
+#pragma mark MTChoseTeacherDelegate
+
+- (void)didFinishChoseObject:(MTTeacher *)teacher withIndexPath:(NSIndexPath *)indexPath {
+    self.teacher = teacher;
+    self.course.teachers = teacher;
+    self.fourField.text = [NSString stringWithFormat:@"%@ %@", teacher.name, teacher.surname];
+    NSLog(@"teacher: %@ %@", teacher.name, teacher.surname);
+}
+
+#pragma mark -
+#pragma mark Private
+
+- (void)showChoseTeacher {
+    MTChoseTeacherViewController *vc = [MTChoseTeacherViewController new];
+    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:vc];
+    vc.delegate = self;
+    navController.modalPresentationStyle = UIModalPresentationPopover;
+    [self presentViewController:navController animated:YES completion:nil];
 }
 
 @end

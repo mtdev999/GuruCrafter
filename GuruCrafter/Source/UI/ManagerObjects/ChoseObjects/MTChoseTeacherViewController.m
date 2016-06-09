@@ -56,9 +56,9 @@
         MTTeacher *teacher = (MTTeacher *)object;
         teacher = [self.fetchedResultsController objectAtIndexPath:indexPath];
         cell.textLabel.text = [NSString stringWithFormat:@"%@ %@", teacher.name, teacher.surname];
-        if ([self.university.teachers containsObject:teacher]) {
-            cell.accessoryType = UITableViewCellAccessoryCheckmark;
-        }
+//        if ([self.course.teachers containsObject:teacher]) {
+//            cell.accessoryType = UITableViewCellAccessoryCheckmark;
+//        }
     }
 }
 
@@ -68,18 +68,17 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
-    MTCourse *course = self.course;
-    NSMutableSet *array = [NSMutableSet setWithSet:course.teachers];
+//    MTCourse *course = self.course;
+//    NSMutableSet *array = [NSMutableSet setWithSet:course.teachers];
     
     UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
     cell.accessoryType = UITableViewCellAccessoryCheckmark;
     
     MTTeacher *teacher = [self.fetchedResultsController objectAtIndexPath:indexPath];
-    [array addObject:teacher];
-    course.teachers = array;
+//    [array addObject:teacher];
+//    course.teachers = array;
     
-    NSLog(@"course.teachers: %@", course.teachers);
-    
+    NSLog(@"(chose teachers) teacher name: %@ %@", teacher.name, teacher.surname);
     NSError *error = nil;
     if (![[[MTDataManager sharedManager] managedObjectContext] save:&error]) {
         NSLog(@"%@", error.localizedDescription);

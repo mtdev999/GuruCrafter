@@ -8,9 +8,11 @@
 
 #import "MTManagerObjectsViewController.h"
 
-@class MTCourse;
+@class MTCourse, MTTeacher;
 
 @interface MTCourseInfoViewController : MTManagerObjectsViewController
-@property (nonatomic, strong)   MTCourse *course;
+@property (nonatomic, strong)   NSIndexPath *indexPath;
+@property (nonatomic, strong)   MTCourse    *course;
+@property (nonatomic, strong)   MTTeacher   *teacher;
 
 @end

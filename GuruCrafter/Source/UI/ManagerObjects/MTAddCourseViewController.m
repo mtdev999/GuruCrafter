@@ -44,9 +44,11 @@
     course.name = self.firstField.text;
     course.subject = self.secondField.text;
     course.sector = self.thridField.text;
-    NSMutableSet *temp = [NSMutableSet setWithSet:course.teachers];
-    [temp addObject:self.teacher];
-    course.teachers = temp;
+    if (self.teacher) {
+       
+        course.teachers = self.teacher;
+    }
+    
     
     [self save];
     [self.navigationController popViewControllerAnimated:YES];
@@ -127,7 +129,7 @@
 }
 
 #pragma mark -
-#pragma mark 
+#pragma mark MTChoseTeacherDelegate
 
 - (void)didFinishChoseObject:(MTTeacher *)teacher withIndexPath:(NSIndexPath *)indexPath {
     self.teacher = teacher;

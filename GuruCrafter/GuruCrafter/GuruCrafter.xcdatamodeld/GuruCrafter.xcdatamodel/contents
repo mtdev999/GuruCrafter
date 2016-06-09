@@ -5,7 +5,7 @@
         <attribute name="sector" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="subject" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="students" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="MTStudent" inverseName="corses" inverseEntity="MTStudent" syncable="YES"/>
-        <relationship name="teachers" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="MTTeacher" inverseName="courses" inverseEntity="MTTeacher" syncable="YES"/>
+        <relationship name="teachers" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="MTTeacher" inverseName="courses" inverseEntity="MTTeacher" syncable="YES"/>
         <relationship name="university" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="MTUniversity" inverseName="courses" inverseEntity="MTUniversity" syncable="YES"/>
     </entity>
     <entity name="MTParentObject" representedClassName="MTParentObject" syncable="YES"/>

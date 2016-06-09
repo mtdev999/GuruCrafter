@@ -140,7 +140,7 @@
         <scene sceneID="p9k-UE-lSp">
             <objects>
                 <navigationController id="suO-qq-C9i" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Universities" id="0kX-Bw-pgz"/>
+                    <tabBarItem key="tabBarItem" title="Universities" image="Image-1" id="0kX-Bw-pgz"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="BI4-fe-szj">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -155,14 +155,13 @@
             </objects>
             <point key="canvasLocation" x="2527" y="-214"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Main View Controller-->
         <scene sceneID="ua2-U8-cWw">
             <objects>
-                <tabBarController id="XMi-WN-J47" sceneMemberID="viewController">
-                    <tabBar key="tabBar" contentMode="scaleToFill" id="49X-A9-61o">
+                <tabBarController storyboardIdentifier="MTMainViewController" id="XMi-WN-J47" customClass="MTMainViewController" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleAspectFit" backgroundImage="Group 2" id="49X-A9-61o">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <color key="barTintColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                     </tabBar>
                     <connections>
@@ -180,7 +179,7 @@
         <scene sceneID="Ed4-KL-SdM">
             <objects>
                 <navigationController id="B86-jI-UDH" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" tag="3" title="Teachers" id="wYx-3n-apD"/>
+                    <tabBarItem key="tabBarItem" tag="3" title="Teachers" image="Professor-01-512" id="wYx-3n-apD"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="EMk-gI-ZlD">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -199,7 +198,7 @@
         <scene sceneID="2zm-r1-tgt">
             <objects>
                 <navigationController id="KZT-CO-tWE" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" tag="2" title="Courses" id="Zao-mU-xHX"/>
+                    <tabBarItem key="tabBarItem" tag="2" title="Courses" image="course" id="Zao-mU-xHX"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="6u8-sC-fOH">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -218,7 +217,7 @@
         <scene sceneID="beC-3C-p98">
             <objects>
                 <navigationController id="8rn-OC-74v" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" tag="1" title="Students" id="fZQ-vG-Mae"/>
+                    <tabBarItem key="tabBarItem" tag="1" title="Students" image="Students-512" id="fZQ-vG-Mae"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="gFd-1P-zZ5">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -418,4 +417,11 @@
             <point key="canvasLocation" x="4464" y="1492"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Group 2" width="413" height="50"/>
+        <image name="Image-1" width="23" height="23"/>
+        <image name="Professor-01-512" width="25" height="25"/>
+        <image name="Students-512" width="25" height="18"/>
+        <image name="course" width="23" height="23"/>
+    </resources>
 </document>

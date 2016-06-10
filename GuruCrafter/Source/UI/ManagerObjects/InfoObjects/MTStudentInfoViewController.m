@@ -8,8 +8,13 @@
 
 #import "MTStudentInfoViewController.h"
 
+
+#import "MTChoseCoursesViewController.h"
+#import "MTCourseInfoViewController.h"
+
 #import "MTStudent.h"
 #import "MTUniversity.h"
+#import "MTCourse.h"
 #import "MTDataManager.h"
 #import "TextField.h"
 
@@ -101,7 +106,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
-    return section == 0 ? 4 : 10;
+    return section == 0 ? 4 : self.student.corses.count + 1;
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -109,7 +114,7 @@
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
-    return section == 0 ? @"Info:": @"Students:";
+    return section == 0 ? @"Info:": @"Courses:";
 }
 
 - (void)configureCell:(UITableViewCell *)cell withObject:(NSManagedObject *)object indexPath:(NSIndexPath *)indexPath {
@@ -145,28 +150,33 @@
             cell.textLabel.textAlignment = NSTextAlignmentRight;
             cell.textLabel.textColor = [UIColor orangeColor];
             cell.textLabel.font = [UIFont systemFontOfSize:12];
-            cell.textLabel.text = @"ADD STUDENT";
+            cell.textLabel.text = @"ADD COURSE";
         } else {
-//            MTCourse *course = self.course;
-//            NSArray *array = [course.students allObjects];
-//            MTStudent *student = [array objectAtIndex:indexPath.row - 1];
-//            cell.textLabel.text = [NSString stringWithFormat:@"%@ %@", student.name, student.surname];
+            
+            NSArray *array = [student.corses allObjects];
+            NSLog(@"student:%@ count courses: %lu", student.name, student.corses.count);
+            NSUInteger index = indexPath.row - 1;
+            
+            MTCourse *course = [array objectAtIndex:index];
+            NSLog(@"course: %@", course.name);
+            cell.textLabel.text = [NSString stringWithFormat:@"%@", course.name];
         }
     }
 }
 
-//- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-//    if (editingStyle == UITableViewCellEditingStyleDelete) {
-//        NSArray *tempArray = [self.course.students allObjects];
-//        NSMutableArray *tempMutableArray = [NSMutableArray arrayWithArray:tempArray];
-//        
-//        
-//        [tempMutableArray removeObject:[tempArray objectAtIndex:indexPath.row - 1]];
-//        [self.course setStudents:[NSSet setWithArray:tempMutableArray]];
-//        
-//        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-//    }
-//}
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        NSArray *tempArray = [self.student.corses allObjects];
+        NSMutableArray *tempMutableArray = [NSMutableArray arrayWithArray:tempArray];
+        
+        
+        [tempMutableArray removeObject:[tempArray objectAtIndex:indexPath.row - 1]];
+        [self.student setCorses:[NSSet setWithArray:tempMutableArray]];
+        
+        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+        [self save];
+    }
+}
 
 #pragma mark -
 #pragma mark UITableViewDelegate
@@ -174,14 +184,20 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
+    MTStudent *student = self.student;
+    
     if (indexPath.section == 1 && indexPath.row == 0) {
-//        MTChoseStudentViewController *vc = [MTChoseStudentViewController new];
-//        vc.course = self.course;
-//        UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:vc];
-//        navController.modalPresentationStyle = UIModalPresentationPageSheet;
-//        [self presentViewController:navController animated:YES completion:nil];
+        MTChoseCoursesViewController *vc = [MTChoseCoursesViewController new];
+        vc.student = student;
+        UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:vc];
+        navController.modalPresentationStyle = UIModalPresentationPageSheet;
+        [self presentViewController:navController animated:YES completion:nil];
     } else {
+        MTCourseInfoViewController *vc = [MTCourseInfoViewController new];
+        NSArray *array = [student.corses allObjects];
         
+        vc.course = [array objectAtIndex:indexPath.row - 1];
+        [self.navigationController pushViewController:vc animated:YES];
     }
 }
 

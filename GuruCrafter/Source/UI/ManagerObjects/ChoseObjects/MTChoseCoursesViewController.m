@@ -10,6 +10,7 @@
 
 #import "MTUniversity.h"
 #import "MTCourse.h"
+#import "MTStudent.h"
 #import "MTDataManager.h"
 
 @interface MTChoseCoursesViewController ()
@@ -57,7 +58,12 @@
         MTCourse *course = (MTCourse *)object;
         course = [self.fetchedResultsController objectAtIndexPath:indexPath];
         cell.textLabel.text = [NSString stringWithFormat:@"%@", course.name];
+        
         if ([self.university.courses containsObject:course]) {
+            cell.accessoryType = UITableViewCellAccessoryCheckmark;
+        }
+        
+        if ([self.student.corses containsObject:course]) {
             cell.accessoryType = UITableViewCellAccessoryCheckmark;
         }
     }
@@ -69,15 +75,25 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
-    MTUniversity *university = self.university;
-    NSMutableSet *array = [NSMutableSet setWithSet:university.courses];
-    
     UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
     cell.accessoryType = UITableViewCellAccessoryCheckmark;
     
     MTCourse *course = [self.fetchedResultsController objectAtIndexPath:indexPath];
-    [array addObject:course];
-    university.courses = array;
+    
+    if (self.university) {
+        MTUniversity *university = self.university;
+        NSMutableSet *array = [NSMutableSet setWithSet:university.courses];
+        
+        [array addObject:course];
+        university.courses = array;
+    }
+    
+    if (self.student) {
+        MTStudent *student = self.student;
+        NSMutableSet *array = [NSMutableSet setWithSet:student.corses];
+        [array addObject:course];
+        student.corses = array;
+    }
     
     NSError *error = nil;
     if (![[[MTDataManager sharedManager] managedObjectContext] save:&error]) {

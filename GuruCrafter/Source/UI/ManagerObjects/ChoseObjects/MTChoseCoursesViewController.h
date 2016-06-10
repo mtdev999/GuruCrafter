@@ -8,10 +8,11 @@
 
 #import "MTManagerObjectsViewController.h"
 
-@class MTUniversity;
+@class MTUniversity, MTStudent;
 
 @interface MTChoseCoursesViewController : MTManagerObjectsViewController
-@property (strong, nonatomic) NSIndexPath   *choisedIndexPath;
-@property (nonatomic, strong)   MTUniversity *university;
+@property (strong, nonatomic)   NSIndexPath     *choisedIndexPath;
+@property (nonatomic, strong)   MTUniversity    *university;
+@property (nonatomic, strong)   MTStudent       *student;
 
 @end

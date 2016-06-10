@@ -37,13 +37,6 @@
 		1B10852F1D05FC9000EC6E2A /* MTChoseUniversityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B10852E1D05FC9000EC6E2A /* MTChoseUniversityViewController.m */; };
 		1B3CF9F31D06F75400DAF925 /* MTDatePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B3CF9F21D06F75400DAF925 /* MTDatePickerViewController.m */; };
 		1B79E97F1D09E32300BA26CE /* MTMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B79E97E1D09E32300BA26CE /* MTMainViewController.m */; };
-		1B79E9A81D09EEFC00BA26CE /* Rectangle 1.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 1B79E9A71D09EEFC00BA26CE /* Rectangle 1.pdf */; };
-		1B79E9AA1D09F4A600BA26CE /* books-512.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 1B79E9A91D09F4A600BA26CE /* books-512.pdf */; };
-		1B79E9AC1D09F52E00BA26CE /* University.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 1B79E9AB1D09F52E00BA26CE /* University.pdf */; };
-		1B79E9AE1D09F5F600BA26CE /* Students-512.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 1B79E9AD1D09F5F600BA26CE /* Students-512.pdf */; };
-		1B79E9B01D09F60100BA26CE /* Professor-01-512.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 1B79E9AF1D09F60100BA26CE /* Professor-01-512.pdf */; };
-		1B79E9B21D09F6E400BA26CE /* line.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 1B79E9B11D09F6E400BA26CE /* line.pdf */; };
-		1B79E9B41D09F88800BA26CE /* Group 2.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 1B79E9B31D09F88800BA26CE /* Group 2.pdf */; };
 		1BC59F601CFADFC300FC5D63 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BC59F5F1CFADFC300FC5D63 /* main.m */; };
 		1BC59F631CFADFC300FC5D63 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BC59F621CFADFC300FC5D63 /* AppDelegate.m */; };
 		1BC59F6C1CFADFC300FC5D63 /* GuruCrafter.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1BC59F6A1CFADFC300FC5D63 /* GuruCrafter.xcdatamodeld */; };
@@ -115,13 +108,6 @@
 		1B3CF9F21D06F75400DAF925 /* MTDatePickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTDatePickerViewController.m; sourceTree = "<group>"; };
 		1B79E97D1D09E32300BA26CE /* MTMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTMainViewController.h; sourceTree = "<group>"; };
 		1B79E97E1D09E32300BA26CE /* MTMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTMainViewController.m; sourceTree = "<group>"; };
-		1B79E9A71D09EEFC00BA26CE /* Rectangle 1.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Rectangle 1.pdf"; sourceTree = "<group>"; };
-		1B79E9A91D09F4A600BA26CE /* books-512.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "books-512.pdf"; sourceTree = "<group>"; };
-		1B79E9AB1D09F52E00BA26CE /* University.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = University.pdf; sourceTree = "<group>"; };
-		1B79E9AD1D09F5F600BA26CE /* Students-512.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Students-512.pdf"; sourceTree = "<group>"; };
-		1B79E9AF1D09F60100BA26CE /* Professor-01-512.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Professor-01-512.pdf"; sourceTree = "<group>"; };
-		1B79E9B11D09F6E400BA26CE /* line.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = line.pdf; sourceTree = "<group>"; };
-		1B79E9B31D09F88800BA26CE /* Group 2.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Group 2.pdf"; sourceTree = "<group>"; };
 		1BC59F5B1CFADFC300FC5D63 /* GuruCrafter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GuruCrafter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BC59F5F1CFADFC300FC5D63 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		1BC59F611CFADFC300FC5D63 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -224,20 +210,6 @@
 			path = MTDatePickerViewController;
 			sourceTree = "<group>";
 		};
-		1B79E9A61D09EEFC00BA26CE /* images */ = {
-			isa = PBXGroup;
-			children = (
-				1B79E9AF1D09F60100BA26CE /* Professor-01-512.pdf */,
-				1B79E9A71D09EEFC00BA26CE /* Rectangle 1.pdf */,
-				1B79E9A91D09F4A600BA26CE /* books-512.pdf */,
-				1B79E9B31D09F88800BA26CE /* Group 2.pdf */,
-				1B79E9AB1D09F52E00BA26CE /* University.pdf */,
-				1B79E9AD1D09F5F600BA26CE /* Students-512.pdf */,
-				1B79E9B11D09F6E400BA26CE /* line.pdf */,
-			);
-			path = images;
-			sourceTree = "<group>";
-		};
 		1BC59F521CFADFC300FC5D63 = {
 			isa = PBXGroup;
 			children = (
@@ -279,7 +251,6 @@
 		1BC59F781CFAE04000FC5D63 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
-				1B79E9A61D09EEFC00BA26CE /* images */,
 				1BC59F791CFAE04000FC5D63 /* Assets.xcassets */,
 				1BC59F7A1CFAE04000FC5D63 /* LaunchScreen.storyboard */,
 				1BC59F7C1CFAE04000FC5D63 /* Main.storyboard */,
@@ -444,16 +415,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1B79E9B41D09F88800BA26CE /* Group 2.pdf in Resources */,
 				1BC59F821CFAE04000FC5D63 /* Assets.xcassets in Resources */,
-				1B79E9A81D09EEFC00BA26CE /* Rectangle 1.pdf in Resources */,
-				1B79E9B01D09F60100BA26CE /* Professor-01-512.pdf in Resources */,
-				1B79E9AE1D09F5F600BA26CE /* Students-512.pdf in Resources */,
-				1B79E9AC1D09F52E00BA26CE /* University.pdf in Resources */,
 				1BC59F841CFAE04000FC5D63 /* Main.storyboard in Resources */,
-				1B79E9AA1D09F4A600BA26CE /* books-512.pdf in Resources */,
 				1BC59F831CFAE04000FC5D63 /* LaunchScreen.storyboard in Resources */,
-				1B79E9B21D09F6E400BA26CE /* line.pdf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

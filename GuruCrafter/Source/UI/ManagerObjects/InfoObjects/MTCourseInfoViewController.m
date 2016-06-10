@@ -11,6 +11,7 @@
 #import "MTUniversitiesViewController.h"
 #import "MTChoseStudentViewController.h"
 #import "MTChoseTeacherViewController.h"
+#import "MTStudentInfoViewController.h"
 
 #import "MTUniversity.h"
 #import "MTCourse.h"
@@ -157,7 +158,10 @@
         navController.modalPresentationStyle = UIModalPresentationPageSheet;
         [self presentViewController:navController animated:YES completion:nil];
     } else {
-        
+        MTStudentInfoViewController *vc = [MTStudentInfoViewController new];
+        NSArray *array = [self.course.students allObjects];
+        vc.student = [array objectAtIndex:indexPath.row - 1];
+        [self.navigationController pushViewController:vc animated:YES];
     }
 }
 

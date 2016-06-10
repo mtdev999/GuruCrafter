@@ -140,7 +140,7 @@
         <scene sceneID="p9k-UE-lSp">
             <objects>
                 <navigationController id="suO-qq-C9i" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Universities" image="Image-1" id="0kX-Bw-pgz"/>
+                    <tabBarItem key="tabBarItem" title="Universities" image="University" id="0kX-Bw-pgz"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="BI4-fe-szj">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -179,7 +179,7 @@
         <scene sceneID="Ed4-KL-SdM">
             <objects>
                 <navigationController id="B86-jI-UDH" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" tag="3" title="Teachers" image="Professor-01-512" id="wYx-3n-apD"/>
+                    <tabBarItem key="tabBarItem" tag="3" title="Teachers" image="teachers" id="wYx-3n-apD"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="EMk-gI-ZlD">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -198,7 +198,7 @@
         <scene sceneID="2zm-r1-tgt">
             <objects>
                 <navigationController id="KZT-CO-tWE" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" tag="2" title="Courses" image="course" id="Zao-mU-xHX"/>
+                    <tabBarItem key="tabBarItem" tag="2" title="Courses" image="Courses" id="Zao-mU-xHX"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="6u8-sC-fOH">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -418,10 +418,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Courses" width="24" height="24"/>
         <image name="Group 2" width="413" height="50"/>
-        <image name="Image-1" width="23" height="23"/>
-        <image name="Professor-01-512" width="25" height="25"/>
-        <image name="Students-512" width="25" height="18"/>
-        <image name="course" width="23" height="23"/>
+        <image name="Students-512" width="26" height="19"/>
+        <image name="University" width="24" height="24"/>
+        <image name="teachers" width="24" height="24"/>
     </resources>
 </document>

@@ -32,10 +32,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.navigationItem.title = @"University";
-    
-    
-
-    
 
     UIBarButtonItem *edit = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemEdit
                                                                                 target:self

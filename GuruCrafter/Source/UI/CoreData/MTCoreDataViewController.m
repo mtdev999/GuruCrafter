@@ -67,6 +67,7 @@
     }
     
     NSManagedObject *object = [[self fetchedResultsController] objectAtIndexPath:indexPath];
+    cell.textLabel.textColor = [UIColor whiteColor];
     [self configureCell:cell withObject:object];
     
     return cell;

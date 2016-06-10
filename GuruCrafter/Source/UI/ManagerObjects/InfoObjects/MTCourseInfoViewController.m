@@ -12,6 +12,7 @@
 #import "MTChoseStudentViewController.h"
 #import "MTChoseTeacherViewController.h"
 #import "MTStudentInfoViewController.h"
+#import "MTStudentsViewController.h"
 
 #import "MTUniversity.h"
 #import "MTCourse.h"
@@ -21,8 +22,11 @@
 
 #import "TextField.h"
 
+#define BGColorCellEditing [UIColor colorWithRed:1.0 green:0.972 blue:0.7441 alpha:1.0];
+
 @interface MTCourseInfoViewController () <UITextFieldDelegate, MTChoseTeacherDelegate>
-@property (nonatomic, strong)   NSMutableArray *tempTeashers;
+@property (nonatomic, assign)   BOOL    editing;
+
 @end
 
 @implementation MTCourseInfoViewController
@@ -32,7 +36,9 @@
     [super viewDidLoad];
     self.navigationItem.title = @"Course Info";
     
-    if ([[self.navigationController.viewControllers firstObject] isKindOfClass:[MTUniversitiesViewController class]]) {
+    if ([[self.navigationController.viewControllers firstObject] isKindOfClass:[MTUniversitiesViewController class]]
+        || [[self.navigationController.viewControllers firstObject] isKindOfClass:[MTStudentsViewController class]])
+    {
         self.navigationItem.rightBarButtonItem = nil;
     } else {
         UIBarButtonItem *edit = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemEdit
@@ -56,7 +62,50 @@
 #pragma mark Actions
 
 - (void)actionEdit:(UIBarButtonItem *)sender {
+    self.tableView.editing = NO;
     
+    self.editing = YES;
+    
+    [self.firstField becomeFirstResponder];
+    self.firstField.backgroundColor = BGColorCellEditing
+    self.secondField.backgroundColor = BGColorCellEditing
+    self.thridField.backgroundColor = BGColorCellEditing
+    
+    UIBarButtonItem *editButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone
+                                                                                target:self
+                                                                                action:@selector(actionDone:)];
+    [self.navigationItem setRightBarButtonItem:editButton animated:YES];
+}
+
+- (void)actionDone:(UIBarButtonItem *)sender {
+    if (self.firstField.text.length > 0
+        && self.secondField.text.length > 0) {
+        
+        self.course.name = self.firstField.text;
+        self.course.subject = self.secondField.text;
+        self.course.sector = self.secondField.text;
+        if (self.teacher) {
+            self.course.teachers = self.teacher;
+        }
+        
+        [self save];
+        [self.navigationController popViewControllerAnimated:YES];
+    } else {
+        [self showAlertInfo];
+    }
+}
+
+- (void)showAlertInfo {
+    UIAlertController *controller = [UIAlertController alertControllerWithTitle:@"WARNING!"
+                                                                        message:@"You should not have empty cells."
+                                                                 preferredStyle:UIAlertControllerStyleAlert];
+    
+    UIAlertAction *ok = [UIAlertAction actionWithTitle:@"OK"
+                                                 style:UIAlertActionStyleCancel
+                                               handler:nil];
+    
+    [controller addAction:ok];
+    [self presentViewController:controller animated:YES completion:nil];
 }
 
 #pragma mark -
@@ -64,7 +113,7 @@
 
 -(void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.section == 0 && [cell respondsToSelector:@selector(setBackgroundColor:)]) {
-        [cell setBackgroundColor:[UIColor colorWithRed:0.8039 green:0.5059 blue:0.4784 alpha:0.501266891891892]];
+        [cell setBackgroundColor:[UIColor colorWithRed:0.8039 green:0.5059 blue:0.4784 alpha:1.0]];
     }
 }
 
@@ -105,7 +154,8 @@
             self.fourField = field;
 
             if (self.course.teachers) {
-                self.fourField.text = [NSString stringWithFormat:@"%@ %@", self.course.teachers.name, self.course.teachers.surname];
+                self.fourField.text = [NSString stringWithFormat:@"%@ %@", self.course.teachers.name,
+                                                                           self.course.teachers.surname];
                 
             } else {
                 self.fourField.text = @"ADD TEACHER";
@@ -154,13 +204,16 @@
     if (indexPath.section == 1 && indexPath.row == 0) {
         MTChoseStudentViewController *vc = [MTChoseStudentViewController new];
         vc.course = self.course;
+        
         UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:vc];
         navController.modalPresentationStyle = UIModalPresentationPageSheet;
         [self presentViewController:navController animated:YES completion:nil];
+        
     } else if(indexPath.section == 1) {
         MTStudentInfoViewController *vc = [MTStudentInfoViewController new];
         NSArray *array = [self.course.students allObjects];
         vc.student = [array objectAtIndex:indexPath.row - 1];
+        
         [self.navigationController pushViewController:vc animated:YES];
     }
 }
@@ -170,7 +223,8 @@
 
 - (BOOL)textFieldShouldBeginEditing:(UITextField *)textField {
     
-    if ([[self.navigationController.viewControllers firstObject] isKindOfClass:[MTUniversitiesViewController class]]) {
+    if ([[self.navigationController.viewControllers firstObject] isKindOfClass:[MTUniversitiesViewController class]]
+        || [[self.navigationController.viewControllers firstObject] isKindOfClass:[MTStudentsViewController class]]) {
         return NO;
     }
     if ([textField isEqual:self.fourField]) {

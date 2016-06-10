@@ -55,6 +55,7 @@
 - (void)configureCell:(UITableViewCell *)cell withObject:(NSManagedObject *)object indexPath:(NSIndexPath *)indexPath {
     UITextField *field = [TextField getTextFieldWith:self.view.bounds];
     field.delegate = self;
+//    cell.backgroundColor = [UIColor clearColor];
 
     if (indexPath.row == 0) {
         cell.textLabel.text = @"Name:";

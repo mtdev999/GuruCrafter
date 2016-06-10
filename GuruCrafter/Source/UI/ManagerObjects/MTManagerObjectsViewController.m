@@ -66,6 +66,7 @@
     NSManagedObject *object = [[self fetchedResultsController] objectAtIndexPath:indexPath];
     [self configureCell:cell withObject:object indexPath:indexPath];
     
+    
     return cell;
 }
 

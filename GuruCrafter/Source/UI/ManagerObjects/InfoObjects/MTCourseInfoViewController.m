@@ -157,7 +157,7 @@
         UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:vc];
         navController.modalPresentationStyle = UIModalPresentationPageSheet;
         [self presentViewController:navController animated:YES completion:nil];
-    } else {
+    } else if(indexPath.section == 1) {
         MTStudentInfoViewController *vc = [MTStudentInfoViewController new];
         NSArray *array = [self.course.students allObjects];
         vc.student = [array objectAtIndex:indexPath.row - 1];

@@ -57,6 +57,12 @@
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="tTZ-1c-etv" id="hbl-TS-OS4">
                                     <rect key="frame" x="0.0" y="0.0" width="567" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8Br-K8-WlA">
+                                            <rect key="frame" x="4" y="-1" width="6" height="44"/>
+                                            <color key="backgroundColor" red="0.2627450980392157" green="0.57647058823529407" blue="0.75686274509803919" alpha="0.75269214527027029" colorSpace="calibratedRGB"/>
+                                        </view>
+                                    </subviews>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
@@ -284,6 +290,12 @@
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="8S3-cE-raq" id="tuq-HM-ox6">
                                     <rect key="frame" x="0.0" y="0.0" width="567" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="B6N-xg-TLK">
+                                            <rect key="frame" x="4" y="-1" width="6" height="44"/>
+                                            <color key="backgroundColor" red="0.89803921568627454" green="0.78823529411764703" blue="0.60784313725490191" alpha="0.75063344594594594" colorSpace="calibratedRGB"/>
+                                        </view>
+                                    </subviews>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>

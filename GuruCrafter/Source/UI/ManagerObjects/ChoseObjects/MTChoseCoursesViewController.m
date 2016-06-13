@@ -34,13 +34,17 @@
 #pragma mark Actions
 
 - (void)actionDone:(UIBarButtonItem *)sender {
-    [self dismissViewControllerAnimated:YES completion:^{
-        
-    }];
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 #pragma mark -
 #pragma mark UITableViewDataSource
+
+-(void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
+    [super tableView:tableView willDisplayCell:cell forRowAtIndexPath:indexPath];
+    self.cellBGView.backgroundColor = [UIColor colorWithRed:0.2667 green:0.6353 blue:0.6941 alpha:0.7];
+    [cell setSelected:NO];
+}
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     if (section == 0) {
@@ -75,26 +79,44 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
-    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
-    cell.accessoryType = UITableViewCellAccessoryCheckmark;
-    
     MTCourse *course = [self.fetchedResultsController objectAtIndexPath:indexPath];
+    MTUniversity *university = self.university;
+    MTStudent *student = self.student;
     
-    if (self.university) {
-        MTUniversity *university = self.university;
-        NSMutableSet *array = [NSMutableSet setWithSet:university.courses];
+    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+    
+    if (cell.accessoryType == UITableViewCellAccessoryCheckmark) {
+        cell.accessoryType = UITableViewCellAccessoryNone;
+        if (self.university) {
+            
+            NSMutableSet *array = [NSMutableSet setWithSet:university.courses];
+            
+            [array removeObject:course];
+            university.courses = array;
+        }
+        if (self.student) {
+            
+            NSMutableSet *array = [NSMutableSet setWithSet:student.corses];
+            [array removeObject:course];
+            student.corses = array;
+        }
         
-        [array addObject:course];
-        university.courses = array;
+    } else {
+        cell.accessoryType = UITableViewCellAccessoryCheckmark;
+        if (self.university) {
+            NSMutableSet *array = [NSMutableSet setWithSet:university.courses];
+            
+            [array addObject:course];
+            university.courses = array;
+        }
+        
+        if (self.student) {
+            NSMutableSet *array = [NSMutableSet setWithSet:student.corses];
+            [array addObject:course];
+            student.corses = array;
+        }
     }
-    
-    if (self.student) {
-        MTStudent *student = self.student;
-        NSMutableSet *array = [NSMutableSet setWithSet:student.corses];
-        [array addObject:course];
-        student.corses = array;
-    }
-    
+
     NSError *error = nil;
     if (![[[MTDataManager sharedManager] managedObjectContext] save:&error]) {
         NSLog(@"%@", error.localizedDescription);

@@ -9,6 +9,7 @@
 #import "MTTeachersViewController.h"
 
 #import "MTAddTeacherViewController.h"
+#import "MTTeacherInfoViewController.h"
 #import "MTTeacher.h"
 #import "MTDataManager.h"
 
@@ -68,6 +69,10 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    MTTeacherInfoViewController *vc = [MTTeacherInfoViewController new];
+    vc.teacher = [self.fetchedResultsController objectAtIndexPath:indexPath];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 #pragma mark -
@@ -81,7 +86,7 @@
     
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
     NSEntityDescription *description = [NSEntityDescription entityForName:@"MTTeacher"
-                                                   inManagedObjectContext:self.managedObjectContext];
+                                                   inManagedObjectContext:[[MTDataManager sharedManager] managedObjectContext]];
     [fetchRequest setEntity:description];
     NSSortDescriptor *nameDescriptor = [NSSortDescriptor sortDescriptorWithKey:@"name" ascending:YES];
     NSSortDescriptor *surnameDescriptor = [NSSortDescriptor sortDescriptorWithKey:@"surname" ascending:YES];
@@ -89,7 +94,7 @@
     
     NSFetchedResultsController *aFetchedResultsController =
     [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest
-                                        managedObjectContext:self.managedObjectContext
+                                        managedObjectContext:[[MTDataManager sharedManager] managedObjectContext]
                                           sectionNameKeyPath:nil
                                                    cacheName:nil];
     aFetchedResultsController.delegate = self;

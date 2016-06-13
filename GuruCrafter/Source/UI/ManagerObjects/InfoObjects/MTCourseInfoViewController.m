@@ -111,10 +111,9 @@
 #pragma mark -
 #pragma mark UITableViewDataSource
 
--(void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (indexPath.section == 0 && [cell respondsToSelector:@selector(setBackgroundColor:)]) {
-        [cell setBackgroundColor:[UIColor colorWithRed:0.8039 green:0.5059 blue:0.4784 alpha:1.0]];
-    }
+- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
+    [super tableView:tableView willDisplayCell:cell forRowAtIndexPath:indexPath];
+    self.cellBGView.backgroundColor = [UIColor colorWithRed:0.8039 green:0.5059 blue:0.4784 alpha:0.7];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -170,7 +169,7 @@
     } else {
         if (indexPath.row == 0) {
             cell.textLabel.textAlignment = NSTextAlignmentRight;
-            cell.textLabel.textColor = [UIColor orangeColor];
+            cell.textLabel.textColor = [UIColor redColor];
             cell.textLabel.font = [UIFont systemFontOfSize:12];
             cell.textLabel.text = @"ADD STUDENT";
         } else {
@@ -251,10 +250,17 @@
 
 - (void)showChoseTeacher {
     MTChoseTeacherViewController *vc = [MTChoseTeacherViewController new];
-    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:vc];
     vc.delegate = self;
+    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:vc];
+    
     navController.modalPresentationStyle = UIModalPresentationPopover;
     [self presentViewController:navController animated:YES completion:nil];
+    
+    UIPopoverPresentationController *popController = [navController popoverPresentationController];
+    popController.permittedArrowDirections = UIPopoverArrowDirectionRight;
+    
+    popController.sourceView = self.fourField;
+    popController.sourceRect = CGRectMake(30, 50, 10, 10);
 }
 
 @end

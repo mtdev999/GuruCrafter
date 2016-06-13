@@ -57,12 +57,16 @@
 #pragma mark -
 #pragma mark UITableViewDataSource
 
+- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
+    [super tableView:tableView willDisplayCell:cell forRowAtIndexPath:indexPath];
+    self.cellBGView.backgroundColor = [UIColor colorWithRed:0.2941 green:0.6 blue:0.7804 alpha:0.7];
+}
+
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
     return @"Info:";
 }
 
 - (void)configureCell:(UITableViewCell *)cell withObject:(NSManagedObject *)object indexPath:(NSIndexPath *)indexPath {
-    
     UITextField *field = [TextField getTextFieldWith:self.view.bounds];
     field.delegate = self;
     

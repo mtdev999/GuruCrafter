@@ -19,6 +19,7 @@
 @property (nonatomic, strong)       UITextField     *secondField;
 @property (nonatomic, strong)       UITextField     *thridField;
 @property (nonatomic, strong)       UITextField     *fourField;
+@property (nonatomic, strong)       UIView          *cellBGView;
 
 - (void)save;
 

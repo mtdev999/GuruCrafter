@@ -46,6 +46,15 @@
 #pragma mark -
 #pragma mark UITableViewDataSource
 
+- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
+    [super tableView:tableView willDisplayCell:cell forRowAtIndexPath:indexPath];
+    self.cellBGView.backgroundColor = [UIColor colorWithRed:0.8235 green:0.698 blue:0.3686 alpha:0.7];
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return 3;
+}
+
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
     return @"Info:";
 }

@@ -73,8 +73,7 @@
     MTCourseInfoViewController *vc  = [[MTCourseInfoViewController alloc] init];
     MTCourse *course = [self.fetchedResultsController objectAtIndexPath:indexPath];
     vc.course = course;
-    
-    NSLog(@"course: %@", course);
+
     [self.navigationController pushViewController:vc animated:YES];
 }
 

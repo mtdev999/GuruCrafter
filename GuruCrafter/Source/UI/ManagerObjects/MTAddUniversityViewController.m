@@ -48,6 +48,15 @@
 #pragma mark -
 #pragma mark UITableViewDataSource
 
+-(void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
+    [super tableView:tableView willDisplayCell:cell forRowAtIndexPath:indexPath];
+    self.cellBGView.backgroundColor = [UIColor colorWithRed:0.2667 green:0.6353 blue:0.6941 alpha:0.7];
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return 3;
+}
+
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
     return @"Info:";
 }
@@ -55,7 +64,6 @@
 - (void)configureCell:(UITableViewCell *)cell withObject:(NSManagedObject *)object indexPath:(NSIndexPath *)indexPath {
     UITextField *field = [TextField getTextFieldWith:self.view.bounds];
     field.delegate = self;
-//    cell.backgroundColor = [UIColor clearColor];
 
     if (indexPath.row == 0) {
         cell.textLabel.text = @"Name:";
@@ -104,6 +112,12 @@
     
     navController.modalPresentationStyle = UIModalPresentationPopover;
     [self presentViewController:navController animated:YES completion:nil];
+    
+    UIPopoverPresentationController *popController = [navController popoverPresentationController];
+    popController.permittedArrowDirections = UIPopoverArrowDirectionRight;
+    
+    popController.sourceView = self.thridField;
+    popController.sourceRect = CGRectMake(30, 50, 10, 10);
 }
 
 #pragma mark -

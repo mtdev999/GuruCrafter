@@ -24,7 +24,7 @@
     CGRect frame = self.view.bounds;
     
     self.tableView = [[UITableView alloc] initWithFrame:frame style:UITableViewStyleGrouped];
-
+    
     UIBarButtonItem *doneButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone
                                                                                target:self
                                                                                action:@selector(actionDone:)];
@@ -51,6 +51,19 @@
 #pragma mark -
 #pragma mark UITableViewDataSource
 
+-(void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
+    UIView *view = [[UIView alloc] initWithFrame:
+                    CGRectMake(4, 4, CGRectGetWidth(cell.bounds) - 8, CGRectGetHeight(cell.bounds) - 8)];
+    view.layer.cornerRadius = 8.f;
+    
+    [cell addSubview:view];
+    [cell sendSubviewToBack:view];
+    [cell setContentMode:UIViewContentModeScaleAspectFit];
+    [cell setBackgroundColor:[UIColor clearColor]];
+    self.cellBGView = view;
+
+}
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return 4;
 }
@@ -62,6 +75,9 @@
     if (!cell) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
     }
+    
+    cell.backgroundColor = [UIColor clearColor];
+    cell.textLabel.textColor = [UIColor whiteColor];
     
     NSManagedObject *object = [[self fetchedResultsController] objectAtIndexPath:indexPath];
     [self configureCell:cell withObject:object indexPath:indexPath];

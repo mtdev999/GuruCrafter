@@ -18,6 +18,7 @@
 #import "MTStudent.h"
 
 #import "TextField.h"
+#import "UIView+MTExtensions.h"
 
 #define BGColorCellEditing [UIColor colorWithRed:1.0 green:0.972 blue:0.7441 alpha:1.0];
 
@@ -75,12 +76,10 @@
         
         self.university.name = self.firstField.text;
         self.university.location = self.secondField.text;
+        
         if (self.currentDate) {
             self.university.foundingDate = self.currentDate;
         }
-
-        
-        NSLog(@"%@", [NSString stringWithFormat:@"%@", self.university.foundingDate]);
         
         [self save];
         [self.navigationController popViewControllerAnimated:YES];
@@ -106,14 +105,11 @@
 #pragma mark UITableViewDataSource
 
 -(void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (indexPath.section == 0 && [cell respondsToSelector:@selector(setBackgroundColor:)]) {
-        [cell setBackgroundColor:[UIColor colorWithRed:0.2667 green:0.6353 blue:0.6941 alpha:0.5]];
-    }
+    [super tableView:tableView willDisplayCell:cell forRowAtIndexPath:indexPath];
+    self.cellBGView.backgroundColor = [UIColor colorWithRed:0.2667 green:0.6353 blue:0.6941 alpha:0.7];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    
-    
     return section == 0 ? 3 : self.university.courses.count + 1;
 }
 
@@ -163,7 +159,7 @@
     } else {
         if (indexPath.row == 0) {
             cell.textLabel.textAlignment = NSTextAlignmentRight;
-            cell.textLabel.textColor = [UIColor orangeColor];
+            cell.textLabel.textColor = [UIColor redColor];
             cell.textLabel.font = [UIFont systemFontOfSize:12];
             cell.textLabel.text = @"ADD COURSE";
         } else {
@@ -197,9 +193,8 @@
     if (indexPath.section == 1 && indexPath.row == 0) {
         MTChoseCoursesViewController *vc = [MTChoseCoursesViewController new];
         vc.university = self.university;
-        UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:vc];
-        navController.modalPresentationStyle = UIModalPresentationPageSheet;
-        [self presentViewController:navController animated:YES completion:nil];
+        [self.navigationController pushViewController:vc animated:YES];
+    
     } else if (indexPath.section == 1){
         MTCourseInfoViewController *vc = [MTCourseInfoViewController new];
         NSArray *array = [self.university.courses allObjects];
@@ -235,6 +230,12 @@
     
     navController.modalPresentationStyle = UIModalPresentationPopover;
     [self presentViewController:navController animated:YES completion:nil];
+    
+    UIPopoverPresentationController *popController = [navController popoverPresentationController];
+    popController.permittedArrowDirections = UIPopoverArrowDirectionRight;
+    
+    popController.sourceView = self.thridField;
+    popController.sourceRect = CGRectMake(30, 50, 10, 10);
 }
 
 #pragma mark -
